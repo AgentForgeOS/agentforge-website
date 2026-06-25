@@ -23,9 +23,13 @@ export const transition: Transition = {
   ease: ease.outExpo,
 };
 
-/** Fade + rise. The default entrance for any element revealed on scroll. */
+/**
+ * The default entrance — opacity-led, with a barely-there rise. Restraint is
+ * the point: motion signals intent, it is not the decoration. Use sparingly
+ * (a section's first element), never on every block.
+ */
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 6 },
   visible: { opacity: 1, y: 0, transition },
 };
 

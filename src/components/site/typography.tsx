@@ -11,7 +11,7 @@ export function Display({ className, ...props }: ComponentProps<"h1">) {
   return (
     <h1
       className={cn(
-        "text-display font-medium tracking-tight text-foreground text-balance",
+        "text-display font-medium text-foreground text-balance",
         className,
       )}
       {...props}
@@ -23,7 +23,7 @@ export function Heading({ className, ...props }: ComponentProps<"h2">) {
   return (
     <h2
       className={cn(
-        "text-h1 font-medium tracking-tight text-foreground text-balance",
+        "text-h1 font-medium text-foreground text-balance",
         className,
       )}
       {...props}
@@ -34,7 +34,7 @@ export function Heading({ className, ...props }: ComponentProps<"h2">) {
 export function Subheading({ className, ...props }: ComponentProps<"h3">) {
   return (
     <h3
-      className={cn("text-h2 font-medium tracking-tight text-foreground", className)}
+      className={cn("text-h2 font-medium text-foreground", className)}
       {...props}
     />
   );
@@ -44,7 +44,7 @@ export function Eyebrow({ className, ...props }: ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "text-eyebrow font-medium uppercase tracking-[0.12em] text-brand",
+        "text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground",
         className,
       )}
       {...props}

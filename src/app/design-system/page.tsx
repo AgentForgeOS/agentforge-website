@@ -64,7 +64,7 @@ const inkTokens = [
 ];
 
 const accentTokens = [
-  { name: "brand", value: "#3B82F6", note: "the single accent" },
+  { name: "brand", value: "#3F80E8", note: "the single accent" },
   { name: "brand-muted", value: "#14233F", note: "faint blue fill" },
 ];
 
@@ -72,7 +72,7 @@ const semanticTokens = [
   { name: "success", value: "#34B981", note: "muted green" },
   { name: "warning", value: "#E0A23B", note: "amber" },
   { name: "error", value: "#E5575A", note: "muted red" },
-  { name: "readout", value: "#4ADE80", note: "terminal" },
+  { name: "readout", value: "#52C08C", note: "terminal" },
 ];
 
 const archetypes = [
@@ -154,7 +154,7 @@ export default function DesignSystemPage() {
   return (
     <main className="min-h-dvh">
       {/* Masthead */}
-      <Section className="pt-16 pb-10 md:pt-24 md:pb-12">
+      <Section className="pt-24 pb-16 md:pt-36 md:pb-20">
         <Container>
           <Reveal className="flex flex-col gap-6">
             <div className="flex items-center gap-2.5">
@@ -179,7 +179,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Color */}
-      <Section className="py-12 md:py-16">
+      <Section className="py-16 md:py-24">
         <Container className="flex flex-col gap-8">
           <Reveal>
             <SectionHeader
@@ -218,7 +218,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Typography */}
-      <Section className="py-12 md:py-16">
+      <Section className="py-16 md:py-24">
         <Container className="flex flex-col gap-8">
           <Reveal>
             <SectionHeader
@@ -261,7 +261,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Cards */}
-      <Section className="py-12 md:py-16">
+      <Section className="py-16 md:py-24">
         <Container className="flex flex-col gap-8">
           <Reveal>
             <SectionHeader
@@ -281,7 +281,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Decision Workspace / Terminal */}
-      <Section className="py-12 md:py-16">
+      <Section className="py-16 md:py-24">
         <Container className="grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
             <SectionHeader
@@ -318,7 +318,7 @@ export default function DesignSystemPage() {
       </Section>
 
       {/* Controls + progressive disclosure */}
-      <Section className="py-12 md:py-16">
+      <Section className="py-16 md:py-24">
         <Container className="flex flex-col gap-8">
           <Reveal>
             <SectionHeader

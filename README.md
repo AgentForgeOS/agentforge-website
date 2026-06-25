@@ -21,7 +21,7 @@ Obsidian-dark, **one** accent. Components never hardcode color; everything resol
 |---|---|
 | Surfaces | `background` `#090D16` · `card` · `elevated` · `border` · `hairline-strong` |
 | Ink | `foreground` · `muted-foreground` |
-| Accent | `brand` `#3B82F6` (refined enterprise blue) · `brand-muted` |
+| Accent | `brand` `#3F80E8` (a calmer, desaturated azure — deliberately _not_ default blue-500) · `brand-muted` |
 | Semantic | `success` · `warning` · `error` · `readout` (terminal green) |
 | Type | display scale (`text-display` / `text-h1` / `text-h2` / `text-eyebrow`), Geist sans + mono |
 | Motion | one curve (`--ease-out-expo`), four durations (150 / 250 / 400 / 600ms) |
