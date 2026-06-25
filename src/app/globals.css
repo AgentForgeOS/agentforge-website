@@ -1,26 +1,141 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
+
+/* ===========================================================================
+   AgentForge design system — token layer
+   Obsidian-dark, single accent (refined enterprise blue). Components never
+   hardcode color; everything resolves through a token. See README.md.
+   =========================================================================== */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+
+  /* shadcn contract */
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* brand extensions — exposed as utilities (bg-brand, text-readout, …) */
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-readout: var(--readout);
+  --color-readout-muted: var(--readout-muted);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-elevated: var(--elevated);
+  --color-hairline-strong: var(--hairline-strong);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+
+  /* display type scale — large, tight-tracked headlines */
+  --text-display: clamp(2.75rem, 5.5vw, 4.5rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 500;
+  --text-h1: clamp(2rem, 3.6vw, 3rem);
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h2: clamp(1.5rem, 2.4vw, 2rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.01em;
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.12em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root,
+.dark {
+  color-scheme: dark;
+
+  /* surfaces — obsidian → elevated slate */
+  --background: #090d16; /* obsidian (per blueprint) */
+  --foreground: #e7ebf3; /* near-white, never pure */
+  --card: #0e1421; /* raised surface */
+  --card-foreground: #e7ebf3;
+  --popover: #131a29; /* overlay */
+  --popover-foreground: #e7ebf3;
+  --elevated: #131a29;
+
+  /* accent — the single refined enterprise blue */
+  --brand: #3b82f6;
+  --brand-foreground: #f6f9ff;
+  --brand-muted: #14233f; /* faint blue fill for subtle emphasis */
+  --primary: #3b82f6;
+  --primary-foreground: #f6f9ff;
+  --ring: #3b82f6;
+
+  /* neutrals */
+  --secondary: #131a29;
+  --secondary-foreground: #e7ebf3;
+  --muted: #111827;
+  --muted-foreground: #9aa3b7; /* secondary text */
+  --accent: #18212f; /* subtle hover surface */
+  --accent-foreground: #e7ebf3;
+  --border: #1c2333; /* hairline */
+  --hairline-strong: #2a3346;
+  --input: #1c2333;
+
+  /* semantic — muted, intentional */
+  --success: #34b981; /* muted green */
+  --warning: #e0a23b; /* amber */
+  --error: #e5575a; /* muted red */
+  --destructive: #e5575a;
+
+  /* terminal "Decision Workspace" readout */
+  --readout: #4ade80;
+  --readout-muted: #0f2a1c;
+
+  --radius: 0.625rem;
+
+  /* motion — durations + the one easing curve (expo ease-out) */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-deliberate: 600ms;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--brand) 28%, transparent);
+  }
 }
