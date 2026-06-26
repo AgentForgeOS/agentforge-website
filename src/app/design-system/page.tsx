@@ -18,6 +18,7 @@ import {
   IllContext,
   IllPolicyGates,
   IllMemory,
+  IllMaster,
 } from "@/components/site/illustrations";
 import {
   Display,
@@ -226,6 +227,19 @@ export default function DesignSystemPage() {
               title="An illustration language"
               lead="Six canonical diagrams, all drawn from the same atoms — signal nodes, connectors, one accented decision. Reusable across the site, decks, and whitepapers, so every diagram is unmistakably AgentForge — never clip-art, never Lucidchart."
             />
+          </Reveal>
+          <Reveal>
+            <figure className="flex flex-col gap-8 rounded-xl border border-border bg-card px-6 py-12 md:px-16 md:py-16">
+              <IllMaster className="mx-auto max-w-2xl" />
+              <figcaption className="mx-auto max-w-xl text-center text-sm leading-relaxed text-muted-foreground text-pretty">
+                <span className="text-foreground">The signature illustration.</span>{" "}
+                The whole system in one frame — heterogeneous signals converge into
+                evidence, a governed decision is made under human oversight, and the
+                outcome feeds back as institutional memory, the field growing denser
+                every cycle. One abstract metaphor, drawn entirely in the node-and-connector
+                language.
+              </figcaption>
+            </figure>
           </Reveal>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {illustrations.map(({ Ill, name, note }) => (

@@ -144,3 +144,54 @@ export function IllMemory() {
     </Frame>
   );
 }
+
+/**
+ * The master illustration — the entire operational-intelligence story as one
+ * abstract metaphor, built from the same grammar. Heterogeneous signals (left)
+ * converge into evidence, into a governed decision made under human oversight
+ * (the framed workspace), whose outcome feeds back as institutional memory —
+ * the field growing denser every cycle. This is the signature graphic.
+ */
+export function IllMaster({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 380 200" fill="none" aria-hidden="true" className={cn("w-full", className)}>
+      {/* institutional learning — the outcome feeding back into the field */}
+      <path
+        d="M270,92 C330,18 80,8 38,44"
+        fill="none"
+        strokeWidth={1.5}
+        strokeDasharray="2 5"
+        className="stroke-border"
+      />
+      {/* convergence: signal field → evidence → decision → oversight */}
+      <g className="stroke-hairline-strong" strokeWidth={1.5}>
+        <path d="M30,50 L198,100" />
+        <path d="M58,72 L198,100" />
+        <path d="M26,92 L198,100" />
+        <path d="M54,112 L198,100" />
+        <path d="M34,138 L198,100" />
+        <path d="M62,158 L198,100" />
+        <path d="M206,100 L262,100" />
+        <path d="M272,92 L272,60" />
+      </g>
+      {/* governed decision workspace */}
+      <rect x={244} y={34} width={56} height={90} rx={8} className="fill-card stroke-border" strokeWidth={1.5} />
+      {/* operational reality — heterogeneous signals, memory accruing (faint) */}
+      <MemoryNode cx={20} cy={120} />
+      <MemoryNode cx={46} cy={38} />
+      <SignalNode cx={30} cy={50} />
+      <SignalNode cx={58} cy={72} />
+      <SignalNode cx={26} cy={92} />
+      <SignalNode cx={54} cy={112} />
+      <SignalNode cx={34} cy={138} />
+      <SignalNode cx={62} cy={158} />
+      {/* evidence */}
+      <SignalNode cx={202} cy={100} />
+      {/* human oversight */}
+      <circle cx={272} cy={50} r={7.5} strokeWidth={1.25} className="stroke-muted-foreground" />
+      <circle cx={272} cy={50} r={3.25} strokeWidth={1.25} className="fill-background stroke-foreground" />
+      {/* the governed decision */}
+      <DecisionNode cx={272} cy={100} />
+    </svg>
+  );
+}

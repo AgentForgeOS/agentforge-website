@@ -30,7 +30,7 @@ Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-bor
 
 ### Components — `src/components/site/*`
 - **Brand** — `Logo` / `LifecycleMark` (operational signals converging into a decision core) and `LifecycleRail` (the Detect → Anticipate → Decide → Learn motif). The recurring node-and-connector geometry that makes the system recognizably AgentForge — in the logo, dividers, every section eyebrow, and the signal line a `ConceptCard` traces on hover.
-- **Illustrations** — `IllLifecycle`, `IllConvergence`, `IllDecisionObject`, `IllContext`, `IllPolicyGates`, `IllMemory`: six canonical diagrams built from one grammar (signal nodes, connectors, a single accented decision; the recurring idea is convergence → decision → radiate back). Reusable across site, decks, whitepapers, and investor materials.
+- **Illustrations** — `IllLifecycle`, `IllConvergence`, `IllDecisionObject`, `IllContext`, `IllPolicyGates`, `IllMemory`: six canonical diagrams built from one grammar (signal nodes, connectors, a single accented decision; the recurring idea is convergence → decision → radiate back). Plus `IllMaster` — the **signature illustration**: the whole system in one abstract metaphor (operational reality → evidence → governed decision under human oversight → learning feeding back). The AgentForge equivalent of the Palantir ontology diagram. Reusable across site, decks, whitepapers, and investor materials.
 - **Typography** — `Display`, `Heading`, `Subheading`, `Eyebrow`, `Lead`, `Prose`, `MonoLabel`
 - **Layout** — `Container`, `Section`, `SectionHeader`, `Hairline`
 - **ConceptCard** — the fundamental unit. Every concept (decision type, architecture layer, principle, customer story, feature, industry) is the _same_ card with different content.
@@ -47,6 +47,7 @@ Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-bor
 - **Terminal = runtime.** Use the Decision Workspace only to show runtime reasoning — evidence, recommendations, policy evaluation, decision objects. **Never for marketing.** That restraint is what keeps it special.
 - **One illustration grammar.** Every diagram uses the same atoms (signal nodes, connectors, a single accented decision); the recurring idea is convergence → decision → radiate-back. Never clip-art, stock diagrams, or Lucidchart.
 - **Everything is a Decision Object.** The product's core idea, reflected in the UI — every concept is a reusable, governed object ("one card, every concept").
+- **The right thing moves — not everything.** Motion is rare and earns its place (a card's signal line on hover, signals converging once). No spinning, floating, glowing, or particles. Apple's magic isn't that everything moves; it's that the _one_ right thing does.
 - **Never reduce the whitespace.** Enterprise buyers want breathing room.
 - **Mission control, not a chatbot.** The mantra for every screen — if it doesn't feel like that, redesign it.
 - Reuse components aggressively; minimize bespoke styles. Motion explains relationships — never decorates. Never invent layouts inconsistent with the system.
