@@ -8,7 +8,9 @@ import {
 } from "lucide-react";
 
 import { Container } from "@/components/site/container";
-import { Section, SectionHeader, Hairline } from "@/components/site/section";
+import { Section, SectionHeader } from "@/components/site/section";
+import { Logo, LifecycleMark } from "@/components/site/logo";
+import { LifecycleRail } from "@/components/site/lifecycle";
 import {
   Display,
   Heading,
@@ -157,12 +159,9 @@ export default function DesignSystemPage() {
       <Section className="pt-24 pb-16 md:pt-36 md:pb-20">
         <Container>
           <Reveal className="flex flex-col gap-6">
-            <div className="flex items-center gap-2.5">
-              <span className="grid size-6 place-items-center rounded-[5px] bg-brand">
-                <span className="size-2.5 rotate-45 bg-brand-foreground" />
-              </span>
-              <span className="text-sm font-medium tracking-tight">AgentForge</span>
-              <Badge variant="outline" className="ml-1 font-mono text-[11px] font-normal">
+            <div className="flex items-center gap-3">
+              <Logo />
+              <Badge variant="outline" className="font-mono text-[11px] font-normal">
                 Design system
               </Badge>
             </div>
@@ -175,6 +174,29 @@ export default function DesignSystemPage() {
               source of truth — components compose only from these tokens.
             </Lead>
           </Reveal>
+        </Container>
+      </Section>
+
+      {/* Identity / motif */}
+      <Section className="py-16 md:py-24">
+        <Container className="flex flex-col gap-10">
+          <Reveal>
+            <SectionHeader
+              eyebrow="Identity / Motif"
+              title="One geometry, everywhere"
+              lead="The mark is the message: operational signals converging into a single governed decision. The same node-and-connector geometry recurs as the brand's quiet signature — in the logo, in dividers, in the line that travels a card on hover. Understated, never decorative."
+            />
+          </Reveal>
+          <div className="grid items-center gap-10 rounded-xl border border-border bg-card p-8 md:grid-cols-[auto_1fr] md:gap-14 md:p-12">
+            <LifecycleMark className="size-20" />
+            <div className="flex flex-col gap-7">
+              <LifecycleRail labels />
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Detect → Anticipate → <span className="text-foreground">Decide</span> → Learn.
+                The decision core is the one place the accent appears at full strength.
+              </p>
+            </div>
+          </div>
         </Container>
       </Section>
 
@@ -439,11 +461,11 @@ export default function DesignSystemPage() {
         </Container>
       </Section>
 
-      <Hairline />
-      <Section className="py-10">
-        <Container>
+      <Section className="py-12">
+        <Container className="flex flex-col gap-8 border-t border-border pt-12">
+          <LifecycleRail className="max-w-xs opacity-70" />
           <p className="font-mono text-xs text-muted-foreground">
-            AgentForge design system · obsidian · single accent · built from tokens
+            AgentForge · obsidian · one accent · mission control, not a chatbot
           </p>
         </Container>
       </Section>

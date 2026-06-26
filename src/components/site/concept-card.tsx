@@ -33,12 +33,17 @@ export function ConceptCard({
   const inner = (
     <div
       className={cn(
-        "group relative flex h-full flex-col gap-5 rounded-lg border border-border bg-card p-7",
+        "group relative flex h-full flex-col gap-5 overflow-hidden rounded-lg border border-border bg-card p-7",
         "transition-colors duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
         interactive && "hover:border-hairline-strong hover:bg-elevated",
         className,
       )}
     >
+      {/* signature: a node tick that propagates into a signal line on hover */}
+      <span
+        className="pointer-events-none absolute left-0 top-0 h-px w-5 bg-brand/50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-full group-hover:bg-brand/70"
+        aria-hidden="true"
+      />
       {Icon ? (
         <Icon
           className="size-5 text-muted-foreground transition-colors duration-300 group-hover:text-foreground"

@@ -29,6 +29,7 @@ Obsidian-dark, **one** accent. Components never hardcode color; everything resol
 Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-border`, `text-readout`, `text-display`, etc. shadcn primitives read the same contract (`--primary` = brand), so they're themed automatically.
 
 ### Components — `src/components/site/*`
+- **Brand** — `Logo` / `LifecycleMark` (operational signals converging into a decision core) and `LifecycleRail` (the Detect → Anticipate → Decide → Learn motif). The recurring node-and-connector geometry that makes the system recognizably AgentForge — in the logo, dividers, and the signal line a `ConceptCard` traces on hover.
 - **Typography** — `Display`, `Heading`, `Subheading`, `Eyebrow`, `Lead`, `Prose`, `MonoLabel`
 - **Layout** — `Container`, `Section`, `SectionHeader`, `Hairline`
 - **ConceptCard** — the fundamental unit. Every concept (decision type, architecture layer, principle, customer story, feature, industry) is the _same_ card with different content.
@@ -39,12 +40,13 @@ Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-bor
 ### Reference
 `/design-system` renders every token and component — the living spec and the verification surface. `/` redirects to it (no marketing homepage yet).
 
-## Rules (from the brand doc)
-- Never introduce a new color without approval. One accent.
-- Reuse components aggressively; minimize bespoke styles.
-- Whitespace over density · clarity over decoration · consistency over novelty.
-- Motion explains relationships — never decorates.
-- Never invent page layouts inconsistent with the system.
+## Rules
+- **One accent — blue (`#3F80E8`), forever.** Never add a second. (Gold was considered and rejected to keep the system single-accent.)
+- **The lifecycle motif is the signature.** Use the node-and-connector geometry sparingly — logo, dividers, the signal line a card traces on hover — never as wallpaper. It should register subconsciously, not announce itself.
+- **Use the terminal (Decision Workspace) selectively.** It's a moment, not a wrapper — overuse reads DevOps/CLI, and this is enterprise decision software.
+- **Never reduce the whitespace.** Enterprise buyers want breathing room.
+- **Mission control, not a chatbot.** The mantra for every screen — if it doesn't feel like that, redesign it.
+- Reuse components aggressively; minimize bespoke styles. Motion explains relationships — never decorates. Never invent layouts inconsistent with the system.
 
 ## Run
 
