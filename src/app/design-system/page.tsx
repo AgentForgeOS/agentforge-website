@@ -12,6 +12,14 @@ import { Section, SectionHeader } from "@/components/site/section";
 import { Logo, LifecycleMark } from "@/components/site/logo";
 import { LifecycleRail } from "@/components/site/lifecycle";
 import {
+  IllLifecycle,
+  IllConvergence,
+  IllDecisionObject,
+  IllContext,
+  IllPolicyGates,
+  IllMemory,
+} from "@/components/site/illustrations";
+import {
   Display,
   Heading,
   Subheading,
@@ -122,6 +130,15 @@ const archetypes = [
   },
 ];
 
+const illustrations = [
+  { Ill: IllLifecycle, name: "Operational lifecycle", note: "Detect → Anticipate → Decide → Learn, closed by feedback." },
+  { Ill: IllConvergence, name: "Evidence assembly", note: "Many signals converge into one governed decision." },
+  { Ill: IllDecisionObject, name: "Decision Object", note: "Lineage in, the decision contained, effect out." },
+  { Ill: IllContext, name: "Operational context", note: "An anchor entity and the graph assembled around it." },
+  { Ill: IllPolicyGates, name: "Policy gates", note: "Candidate paths filtered before any decision surfaces." },
+  { Ill: IllMemory, name: "Institutional memory", note: "The loop — knowledge compounding with every decision." },
+];
+
 const TextSpec = ({ label, children }: { label: string; children: React.ReactNode }) => (
   <div className="flex flex-col gap-2 py-5">
     <MonoLabel>{label}</MonoLabel>
@@ -183,7 +200,7 @@ export default function DesignSystemPage() {
           <Reveal>
             <SectionHeader
               eyebrow="Identity / Motif"
-              title="One geometry, everywhere"
+              title="The geometry of operational intelligence"
               lead="The mark is the message: operational signals converging into a single governed decision. The same node-and-connector geometry recurs as the brand's quiet signature — in the logo, in dividers, in the line that travels a card on hover. Understated, never decorative."
             />
           </Reveal>
@@ -196,6 +213,37 @@ export default function DesignSystemPage() {
                 The decision core is the one place the accent appears at full strength.
               </p>
             </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Illustration language */}
+      <Section className="py-16 md:py-24">
+        <Container className="flex flex-col gap-10">
+          <Reveal>
+            <SectionHeader
+              eyebrow="Foundations / Illustration"
+              title="An illustration language"
+              lead="Six canonical diagrams, all drawn from the same atoms — signal nodes, connectors, one accented decision. Reusable across the site, decks, and whitepapers, so every diagram is unmistakably AgentForge — never clip-art, never Lucidchart."
+            />
+          </Reveal>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {illustrations.map(({ Ill, name, note }) => (
+              <div
+                key={name}
+                className="flex flex-col gap-5 rounded-xl border border-border bg-card p-6"
+              >
+                <div className="rounded-lg border border-border bg-background/40 p-6">
+                  <Ill />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="text-sm font-medium text-foreground">{name}</h3>
+                  <p className="text-xs leading-relaxed text-muted-foreground text-pretty">
+                    {note}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </Section>
