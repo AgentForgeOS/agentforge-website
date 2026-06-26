@@ -367,6 +367,13 @@ export default function Home() {
                 <PlatformLifecycle />
               </Reveal>
             </div>
+            <Reveal>
+              <p className="max-w-3xl text-lg leading-relaxed text-foreground/90 text-pretty">
+                AgentForge defines the open architecture for operational intelligence:
+                bring the Detect and Anticipate capabilities you already have, or adopt new
+                ones over time — the operating model never changes.
+              </p>
+            </Reveal>
           </Container>
         </Section>
 
@@ -397,6 +404,39 @@ export default function Home() {
           </Container>
         </Section>
 
+        {/* 6b · Why we built this — the founder trust anchor. Origin, not résumé. */}
+        <Section className="border-y border-border/60 bg-card/30">
+          <Container>
+            <Reveal className="mx-auto flex max-w-2xl flex-col gap-5">
+              <Eyebrow>Why we built this</Eyebrow>
+              <Heading>This didn&apos;t start with generative AI.</Heading>
+              <Prose>
+                Operational decision intelligence didn&apos;t begin with a model. It began
+                with more than a decade inside enterprise operations — co-founding Cognosos
+                and helping manufacturing, logistics, and healthcare organizations digitize
+                operational awareness across hundreds of facilities and millions of moving
+                assets.
+              </Prose>
+              <Prose>
+                Building those systems made the real gap impossible to unsee. Enterprises had
+                spent decades learning what happened, and were starting to invest in seeing
+                what&apos;s happening now. But the consequential operational decision still
+                came down to a person, stitching judgment together from disconnected systems.
+              </Prose>
+              <Prose>
+                That&apos;s a twenty-five-year arc the market is only now naming — from
+                systems of record, to systems of awareness, to the operational decision
+                itself. We watched it happen from the inside, before there were words for it.
+                AgentForge is the layer we kept wishing existed.
+              </Prose>
+              <p className="text-sm text-muted-foreground/80">
+                Designed with operators in supply chains and claims organizations — not from
+                a whiteboard.
+              </p>
+            </Reveal>
+          </Container>
+        </Section>
+
         {/* 7 · Close — inevitability, then one quiet ask. */}
         <Section id="access" className="scroll-mt-20">
           <Container className="flex flex-col items-center gap-8 text-center">
@@ -409,11 +449,6 @@ export default function Home() {
                 The day this clicks, you stop asking your ERP to be your decision system —
                 and start asking what is. We&apos;re building it.
               </Lead>
-              <p className="max-w-xl text-sm leading-relaxed text-muted-foreground/80">
-                Built alongside the operators who live these decisions — in claims desks
-                and supply chains, where a wrong call is expensive and a right one goes
-                unseen.
-              </p>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
