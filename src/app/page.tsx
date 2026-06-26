@@ -338,8 +338,8 @@ export default function Home() {
             <Reveal>
               <SectionHeader
                 eyebrow="The platform"
-                title="The decision is the breakthrough. The lifecycle is the platform."
-                lead="Operational intelligence is a continuous lifecycle — Detect, Anticipate, Decide, Learn. It compounds only when every decision sharpens the next one, which is why the lifecycle matters more than any single stage."
+                title="The decision creates value. The lifecycle compounds it."
+                lead="Operational intelligence is a continuous lifecycle — Detect, Anticipate, Decide, Learn. It compounds only when every decision sharpens the next one. The value isn't in any individual capability, but in the operating model that connects them into one continuously improving system."
               />
             </Reveal>
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -403,8 +403,8 @@ export default function Home() {
         <Section className="border-y border-border/60 bg-card/30">
           <Container>
             <Reveal className="mx-auto flex max-w-2xl flex-col gap-5">
-              <Eyebrow>Why we built this</Eyebrow>
-              <Heading>This didn&apos;t start with generative AI.</Heading>
+              <Eyebrow>This didn&apos;t start with generative AI</Eyebrow>
+              <Heading>It began a decade before the tools did.</Heading>
               <Prose>
                 Operational decision intelligence didn&apos;t begin with generative AI. It
                 began with more than a decade spent building enterprise operational
