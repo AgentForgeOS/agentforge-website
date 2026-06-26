@@ -40,15 +40,23 @@ export function Subheading({ className, ...props }: ComponentProps<"h3">) {
   );
 }
 
-export function Eyebrow({ className, ...props }: ComponentProps<"p">) {
+export function Eyebrow({ className, children, ...props }: ComponentProps<"p">) {
   return (
     <p
       className={cn(
-        "text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground",
+        "flex items-center gap-2.5 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground",
         className,
       )}
       {...props}
-    />
+    >
+      {/* lifecycle mark — a signal resolving to a decision node. The motif's
+          quietest recurrence; it anchors every section across every page. */}
+      <span className="flex items-center gap-1.5" aria-hidden="true">
+        <span className="h-px w-4 bg-hairline-strong" />
+        <span className="size-[5px] rounded-full bg-brand" />
+      </span>
+      {children}
+    </p>
   );
 }
 
