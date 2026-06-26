@@ -52,18 +52,18 @@ const LAYERS: {
   },
   {
     n: "03",
-    name: "The Decision Layer",
-    verb: "Decides what to do about it.",
-    body: "Where evidence becomes a governed, accountable decision. Almost no enterprise has built it as a system.",
+    name: "The decision itself",
+    verb: "Deciding what to do about it.",
+    body: "Made by a person under pressure — from memory, in a spreadsheet, on a deadline. No system stands behind it.",
     missing: true,
   },
 ];
 
 const PHASES = [
-  { k: "Detect", t: "Sees what's changing across the operation, continuously." },
-  { k: "Anticipate", t: "Projects what it means before it becomes a crisis." },
-  { k: "Decide", t: "Assembles the evidence and commits to an action under policy." },
-  { k: "Learn", t: "Turns every decision and outcome into institutional memory." },
+  { k: "Detect", t: "Catches the supplier slipping the moment it starts." },
+  { k: "Anticipate", t: "Projects the margin hit before it lands." },
+  { k: "Decide", t: "Assembles the evidence and commits to a reroute — under policy." },
+  { k: "Learn", t: "Remembers how it turned out, so the next call is sharper." },
 ] as const;
 
 const MODEL = [
@@ -129,14 +129,16 @@ export default function Home() {
           <Container className="flex flex-col items-center gap-10 text-center">
             <Reveal className="flex max-w-3xl flex-col items-center gap-7">
               <p className="max-w-xl text-balance text-lg leading-relaxed text-muted-foreground">
-                Every enterprise runs on systems that record work. Every enterprise
-                runs on people who decide what to do about it.
+                A supplier slips three weeks. A shipment misses its window. A
+                customer&apos;s margin turns negative overnight. Your operation forces
+                hundreds of decisions like these every day — and the people making
+                them are largely on their own.
               </p>
               <Display className="max-w-2xl">Almost nothing helps them decide.</Display>
               <Lead className="mx-auto text-center">
-                Between the systems that remember and the systems that notice, the most
-                consequential work in any company still happens with no system behind
-                it. This is about the layer that should exist.
+                Your systems record what happened. Your dashboards show what&apos;s
+                happening. But the decision itself — the judgment call, under pressure,
+                with money on the line — still runs on instinct and a spreadsheet.
               </Lead>
               <a
                 href="#thesis"
@@ -160,9 +162,9 @@ export default function Home() {
           <Container className="flex flex-col gap-12">
             <Reveal>
               <SectionHeader
-                eyebrow="The enterprise stack"
-                title="Three layers. Most companies have two."
-                lead="Every enterprise has built two of the three layers it runs on. The third — where decisions actually get made — was never built as a system."
+                eyebrow="The pattern"
+                title="You built a system for two of these. Not the third."
+                lead="Step back from any one of those calls and the same three jobs appear. Your operation has built serious systems for two of them. The third — actually making the call — it left to people."
               />
             </Reveal>
             <Reveal>
@@ -187,7 +189,7 @@ export default function Home() {
                       </h3>
                       {l.missing ? (
                         <span className="rounded border border-brand/40 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-brand">
-                          Missing
+                          No system
                         </span>
                       ) : null}
                     </div>
@@ -208,16 +210,17 @@ export default function Home() {
           <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <Reveal className="flex flex-col gap-5">
               <Eyebrow>The gap</Eyebrow>
-              <Heading>Your most important layer runs on no infrastructure.</Heading>
+              <Heading>So your most important decisions get made the hardest way.</Heading>
               <Prose>
-                Your systems of record and awareness do their jobs. Then they hand the
-                hardest part — the decision — to a person with a dashboard and a deadline.
+                Your systems of record and awareness do their jobs well. Then they hand
+                the hardest part — the decision — to a person with a dashboard and a
+                deadline.
               </Prose>
               <Prose>
-                That decision gets made in a head, a spreadsheet, a thread. It isn&apos;t
-                assembled from evidence the same way twice. It can&apos;t be governed.
-                Nothing learns from it. The layer where your most consequential, most
-                expensive work happens is the one layer you never systematized.
+                She pieces the evidence together from memory and makes the call. The
+                reasoning never gets written down. The next person starts from scratch.
+                Nothing learns from how it turned out. The most consequential, most
+                expensive work in the company is the work with the least support behind it.
               </Prose>
             </Reveal>
             <Reveal delay={0.1}>
@@ -234,8 +237,8 @@ export default function Home() {
             <Reveal>
               <SectionHeader
                 eyebrow="The decision layer"
-                title="What that layer actually does."
-                lead="Strip away the product names, and a decision layer does four things — continuously, as one loop."
+                title="Give the decision its own system."
+                lead="Picture that missing system — call it a decision layer. On every call, it runs the same four steps, continuously, as one loop."
               />
             </Reveal>
 
@@ -284,8 +287,8 @@ export default function Home() {
             <Reveal>
               <SectionHeader
                 eyebrow="AgentForge"
-                title="We're building the decision layer."
-                lead="AgentForge sits on top of your systems of record and awareness and does the one thing they don't: it decides — with evidence, under your governance, and it remembers."
+                title="We're building that layer."
+                lead="AgentForge sits on top of the systems you already run and does the one thing they don't: it helps your people decide — evidence assembled, policy applied, every call remembered."
               />
             </Reveal>
 
@@ -364,6 +367,11 @@ export default function Home() {
                 The day this clicks, you stop asking your ERP to be your decision system —
                 and start asking what is. We&apos;re building it.
               </Lead>
+              <p className="max-w-xl text-sm leading-relaxed text-muted-foreground/80">
+                Built alongside the operators who live these decisions — in claims desks
+                and supply chains, where a wrong call is expensive and a right one goes
+                unseen.
+              </p>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                 <a
                   href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
