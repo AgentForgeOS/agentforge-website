@@ -3,8 +3,9 @@ import { ArrowDown, ArrowRight, GitBranch, Repeat, ShieldCheck } from "lucide-re
 
 import { Container } from "@/components/site/container";
 import { Section, SectionHeader } from "@/components/site/section";
-import { Logo } from "@/components/site/logo";
 import { LifecycleRail } from "@/components/site/lifecycle";
+import { SiteHeader } from "@/components/site/site-header";
+import { SiteFooter } from "@/components/site/site-footer";
 import {
   IllMaster,
   IllConvergence,
@@ -94,29 +95,7 @@ const PRINCIPLES = [
 export default function Home() {
   return (
     <div className="flex min-h-dvh flex-col">
-      {/* Header — minimal by design. Conviction, not conversion. */}
-      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-        <Container className="flex h-16 items-center justify-between">
-          <Logo />
-          <nav className="flex items-center gap-8">
-            <a
-              href="#thesis"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-            >
-              The thesis
-            </a>
-            <a
-              href="#architecture"
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-            >
-              The layer
-            </a>
-            <a href="#access" className={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-3")}>
-              Request access
-            </a>
-          </nav>
-        </Container>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         {/* 1 · The opening truth — begin with a truth, not the product. */}
@@ -461,21 +440,7 @@ export default function Home() {
         </Section>
       </main>
 
-      {/* Footer — quiet. The motif signs off. */}
-      <footer className="border-t border-border">
-        <Container className="flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3">
-            <Logo />
-            <p className="text-sm text-muted-foreground">The Decision Layer for the enterprise.</p>
-          </div>
-          <div className="flex flex-col items-start gap-4 md:items-end">
-            <LifecycleRail className="w-40" />
-            <p className="font-mono text-xs text-muted-foreground/70">
-              © {new Date().getFullYear()} AgentForgeOS, Inc.
-            </p>
-          </div>
-        </Container>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
