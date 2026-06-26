@@ -98,13 +98,13 @@ const PRINCIPLES = [
 ] as const;
 
 const CONTRIBUTORS = [
-  { k: "Enterprise systems", t: "The record of what happened — ERP, CRM, WMS, MES." },
-  { k: "IoT & RTLS", t: "Live signals from the physical operation." },
-  { k: "Computer vision", t: "What the cameras and the floor can see." },
-  { k: "Machine learning", t: "Patterns and forecasts drawn from history." },
-  { k: "Optimization & simulation", t: "The best path among many, tested before it's taken." },
-  { k: "Large language models", t: "Reasoning over context, documents, and language." },
-  { k: "External intelligence", t: "Weather, markets, and the world outside the four walls." },
+  { k: "Enterprise systems", t: "What happened." },
+  { k: "RTLS & IoT", t: "Where things are now." },
+  { k: "Computer vision", t: "What people and cameras observe." },
+  { k: "Machine learning", t: "What's likely to happen." },
+  { k: "Optimization & simulation", t: "What could happen instead." },
+  { k: "Large language models", t: "What policies, procedures, and documents mean." },
+  { k: "External intelligence", t: "What the outside world is changing." },
 ] as const;
 
 export default function Home() {
@@ -392,7 +392,7 @@ export default function Home() {
               <SectionHeader
                 eyebrow="The technology"
                 title="No single technology sees the whole operation."
-                lead="AgentForge assembles operational reality from enterprise systems, RTLS and IoT telemetry, predictive models, optimization engines, computer vision, and AI reasoning — bringing each into a single governed operational lifecycle."
+                lead="Every technology observes a different part of the operation. AgentForge assembles them into a single operational picture before any decision is made."
               />
             </Reveal>
             <Reveal>
@@ -409,9 +409,9 @@ export default function Home() {
             </Reveal>
             <Reveal>
               <p className="max-w-3xl text-lg leading-relaxed text-foreground/90 text-pretty">
-                Each sees a different slice of operational reality. Whichever an operation
-                has, AgentForge assembles them into the best available picture — and turns
-                it into governed decisions.
+                No individual system knows enough to make the decision. AgentForge
+                assembles the best available operational picture — and turns it into a
+                governed decision.
               </p>
             </Reveal>
           </Container>
