@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowDown, ArrowRight, GitBranch, Repeat, ShieldCheck } from "lucide-react";
 
 import { Container } from "@/components/site/container";
-import { Section, SectionHeader, Hairline } from "@/components/site/section";
+import { Section, SectionHeader } from "@/components/site/section";
 import { Logo } from "@/components/site/logo";
 import { LifecycleRail } from "@/components/site/lifecycle";
 import {
@@ -60,13 +60,6 @@ const LAYERS: {
     missing: true,
   },
 ];
-
-const PHASES = [
-  { k: "Detect", t: "Catches the supplier slipping the moment it starts." },
-  { k: "Anticipate", t: "Projects the margin hit before it lands." },
-  { k: "Decide", t: "Assembles the evidence and commits to a reroute — under policy." },
-  { k: "Learn", t: "Remembers how it turned out, so the next call is sharper." },
-] as const;
 
 const MODEL = [
   { Ill: IllConvergence, name: "Evidence assembly", note: "Heterogeneous signals converge into one decision." },
@@ -159,7 +152,7 @@ export default function Home() {
           </Container>
         </section>
 
-        {/* 2 · The realization — three layers, you have two. */}
+        {/* 2 · The realization — the one structural reframe. Record, Awareness, Decision. */}
         <Section id="thesis" className="scroll-mt-20">
           <Container className="flex flex-col gap-12">
             <Reveal>
@@ -207,65 +200,113 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 3 · The gap — why the stack feels incomplete. */}
-        <Section className="border-y border-border/60 bg-card/30">
-          <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
-            <Reveal className="flex flex-col gap-5">
-              <Eyebrow>The gap</Eyebrow>
-              <Heading>So your most important decisions get made the hardest way.</Heading>
-              <Prose>
-                Your systems of record and awareness do their jobs well. Then they hand
-                the hardest part — the decision — to a person with a dashboard and a
-                deadline.
-              </Prose>
-              <Prose>
-                She pieces the evidence together from memory and makes the call. The
-                reasoning never gets written down. The next person starts from scratch.
-                Nothing learns from how it turned out. The most consequential, most
-                expensive work in the company is the work with the least support behind it.
-              </Prose>
+        {/* 3 · AgentForge — the early transition. What it IS: the loop, and one decision
+            in motion. By here the visitor understands the product. */}
+        <Section id="architecture" className="scroll-mt-20 border-y border-border/60 bg-card/30">
+          <Container className="flex flex-col gap-12">
+            <Reveal>
+              <SectionHeader
+                eyebrow="AgentForge"
+                title="AgentForge is the decision layer."
+                lead="The missing system, built as one continuous loop — Detect, Anticipate, Decide, Learn. It sits on top of the systems you already run and does the one thing they don't: it helps your people decide — evidence assembled, policy applied, every call remembered."
+              />
             </Reveal>
-            <Reveal delay={0.1}>
-              <div className="rounded-xl border border-border bg-background/50 px-6 py-12 md:px-12">
-                <IllConvergence />
+
+            <Reveal>
+              <div className="rounded-xl border border-border bg-background/50 px-6 py-10 md:px-12">
+                <LifecycleRail labels className="mx-auto max-w-3xl" />
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.05}>
+              <div className="flex flex-col items-center gap-4">
+                <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                  One decision, in motion
+                </p>
+                <Terminal title="decision-workspace · order #4821" className="w-full max-w-3xl">
+                  <TerminalFlag>⚠ Margin risk — Order #4821 · Northwind Logistics</TerminalFlag>
+                  <div className="space-y-2">
+                    <TerminalHeading>Evidence assembled</TerminalHeading>
+                    <TerminalList
+                      items={[
+                        "Supplier lead time slipped 6 → 14 days (3 signals, last 48h)",
+                        "Contract penalty clause triggers above a 10-day delay",
+                        "Alternate supplier in-SLA at +4% unit cost",
+                        "Account flagged priority tier A",
+                      ]}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <TerminalHeading>Recommendation · reroute to alternate supplier</TerminalHeading>
+                    <p className="text-foreground/55">
+                      Policy: +4% spend within auto-approve threshold · awaiting human sign-off
+                    </p>
+                  </div>
+                  <TerminalActions
+                    items={["Decision Object #4821", "Evidence ×4", "Policy ✓", "Approve", "Override"]}
+                  />
+                </Terminal>
               </div>
             </Reveal>
           </Container>
         </Section>
 
-        {/* 4 · The decision layer, defined — "of course this should exist." */}
-        <Section id="architecture" className="scroll-mt-20">
-          <Container className="flex flex-col gap-14">
+        {/* 4 · Detect & Anticipate — how reality is assembled and futures explored.
+            Technologies are inputs; the visual is convergence, not a catalog. */}
+        <Section>
+          <Container className="flex flex-col gap-12">
             <Reveal>
               <SectionHeader
-                eyebrow="The decision layer"
-                title="Give the decision its own system."
-                lead="Picture that missing system — call it a decision layer. On every call, it runs the same four steps, continuously, as one loop."
+                eyebrow="Detect & Anticipate"
+                title="Before a decision can be governed, reality has to be assembled."
+                lead="Every operation already runs dozens of systems, each producing a partial truth. None of them, alone, is a decision."
               />
             </Reveal>
-
             <Reveal>
-              <div className="flex flex-col gap-10 rounded-xl border border-border bg-card px-6 py-10 md:px-12">
-                <LifecycleRail labels className="mx-auto max-w-3xl" />
-                <div className="grid gap-8 pt-2 sm:grid-cols-2 lg:grid-cols-4">
-                  {PHASES.map((p) => (
-                    <div key={p.k} className="flex flex-col gap-2">
-                      <MonoLabel className={p.k === "Decide" ? "text-brand" : undefined}>
-                        {p.k}
-                      </MonoLabel>
-                      <Prose className="text-sm">{p.t}</Prose>
-                    </div>
-                  ))}
+              <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+                <div className="flex flex-col gap-3">
+                  <MonoLabel className="text-foreground/80">Detect — assemble reality</MonoLabel>
+                  <Prose>
+                    Enterprise systems record transactions. RTLS and IoT track movement.
+                    Cameras observe activity. Language models read the policies and the
+                    paperwork. Each captures one slice of what&apos;s happening — Detect
+                    assembles them into a single, trusted operational picture.
+                  </Prose>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <MonoLabel className="text-foreground/80">Anticipate — explore futures</MonoLabel>
+                  <Prose>
+                    Anticipate takes that picture forward. Forecasting, simulation,
+                    optimization, and risk evaluation weigh the possible futures — what&apos;s
+                    likely, what could happen instead — before any recommendation exists. Only
+                    then is there enough to govern a decision.
+                  </Prose>
                 </div>
               </div>
             </Reveal>
+            <Reveal delay={0.05}>
+              <AssemblyFlow className="mx-auto max-w-3xl" />
+            </Reveal>
+          </Container>
+        </Section>
 
+        {/* 5 · Decide & Learn — the back half. Every decision is a governed, inspectable
+            Decision Object that compounds into institutional memory. */}
+        <Section className="border-y border-border/60 bg-card/30">
+          <Container className="flex flex-col gap-12">
+            <Reveal>
+              <SectionHeader
+                eyebrow="Decide & Learn"
+                title="Every decision becomes a governed object — and the system compounds."
+                lead="This is where AgentForge runs deepest: the decision itself, and the memory it leaves behind."
+              />
+            </Reveal>
             <Reveal>
               <Stagger className="grid gap-4 sm:grid-cols-3">
                 {MODEL.map(({ Ill, name, note }) => (
                   <StaggerItem
                     key={name}
-                    className="flex flex-col gap-5 rounded-xl border border-border bg-card p-6"
+                    className="flex flex-col gap-5 rounded-xl border border-border bg-background/50 p-6"
                   >
                     <div className="rounded-lg border border-border bg-background/40 p-6">
                       <Ill />
@@ -280,46 +321,6 @@ export default function Home() {
                 ))}
               </Stagger>
             </Reveal>
-          </Container>
-        </Section>
-
-        {/* 5 · AgentForge — introduced only now, with one concrete runtime moment. */}
-        <Section className="border-y border-border/60 bg-card/30">
-          <Container className="flex flex-col gap-12">
-            <Reveal>
-              <SectionHeader
-                eyebrow="AgentForge"
-                title="We're building that layer."
-                lead="AgentForge sits on top of the systems you already run and does the one thing they don't: it helps your people decide — evidence assembled, policy applied, every call remembered."
-              />
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <Terminal title="decision-workspace · order #4821" className="mx-auto max-w-3xl">
-                <TerminalFlag>⚠ Margin risk — Order #4821 · Northwind Logistics</TerminalFlag>
-                <div className="space-y-2">
-                  <TerminalHeading>Evidence assembled</TerminalHeading>
-                  <TerminalList
-                    items={[
-                      "Supplier lead time slipped 6 → 14 days (3 signals, last 48h)",
-                      "Contract penalty clause triggers above a 10-day delay",
-                      "Alternate supplier in-SLA at +4% unit cost",
-                      "Account flagged priority tier A",
-                    ]}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <TerminalHeading>Recommendation · reroute to alternate supplier</TerminalHeading>
-                  <p className="text-foreground/55">
-                    Policy: +4% spend within auto-approve threshold · awaiting human sign-off
-                  </p>
-                </div>
-                <TerminalActions
-                  items={["Decision Object #4821", "Evidence ×4", "Policy ✓", "Approve", "Override"]}
-                />
-              </Terminal>
-            </Reveal>
-
             <Reveal>
               <Prose className="mx-auto max-w-2xl text-center">
                 Everything is a <span className="text-foreground">Decision Object</span>: assembled
@@ -330,7 +331,7 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 5b · The platform — zoom out: AgentForge owns the whole lifecycle.
+        {/* 6 · The platform — zoom out: AgentForge owns the whole lifecycle.
             Decide is the flagship; Detect/Anticipate stay open, Decide/Learn are core. */}
         <Section>
           <Container className="flex flex-col gap-12">
@@ -371,47 +372,7 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 5c · Detect & Anticipate — how operational reality is assembled and the
-            futures explored before any governed decision. Technologies are inputs,
-            not the focus; the visual is convergence, not a catalog. */}
-        <Section>
-          <Container className="flex flex-col gap-12">
-            <Reveal>
-              <SectionHeader
-                eyebrow="Detect & Anticipate"
-                title="Before a decision can be governed, reality has to be assembled."
-                lead="Every operation already runs dozens of systems, each producing a partial truth. None of them, alone, is a decision."
-              />
-            </Reveal>
-            <Reveal>
-              <div className="grid gap-10 md:grid-cols-2 md:gap-16">
-                <div className="flex flex-col gap-3">
-                  <MonoLabel className="text-foreground/80">Detect — assemble reality</MonoLabel>
-                  <Prose>
-                    Enterprise systems record transactions. RTLS and IoT track movement.
-                    Cameras observe activity. Language models read the policies and the
-                    paperwork. Each captures one slice of what&apos;s happening — Detect
-                    assembles them into a single, trusted operational picture.
-                  </Prose>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <MonoLabel className="text-foreground/80">Anticipate — explore futures</MonoLabel>
-                  <Prose>
-                    Anticipate takes that picture forward. Forecasting, simulation,
-                    optimization, and risk evaluation weigh the possible futures — what&apos;s
-                    likely, what could happen instead — before any recommendation exists. Only
-                    then is there enough to govern a decision.
-                  </Prose>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <AssemblyFlow className="mx-auto max-w-3xl" />
-            </Reveal>
-          </Container>
-        </Section>
-
-        {/* 6 · Conviction — a system that decides has to earn trust. */}
+        {/* 7 · Conviction — a system that decides has to earn trust. */}
         <Section>
           <Container className="flex flex-col gap-12">
             <Reveal>
@@ -438,7 +399,7 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 6b · Why we built this — the founder trust anchor. Origin, not résumé. */}
+        {/* 8 · Why we built this — the founder trust anchor. Origin, not résumé. */}
         <Section className="border-y border-border/60 bg-card/30">
           <Container>
             <Reveal className="mx-auto flex max-w-2xl flex-col gap-5">
@@ -471,7 +432,7 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 7 · Close — inevitability, then one quiet ask. */}
+        {/* 9 · Close — inevitability, then one quiet ask. */}
         <Section id="access" className="scroll-mt-20">
           <Container className="flex flex-col items-center gap-8 text-center">
             <Reveal className="flex max-w-3xl flex-col items-center gap-6">
