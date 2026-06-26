@@ -355,12 +355,12 @@ export default function Home() {
                 <Prose>
                   Most enterprises already have pieces of the first two stages scattered
                   across their stack. <span className="text-foreground">Detect</span>{" "}
-                  assembles a live operational picture from enterprise systems, physical
-                  infrastructure, connected assets, and external events.{" "}
-                  <span className="text-foreground">Anticipate</span> combines forecasting
-                  models, optimization engines, simulations, and AI reasoning to weigh
-                  what&apos;s most likely to happen next. AgentForge gives them a common
-                  operational language and draws them into a single governed decision.
+                  assembles a trusted operational picture from enterprise systems, RTLS, IoT,
+                  computer vision, connected assets, and external intelligence.{" "}
+                  <span className="text-foreground">Anticipate</span> combines forecasting,
+                  optimization, simulation, and AI reasoning before any operational decision
+                  is made. AgentForge gives them a common operational language and draws them
+                  into a single governed decision.
                 </Prose>
                 <Prose>
                   Where the value concentrates — the decision itself, and the memory it
@@ -392,7 +392,7 @@ export default function Home() {
               <SectionHeader
                 eyebrow="The technology"
                 title="No single technology sees the whole operation."
-                lead="AgentForge brings together enterprise systems, operational telemetry, predictive models, and AI reasoning into one governed decision lifecycle."
+                lead="AgentForge assembles operational reality from enterprise systems, RTLS and IoT telemetry, predictive models, optimization engines, computer vision, and AI reasoning — bringing each into a single governed operational lifecycle."
               />
             </Reveal>
             <Reveal>
@@ -451,11 +451,11 @@ export default function Home() {
               <Eyebrow>Why we built this</Eyebrow>
               <Heading>This didn&apos;t start with generative AI.</Heading>
               <Prose>
-                Operational decision intelligence didn&apos;t begin with a model. It began
-                with more than a decade inside enterprise operations — co-founding Cognosos
-                and helping manufacturing, logistics, and healthcare organizations digitize
-                operational awareness across hundreds of facilities and millions of moving
-                assets.
+                Operational decision intelligence didn&apos;t begin with generative AI. It
+                began with more than a decade spent building enterprise operational
+                awareness platforms — connecting ERP systems, real-time location systems
+                (RTLS), IoT telemetry, and machine learning across manufacturing, logistics,
+                healthcare, and automotive operations.
               </Prose>
               <Prose>
                 Building those systems made the real gap impossible to unsee. Enterprises had
