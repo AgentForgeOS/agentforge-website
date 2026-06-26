@@ -97,6 +97,16 @@ const PRINCIPLES = [
   },
 ] as const;
 
+const CONTRIBUTORS = [
+  { k: "Enterprise systems", t: "The record of what happened — ERP, CRM, WMS, MES." },
+  { k: "IoT & RTLS", t: "Live signals from the physical operation." },
+  { k: "Computer vision", t: "What the cameras and the floor can see." },
+  { k: "Machine learning", t: "Patterns and forecasts drawn from history." },
+  { k: "Optimization & simulation", t: "The best path among many, tested before it's taken." },
+  { k: "Large language models", t: "Reasoning over context, documents, and language." },
+  { k: "External intelligence", t: "Weather, markets, and the world outside the four walls." },
+] as const;
+
 export default function Home() {
   return (
     <div className="flex min-h-dvh flex-col">
@@ -345,11 +355,11 @@ export default function Home() {
                 <Prose>
                   Most enterprises already have pieces of the first two stages scattered
                   across their stack. <span className="text-foreground">Detect</span>{" "}
-                  assembles the best available picture of operational reality — whether the
-                  signals come from enterprise systems, physical infrastructure, or outside
-                  services. <span className="text-foreground">Anticipate</span> brings in
-                  predictive intelligence — forecasting, optimization, simulation, AI — to
-                  weigh the futures before a call is made. AgentForge gives them a common
+                  assembles a live operational picture from enterprise systems, physical
+                  infrastructure, connected assets, and external events.{" "}
+                  <span className="text-foreground">Anticipate</span> combines forecasting
+                  models, optimization engines, simulations, and AI reasoning to weigh
+                  what&apos;s most likely to happen next. AgentForge gives them a common
                   operational language and draws them into a single governed decision.
                 </Prose>
                 <Prose>
@@ -369,6 +379,39 @@ export default function Home() {
                 AgentForge defines the open architecture for operational intelligence:
                 bring the Detect and Anticipate capabilities you already have, or adopt new
                 ones over time — the operating model never changes.
+              </p>
+            </Reveal>
+          </Container>
+        </Section>
+
+        {/* 5c · The contributors — every technology sees a slice; AgentForge converges them.
+            Capabilities, not a sales stack. Names appear here, never required. */}
+        <Section className="border-y border-border/60 bg-card/30">
+          <Container className="flex flex-col gap-12">
+            <Reveal>
+              <SectionHeader
+                eyebrow="The technology"
+                title="No single technology sees the whole operation."
+                lead="AgentForge brings together enterprise systems, operational telemetry, predictive models, and AI reasoning into one governed decision lifecycle."
+              />
+            </Reveal>
+            <Reveal>
+              <Stagger className="grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
+                {CONTRIBUTORS.map((c) => (
+                  <StaggerItem key={c.k} className="flex flex-col gap-1.5">
+                    <MonoLabel className="text-foreground/80">{c.k}</MonoLabel>
+                    <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
+                      {c.t}
+                    </p>
+                  </StaggerItem>
+                ))}
+              </Stagger>
+            </Reveal>
+            <Reveal>
+              <p className="max-w-3xl text-lg leading-relaxed text-foreground/90 text-pretty">
+                Each sees a different slice of operational reality. Whichever an operation
+                has, AgentForge assembles them into the best available picture — and turns
+                it into governed decisions.
               </p>
             </Reveal>
           </Container>
