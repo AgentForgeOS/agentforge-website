@@ -403,8 +403,8 @@ export default function Home() {
         <Section className="border-y border-border/60 bg-card/30">
           <Container>
             <Reveal className="mx-auto flex max-w-2xl flex-col gap-5">
-              <Eyebrow>This didn&apos;t start with generative AI</Eyebrow>
-              <Heading>It began a decade before the tools did.</Heading>
+              <Eyebrow>Built from experience</Eyebrow>
+              <Heading>This didn&apos;t start with generative AI.</Heading>
               <Prose>
                 Operational decision intelligence didn&apos;t begin with generative AI. It
                 began with more than a decade spent building enterprise operational
