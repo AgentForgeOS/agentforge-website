@@ -13,6 +13,7 @@ import {
 } from "@/components/site/illustrations";
 import { Display, Heading, Eyebrow, Lead, Prose, MonoLabel } from "@/components/site/typography";
 import { ConceptCard } from "@/components/site/concept-card";
+import { PlatformLifecycle } from "@/components/site/platform";
 import {
   Terminal,
   TerminalFlag,
@@ -325,6 +326,47 @@ export default function Home() {
                 what the system knows. Not a black box — a system of record for decisions.
               </Prose>
             </Reveal>
+          </Container>
+        </Section>
+
+        {/* 5b · The platform — zoom out: AgentForge owns the whole lifecycle.
+            Decide is the flagship; Detect/Anticipate stay open, Decide/Learn are core. */}
+        <Section>
+          <Container className="flex flex-col gap-12">
+            <Reveal>
+              <SectionHeader
+                eyebrow="The platform"
+                title="Decide is the breakthrough. The lifecycle is the platform."
+                lead="Operational intelligence is one loop — Detect, Anticipate, Decide, Learn. AgentForge is built around the whole loop, not a single stage of it."
+              />
+            </Reveal>
+            <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+              <Reveal className="flex flex-col gap-5">
+                <Prose>
+                  Most enterprises already have pieces of the first two stages scattered
+                  across their stack. <span className="text-foreground">Detect</span>{" "}
+                  assembles the best available picture of operational reality — whether the
+                  signals come from enterprise systems, physical infrastructure, or outside
+                  services. <span className="text-foreground">Anticipate</span> brings in
+                  predictive intelligence — forecasting, optimization, simulation, AI — to
+                  weigh the futures before a call is made. AgentForge doesn&apos;t replace
+                  those tools; it gives them a common operational language and draws them
+                  into a governed decision.
+                </Prose>
+                <Prose>
+                  Where the value concentrates — the decision itself, and the memory it
+                  leaves behind — is where AgentForge runs deepest.{" "}
+                  <span className="text-foreground">Decide</span> and{" "}
+                  <span className="text-foreground">Learn</span> are the proprietary core;
+                  Detect and Anticipate stay open. That&apos;s the difference between a tool
+                  that automates decisions and the operating model for operational
+                  intelligence.
+                </Prose>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <PlatformLifecycle />
+              </Reveal>
+            </div>
           </Container>
         </Section>
 

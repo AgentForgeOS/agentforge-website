@@ -35,6 +35,7 @@ Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-bor
 - **Layout** — `Container`, `Section`, `SectionHeader`, `Hairline`
 - **ConceptCard** — the fundamental unit. Every concept (decision type, architecture layer, principle, customer story, feature, industry) is the _same_ card with different content.
 - **Terminal** — the "Decision Workspace" aesthetic (mission control, monospace, readout-green): `Terminal`, `TerminalFlag`, `TerminalHeading`, `TerminalList`, `TerminalActions`
+- **PlatformLifecycle** — the strategic positioning diagram (`platform.tsx`). The Detect → Anticipate → Decide → Learn loop with Decide as the single flagship accent, banded Open (your tools, or ours) vs AgentForge Core (proprietary). Built from the lifecycle grammar; reusable in decks.
 - **Motion primitives** — `Reveal` (fade+rise on scroll) and `Stagger` / `StaggerItem` (sequence children). Both use the shared curve + threshold.
 - **Primitives** — `src/components/ui/*` (Button, Card, Badge, Separator, Accordion, Tabs, Tooltip).
 
@@ -47,6 +48,7 @@ Use as Tailwind utilities: `bg-background`, `bg-card`, `text-brand`, `border-bor
 - **Terminal = runtime.** Use the Decision Workspace only to show runtime reasoning — evidence, recommendations, policy evaluation, decision objects. **Never for marketing.** That restraint is what keeps it special.
 - **One illustration grammar.** Every diagram uses the same atoms (signal nodes, connectors, a single accented decision); the recurring idea is convergence → decision → radiate-back. Never clip-art, stock diagrams, or Lucidchart.
 - **Everything is a Decision Object.** The product's core idea, reflected in the UI — every concept is a reusable, governed object ("one card, every concept").
+- **Platform, flagship in Decide.** AgentForge owns the reference architecture for the whole Operational Intelligence lifecycle (Detect → Anticipate → Decide → Learn). Position Detect/Anticipate as _open_ — "your existing tools, or ours," participate-not-replace — and Decide/Learn as the proprietary core. Decide is the flagship and keeps the visual emphasis; never give Detect/Anticipate equal billing. We are "the operating model for operational intelligence," not "a tool that automates decisions."
 - **The right thing moves — not everything.** Motion is rare and earns its place (a card's signal line on hover, signals converging once). No spinning, floating, glowing, or particles. Apple's magic isn't that everything moves; it's that the _one_ right thing does.
 - **Never reduce the whitespace.** Enterprise buyers want breathing room.
 - **Mission control, not a chatbot.** The mantra for every screen — if it doesn't feel like that, redesign it.
