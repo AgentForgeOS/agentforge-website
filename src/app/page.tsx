@@ -14,6 +14,7 @@ import {
 import { Display, Heading, Eyebrow, Lead, Prose, MonoLabel } from "@/components/site/typography";
 import { ConceptCard } from "@/components/site/concept-card";
 import { PlatformLifecycle } from "@/components/site/platform";
+import { AssemblyFlow } from "@/components/site/assembly";
 import {
   Terminal,
   TerminalFlag,
@@ -95,16 +96,6 @@ const PRINCIPLES = [
     description:
       "Every decision and outcome becomes institutional memory. The layer sharpens with use — and the knowledge stays yours.",
   },
-] as const;
-
-const CONTRIBUTORS = [
-  { k: "Enterprise systems", t: "What happened." },
-  { k: "RTLS & IoT", t: "Where things are now." },
-  { k: "Computer vision", t: "What people and cameras observe." },
-  { k: "Machine learning", t: "What's likely to happen." },
-  { k: "Optimization & simulation", t: "What could happen instead." },
-  { k: "Large language models", t: "What policies, procedures, and documents mean." },
-  { k: "External intelligence", t: "What the outside world is changing." },
 ] as const;
 
 export default function Home() {
@@ -354,13 +345,9 @@ export default function Home() {
               <Reveal className="flex flex-col gap-5">
                 <Prose>
                   Most enterprises already have pieces of the first two stages scattered
-                  across their stack. <span className="text-foreground">Detect</span>{" "}
-                  assembles a trusted operational picture from enterprise systems, RTLS, IoT,
-                  computer vision, connected assets, and external intelligence.{" "}
-                  <span className="text-foreground">Anticipate</span> combines forecasting,
-                  optimization, simulation, and AI reasoning before any operational decision
-                  is made. AgentForge gives them a common operational language and draws them
-                  into a single governed decision.
+                  across their stack — the systems that sense what&apos;s happening and the
+                  models that project what&apos;s next. AgentForge gives them a common
+                  operational language and draws them into a single governed decision.
                 </Prose>
                 <Prose>
                   Where the value concentrates — the decision itself, and the memory it
@@ -384,35 +371,42 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 5c · The contributors — every technology sees a slice; AgentForge converges them.
-            Capabilities, not a sales stack. Names appear here, never required. */}
-        <Section className="border-y border-border/60 bg-card/30">
+        {/* 5c · Detect & Anticipate — how operational reality is assembled and the
+            futures explored before any governed decision. Technologies are inputs,
+            not the focus; the visual is convergence, not a catalog. */}
+        <Section>
           <Container className="flex flex-col gap-12">
             <Reveal>
               <SectionHeader
-                eyebrow="The technology"
-                title="No single technology sees the whole operation."
-                lead="Every technology observes a different part of the operation. AgentForge assembles them into a single operational picture before any decision is made."
+                eyebrow="Detect & Anticipate"
+                title="Before a decision can be governed, reality has to be assembled."
+                lead="Every operation already runs dozens of systems, each producing a partial truth. None of them, alone, is a decision."
               />
             </Reveal>
             <Reveal>
-              <Stagger className="grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
-                {CONTRIBUTORS.map((c) => (
-                  <StaggerItem key={c.k} className="flex flex-col gap-1.5">
-                    <MonoLabel className="text-foreground/80">{c.k}</MonoLabel>
-                    <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
-                      {c.t}
-                    </p>
-                  </StaggerItem>
-                ))}
-              </Stagger>
+              <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+                <div className="flex flex-col gap-3">
+                  <MonoLabel className="text-foreground/80">Detect — assemble reality</MonoLabel>
+                  <Prose>
+                    Enterprise systems record transactions. RTLS and IoT track movement.
+                    Cameras observe activity. Language models read the policies and the
+                    paperwork. Each captures one slice of what&apos;s happening — Detect
+                    assembles them into a single, trusted operational picture.
+                  </Prose>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <MonoLabel className="text-foreground/80">Anticipate — explore futures</MonoLabel>
+                  <Prose>
+                    Anticipate takes that picture forward. Forecasting, simulation,
+                    optimization, and risk evaluation weigh the possible futures — what&apos;s
+                    likely, what could happen instead — before any recommendation exists. Only
+                    then is there enough to govern a decision.
+                  </Prose>
+                </div>
+              </div>
             </Reveal>
-            <Reveal>
-              <p className="max-w-3xl text-lg leading-relaxed text-foreground/90 text-pretty">
-                No individual system knows enough to make the decision. AgentForge
-                assembles the best available operational picture — and turns it into a
-                governed decision.
-              </p>
+            <Reveal delay={0.05}>
+              <AssemblyFlow className="mx-auto max-w-3xl" />
             </Reveal>
           </Container>
         </Section>
