@@ -1,57 +1,33 @@
 # Solutions
 
-> _A faithful text transcription of the AgentForge "Solutions" section (`/solutions` + the deep `/solutions/[model]` pages) for review. Organized for customer recognition — Planning vs Execution → Capability → Decision Model. Five models have deep pages (below); the rest are named on the landing and grow into deep pages over time. Written from the customer's point of view; the architecture is the explanation at the end, never the lead._
+> _Faithful text transcription of the AgentForge "Solutions" section for review. The information architecture is **frozen**: Planning vs Execution → Capability → Decision Model. **All 25 models have a deep page** at `/solutions/[slug]` on one canonical template — structure, Decision Workspace, tone, and architectural language are constant; only the operational narrative and domain context vary. Each deep page is transcribed below in the compact **Today / With AgentForge** form; the live pages carry the full layout._
 
 ---
 
 ## Landing — `/solutions`
 
-**SOLUTIONS**
-
-# Find your operation.
-
-These are the operational decisions teams make every day — the planning calls that follow the forecast, and the execution calls made live, on the floor and in the yard. Find yours below.
+**Find your operation.** These are the operational decisions teams make every day — the planning calls that follow the forecast, and the execution calls made live, on the floor and in the yard. Find yours below.
 
 ### Planning decisions
 _The forward-looking calls your forecasting and commerce systems leave unmade._
 
 **Inventory & Planning** — _Your demand forecast is an input, not a decision. The hard work is the call that follows — buy now or wait, allocate to which channel, reserve for the launch, move the slow stock._
-- **Demand Allocation** → — Who gets the limited stock when demand outruns supply. _(deep)_
-- **Inventory Purchasing & Buy Timing** — Buy now or wait — and how much, against the forecast.
-- **Stock Reservation** — Hold inventory for a launch, a channel, or a key account.
-- **Slow-Moving Inventory** — Mark down, transfer, or hold aging stock before it strands.
-- **New Store / Launch Planning** — Position inventory for an opening with no sales history.
-- **Capacity Allocation** — Allocate constrained production or fulfillment across demand.
-- **SKU Substitution** — Offer the right substitute when the preferred SKU is short.
+Demand Allocation · Inventory Purchasing & Buy Timing · Stock Reservation · Slow-Moving Inventory · New Store / Launch Planning · Capacity Allocation · SKU Substitution
 
 **Supplier & Procurement**
-- **Supplier Disruption Response** → — Reroute, expedite, or hold when a supplier slips. _(deep)_
-- **Purchase Order Exceptions** — Resolve POs that fall out of tolerance on price, date, or quantity.
-- **Expedite-or-Hold** — Pay to expedite, or absorb the delay.
-- **Dual-Source Switching** — Shift volume to an alternate source under risk or cost pressure.
-- **Supplier Risk Escalation** — Act early on a supplier trending toward failure.
+Supplier Disruption Response · Purchase Order Exceptions · Expedite-or-Hold · Dual-Source Switching · Supplier Risk Escalation
 
 ### Execution decisions
 _Real-time calls as events happen — on the floor, in the yard, on the live event._
 
 **Transportation & Yard Operations**
-- **Trailer Dwell Optimization** → — Release or reposition trailers idling past their window. _(deep)_
-- **Dock Assignment** — Assign the right door under shifting arrivals and labor.
-- **Carrier Exceptions** — Reroute or re-promise when a shipment misses its window.
-- **Asset Retrieval** — Find and move the right asset before it stalls the next step.
-- **Vehicle Logistics** — Stage, move, and sequence vehicles through the yard.
+Trailer Dwell Optimization · Dock Assignment · Carrier Exceptions · Asset Retrieval · Vehicle Logistics
 
 **Manufacturing Operations**
-- **Work-in-Process Bottlenecks** → — Rebalance a line when a work cell starves or backs up. _(deep)_
-- **Quality Holds** — Release, rework, or scrap when a lot fails inspection.
-- **Production Line Balancing** — Shift labor and orders as the schedule drifts.
-- **Resource Assignment** — Assign the right machine, bay, or crew under constraints.
+Work-in-Process Bottlenecks · Quality Holds · Production Line Balancing · Resource Assignment
 
 **Claims & Service Operations**
-- **Claims Adjudication** → — Approve, deny, or escalate against contract and policy. _(deep)_
-- **Fraud & Anomaly Triage** — Flag and route claims that don't add up.
-- **Adjuster Assignment** — Route each claim to the right adjuster or shop.
-- **Service Exceptions** — Decide the make-good when service falls out of SLA.
+Claims Adjudication · Fraud & Anomaly Triage · Adjuster Assignment · Service Exceptions
 
 ### One platform · Only the decision changes. The operating system doesn't.
 
@@ -61,184 +37,147 @@ _[Visual: the **Decision Workspace**, tabbed across the five worlds — Inventor
 
 **And it compounds.** Every Decision Model begins with a single operational problem. Every deployment makes it more complete — a new constraint, an edge case no one anticipated, a pattern that only shows up at scale, a governance rule learned the hard way. So the platform doesn't simply accumulate customers. It accumulates increasingly sophisticated Decision Models — until the model itself becomes an operational asset.
 
-> **Don't see your decision? It's probably the same shape.** Tell us the call your team makes from memory, under pressure, with money on the line. We'll show you what it looks like governed. → **Request access**
+---
+
+# The 25 Decision Models
+
+_Canonical template: **the moment → Today (how it's decided now, and why your systems stop here) → With AgentForge (context assembled · the Decision Workspace · governed) → what changes → the knowledge it keeps.** Architecture is the explanation at the very end of each live page, never the lead._
+
+## Planning · Inventory & Planning
+
+### Demand Allocation
+_Demand outruns supply, and someone has to decide who gets the units._
+**Today.** Your forecast says three channels each want more of a hot SKU than you'll have for four weeks. The forecast hands you a number and a deadline, not a decision; the call gets made from memory, in a meeting — unrecorded, indefensible, unrepeatable.
+**With AgentForge.** Demand by channel, on-hand/in-transit/reserved, promo and launch calendars, account tiers, and each channel's forecast bias are assembled. Workspace: `⚠ Demand 1.8× supply — SKU 7741` → *protect launch + tier-A, discount the wholesale ask* (launch reserved first · wholesale bias-adjusted · within margin floor). **Changes:** higher fill on the demand that matters; fewer stranded launches; an allocation defensible after the fact. **Keeps:** which channel over-asked and by how much — sharper every season.
+
+### Inventory Purchasing & Buy Timing
+_The forecast says buy — but buy now, buy later, or buy less?_
+**Today.** A SKU trends short; the supplier wants a six-week commit, price is rising, finance is squeezing inventory. Your planner gives a quantity off the forecast — it doesn't weigh the price curve, the cash constraint, and the MOQ against each other.
+**With AgentForge.** Forecast firmness, open-to-buy, MOQ/lead time/price trend, and markdown risk assembled. Workspace: `⚠ Stock-out risk in 3 weeks — SKU 5520, price +6%` → *commit 60% now, stage 40%* (within open-to-buy · MOQ met). **Changes:** fewer stock-outs on hot items; less cash tied up early; buys timed to the price curve. **Keeps:** this category's real lead-time and price behavior.
+
+### Stock Reservation
+_Two channels want the same units, and one launch can't be short._
+**Today.** Inventory lands; a launch needs it, a tier-A wholesale account asks for it, DTC is selling it live. Your OMS shows available-to-promise — it doesn't know the launch is firm or that DTC velocity just spiked.
+**With AgentForge.** Live sell-through, launch commitments, account tier, inbound, and reservation aging assembled. Workspace: `⚠ Contention — SKU 3318` → *reserve launch, partial-release wholesale, cap DTC*. **Changes:** launches that don't run short; key accounts kept whole; less idle reserved stock. **Keeps:** which launches actually pull and which reservations expire.
+
+### Slow-Moving Inventory
+_Aging stock is about to become a markdown — act before it strands._
+**Today.** A SKU goes quiet in one region while another is short on a near-substitute; the markdown clock ticks. Your system flags aging — it doesn't know another region wants it, the transfer cost, or where it sits on the markdown curve.
+**With AgentForge.** Aging by location, regional substitute demand, transfer cost, markdown calendar, carrying cost assembled. Workspace: `⚠ 62 days aging — SKU 9027, markdown in 8 days` → *transfer to East, hold markdown one cycle*. **Changes:** less margin given to markdowns; stock redeployed, not dumped. **Keeps:** this category's true aging behavior.
+
+### New Store / Launch Planning
+_A new store opens in three weeks with no sales history to plan from._
+**Today.** No local history; the initial stocking quantities are a guess. Your planner needs history it doesn't have — it copies a template or defaults to safety stock, neither tuned to this market.
+**With AgentForge.** Comparable-store sell-through, local signals, category norms, restock lead time, opening promo assembled. Workspace: `⚠ No history — Store 214 opens in 21 days` → *comp-weighted buy, over-index performance, lean where restock is fast*. **Changes:** fewer dead openings and empty shelves; capital matched to proven format. **Keeps:** every opening becomes a comp for the next.
+
+### Capacity Allocation
+_Production capacity is short, and every order thinks it's first._
+**Today.** Demand exceeds the line; three orders compete — one strategic, one high-margin, one at penalty risk. Your scheduler sequences by due date — it doesn't weigh the penalty, the margin, and the strategic value against each other.
+**With AgentForge.** Capacity, due dates and penalties, margin, strategic weight, changeover assembled. Workspace: `⚠ Capacity 0.7× demand — line 2` → *sequence C, A, B to avoid penalty and protect tier-A*. **Changes:** penalties avoided; margin and strategic value protected; less idle capacity. **Keeps:** this line's real changeover and throughput behavior.
+
+### SKU Substitution
+_The SKU the customer wants is short — what do you offer instead?_
+**Today.** An order can't be filled; a near-substitute is in stock, another inbound, the customer has history. Your OMS shows a stock-out — not which substitute this customer will accept or whether the inbound arrives in time.
+**With AgentForge.** Substitute availability/fit, inbound timing, customer tolerance, ship window, margin assembled. Workspace: `⚠ Requested SKU out — order #6610, 2-day window` → *offer the 95%-fit in-stock substitute, flag for confirm*. **Changes:** fewer missed windows; fewer returns; substitutions the customer accepts. **Keeps:** each customer's real tolerance.
+
+## Planning · Supplier & Procurement
+
+### Supplier Disruption Response
+_A supplier's lead time just doubled, and the orders riding on it are now at risk._
+**Today.** An email: lead time 6 → 14 days; three open orders depend on it, one tier-A with a penalty clause. Your ERP records the order — it doesn't read the email, know the clause triggers at ten days, or recognize the account is growing.
+**With AgentForge.** Inbound signals, affected orders/accounts, penalty terms, alternates (SLA/cost), account tier assembled. Workspace: `⚠ Margin risk — Order #4821` → *reroute to the in-SLA alternate at +4%* (within auto-approve). **Changes:** penalties avoided; tier-A protected; faster than an inbox allows. **Keeps:** what happened last time this supplier slipped.
+
+### Purchase Order Exceptions
+_A PO came back out of tolerance — accept it, or push back?_
+**Today.** A confirmation: +3% price, +4 days, −5% qty, dock already expecting it. Your ERP flags the variance — it doesn't know whether 3% is acceptable here or whether the slip breaks a downstream commit.
+**With AgentForge.** PO vs confirmation, tolerance bands, downstream commits, supplier leverage, receiving assembled. Workspace: `⚠ Out of tolerance — PO #44120` → *accept price, push the date, absorb short qty from safety stock*. **Changes:** fewer cost/schedule surprises; pushback focused where it matters. **Keeps:** this supplier's reliability and which pushbacks land.
+
+### Expedite-or-Hold
+_Pay to expedite, or absorb the delay — which costs less?_
+**Today.** A shipment runs late; expedited freight recovers the date at a premium, holding risks a stock-out or penalty. Your TMS quotes a rate — it doesn't weigh the premium against the cost of the delay.
+**With AgentForge.** Delay and exposed orders, premium options, stock-out/penalty exposure, SKU criticality assembled. Workspace: `⚠ 3-day delay — shipment S-8841` → *partial-expedite the critical SKUs only* (net-positive vs penalty). **Changes:** premiums paid only where they pay off; penalties avoided; margin protected. **Keeps:** the break-even for this lane and supplier.
+
+### Dual-Source Switching
+_Your primary source is wobbling — shift volume to the backup?_
+**Today.** Primary quality and OTD are drifting; the qualified alternate costs more but is steady. Your procurement system tracks scorecards — it doesn't decide when the trend is bad enough to move volume, or how much.
+**With AgentForge.** Primary trend, alternate capacity/cost, switching cost/qualification, volume at risk, contract assembled. Workspace: `⚠ Primary drift — part 7740: OTD 96%→88%` → *shift 40% to the alternate, keep primary on watch*. **Changes:** exposure reduced before a failure; cost increase contained. **Keeps:** this supplier's real trajectory and the right trigger.
+
+### Supplier Risk Escalation
+_A supplier is trending toward failure — act now, or wait for proof?_
+**Today.** Weak signals stack — slower acks, a late-payment notice, a quality dip — none conclusive. Your systems hold each signal separately; none assembles them into a risk picture or decides it's time to act.
+**With AgentForge.** Financial-distress signals, quality/OTD trend, responsiveness, external risk, exposure assembled. Workspace: `⚠ Risk signals stacking — supplier Atlas` → *escalate: open dual-source, schedule risk review*. **Changes:** failures anticipated, not absorbed; single-source exposure cut early. **Keeps:** which signal combinations actually precede failure.
+
+## Execution · Transportation & Yard Operations
+
+### Trailer Dwell Optimization
+_A trailer has sat past its dwell window, and detention is now ticking._
+**Today.** A trailer idles three hours over; detention runs, a door frees, a carrier waits. Your yard system shows a dot on a map — and the dot is an estimate, not the truth; it doesn't know the detention clause or the downstream appointment.
+**With AgentForge.** Live position with confidence, appointment/door schedule, detention clock and terms, downstream priority assembled. Workspace: `⚠ Dwell 3h 12m over — trailer T-2207` → *reposition to door 14, release the empty*. **Changes:** lower detention spend; higher dock throughput; more on-time departures. **Keeps:** which carriers, doors, and hours behave how.
+
+### Dock Assignment
+_Trucks are arriving faster than doors are freeing up._
+**Today.** Three inbound within the hour, two doors, thin labor, one reefer. Your WMS shows door status — it doesn't sequence arrivals against labor, load sensitivity, and downstream need.
+**With AgentForge.** Inbound ETAs/load types, door capability, labor, handling needs, downstream pick priority assembled. Workspace: `⚠ 3 inbound, 2 doors — facility 7, one reefer` → *reefer → door 3, urgent-pick → door 5, third holds*. **Changes:** no spoiled cold-chain; higher throughput; labor used where it counts. **Keeps:** this facility's real door and labor rhythms.
+
+### Carrier Exceptions
+_A shipment just missed its window — reroute, re-promise, or recover?_
+**Today.** A delay will miss a tier-A delivery window; an alternate recovers most, a re-promise might be accepted. Your TMS flags the exception — it doesn't know this customer's tolerance or whether recovery is worth the cost.
+**With AgentForge.** Revised ETA, customer tier/tolerance, recovery options and cost, commitment terms assembled. Workspace: `⚠ Window miss — load L-5567, tier-A` → *partial-reroute via alternate, notify proactively*. **Changes:** tier-A relationships protected; recovery spend where it earns; fewer surprised customers. **Keeps:** each account's real tolerance.
+
+### Asset Retrieval
+_The asset the next step needs can't be found in time._
+**Today.** A job needs a specific asset in 40 minutes; its last-known location is stale, two candidates match. Your tracking gives a last-known dot with a confidence you can't see — it doesn't decide whether that's good enough to act on.
+**With AgentForge.** Last-known position and confidence, candidate proximity, retriever availability, window, substitute assembled. Workspace: `⚠ Asset needed in 40 min — A-3092, confidence medium` → *dispatch to zone 4, stage substitute as backup*. **Changes:** fewer missed windows; less time chasing stale positions; hedged against bad reads. **Keeps:** which zones and tags to trust, by hour.
+
+### Vehicle Logistics
+_The yard is congesting, and the next move sets up the next hour._
+**Today.** Vehicles stack — inbound, ready-for-load, finished; space is tight, a lane is blocked, a priority load is due. Your yard system shows a map — not the next move to clear congestion and hit the departure.
+**With AgentForge.** Vehicle positions/states, destinations/priority, space and blocked lanes, deadlines, movers assembled. Workspace: `⚠ Yard congesting — priority due in 35 min` → *clear lane B, move priority out, restage*. **Changes:** priority departures kept; congestion cleared faster; fewer deadlocked lanes. **Keeps:** this yard's congestion patterns by shift and volume.
+
+## Execution · Manufacturing Operations
+
+### Work-in-Process Bottlenecks
+_A work cell is starving while the material it needs sits two buildings away._
+**Today.** Cell 4 is about to run dry; material is staged two buildings over, another cell backs up, shift changes in 90 minutes. Your MES shows the schedule, not the floor — it reports the bottleneck after it forms.
+**With AgentForge.** WIP location and confidence, live schedule/cell status, staging/transit, shift labor assembled. Workspace: `⚠ Cell 4 starving — ~22 min to dry` → *expedite the lot, resequence two orders*. **Changes:** higher line utilization; fewer starved cells; less reliance on one supervisor's memory. **Keeps:** the floor's recurring bottlenecks and what cleared them.
+
+### Quality Holds
+_A lot failed inspection — release, rework, or scrap?_
+**Today.** A lot trips a check, bound for a key customer; rework is slow, scrap costly, a deviation might be acceptable. Your QMS logs the hold — it doesn't weigh the deviation against the customer's real tolerance and the schedule.
+**With AgentForge.** Defect type/severity, customer spec/tolerance, rework cost/time, schedule impact, deviation history assembled. Workspace: `⚠ Lot failed — Q-4471, tier-A` → *release under documented deviation* (within customer tolerance). **Changes:** fewer needless scraps/reworks; no escapes; schedule protected. **Keeps:** this defect's real tolerance, by customer.
+
+### Production Line Balancing
+_The schedule has drifted, and the line is out of balance._
+**Today.** Mid-shift the plan no longer matches reality — one station ahead, another behind, an order moved up, labor uneven. Your MES holds the schedule — it doesn't rebalance labor and sequence against the floor's real rates.
+**With AgentForge.** Station rates/status, labor flexibility/skills, order priority/due dates, throughput vs plan, changeover assembled. Workspace: `⚠ Out of balance — station 3 behind, 5 idle` → *shift one operator 5 → 3, resequence priority up*. **Changes:** steadier throughput; due dates held through drift; labor on the bottleneck. **Keeps:** this line's real rates and which moves help.
+
+### Resource Assignment
+_The right machine, bay, or crew for the job isn't obvious._
+**Today.** A job is ready; the ideal resource is busy, a second is slower, a third needs a changeover. Your scheduler assigns by availability — it doesn't weigh capability against changeover against priority.
+**With AgentForge.** Resource capability/status, changeover, job priority/due, capability match, crew skills assembled. Workspace: `⚠ Resource contention — J-2208, ideal busy` → *change over the third, assign now*. **Changes:** higher throughput and yield; fewer idle jobs; resources matched to the work. **Keeps:** each resource's real capability and changeover economics.
+
+## Execution · Claims & Service Operations
+
+### Claims Adjudication
+_A claim is filed, and it has to be decided against a contract no one has read in a year._
+**Today.** Coverage depends on contract terms, component history, the shop's record, and faint fraud signals; the customer waits. Your claims system routes a task — it doesn't read the contract, recall the shop, or weigh the fraud signal against the SLA.
+**With AgentForge.** Contract/coverage, claim/component history, shop record, fraud signals, SLA/authority assembled. Workspace: `⚠ Coverage ambiguity — claim #88412` → *approve at contracted rate, flag partial exclusion* (within authority). **Changes:** tighter loss ratio; faster, more consistent cycle time; defensible decisions. **Keeps:** the patterns — a shop, a component, a fraud signature.
+
+### Fraud & Anomaly Triage
+_A claim doesn't quite add up — investigate, fast-track, or route?_
+**Today.** Faint anomaly signals — an unusual pattern, a flagged provider, a timing oddity — none conclusive, investigation costly. Your system flags a risk score — it doesn't assemble the weak signals or decide the threshold to investigate.
+**With AgentForge.** Anomaly signals/patterns, provider history, claim/customer history, investigation cost, exposure assembled. Workspace: `⚠ Anomaly signals — claim #90233, provider flagged` → *route to SIU, hold payout* (multi-signal). **Changes:** leakage caught earlier; clean claims not slowed; investigation where it counts. **Keeps:** which signal combinations and providers predict loss.
+
+### Adjuster Assignment
+_This claim needs the right adjuster or shop — who gets it?_
+**Today.** One adjuster has the specialty but a full queue, a shop is closer but mixed-rated, the customer is priority. Your system routes by queue or zone — it doesn't match complexity to specialty against capacity and priority.
+**With AgentForge.** Complexity/specialty needed, capacity/ratings, geography/SLA, customer priority, load balance assembled. Workspace: `⚠ Assignment needed — claim #77150` → *assign specialist, rebalance one routine claim off queue*. **Changes:** claims matched to skill; SLAs protected; balanced load. **Keeps:** which matches resolve fastest and cleanest.
+
+### Service Exceptions
+_Service fell out of SLA — what's the right make-good?_
+**Today.** A missed commitment, an upset customer; credit, expedite, escalation, or follow-up each carry a different cost and effect. Your service system opens a ticket — it doesn't choose a remedy proportional to the customer and the miss.
+**With AgentForge.** Breach severity, customer value/history, remedies and cost, past effectiveness, contract assembled. Workspace: `⚠ SLA missed — case #61190, high-value` → *service credit + expedited resolution, owner follow-up* (proportional to value). **Changes:** retained high-value customers; remedies proportional, not reflexive; fewer repeat escalations. **Keeps:** which make-goods actually work, by customer value and miss type.
 
 ---
 
-# Deep Decision Model pages
-
-Each deep page follows the same shape — the moment, why it's hard, why existing systems don't help, what AgentForge assembles, the governed decision, what improves, the knowledge it keeps, and (lightly, at the end) the architecture. The five below are V1; the rest of the catalog grows on this template.
-
----
-
-## Demand Allocation
-`Solutions · Planning · Inventory & Planning`
-
-**Demand outruns supply, and someone has to decide who gets the units.**
-
-**The decision.** Your forecast is in. It says three channels each want more of a hot SKU than you'll have for the next four weeks. The forecast doesn't decide who gets it — you do, by Friday, before the allocation locks.
-
-**Why it's hard today.** Every channel's number looks justified. Cut the wrong one and you strand a launch, burn a key account, or leave margin on the table. The right answer depends on context a spreadsheet doesn't hold: which account is actually growing, which promotion is firm, which channel quietly over-forecasts every season.
-
-**Why your systems don't help.** Your planning system forecast the demand — it didn't weigh the trade-off. It hands you a number and a deadline, not a decision. So the call gets made from memory, in a meeting, and it is never recorded, defensible, or repeatable.
-
-**Operational context assembled:** Live and committed demand by channel · On-hand, in-transit, and reserved inventory · Promotion and launch calendars · Account growth and margin tiers · Each channel's historical forecast bias
-
-```
-decision-workspace · allocation · SKU 7741
-⚠ Demand 1.8× supply — SKU 7741, next 4 weeks
-Evidence assembled
- · Wholesale, DTC, and Retail all over-ask vs on-hand + in-transit
- · Launch reservation firm for 1,200 units (DTC)
- · Wholesale forecast runs +22% hot every season, later cut
- · Retail account flagged tier A, growing
-Recommendation · protect launch + tier-A, discount wholesale ask
- Policy: launch reserved first · wholesale bias-adjusted · within margin floor · awaiting planner sign-off
-[ Decision Object #7741 ] [ Evidence ×4 ] [ Policy ✓ ] [ Approve ] [ Adjust ]
-```
-
-**Governed by your policy:** Minimums for strategic accounts · Margin floors · Launch reservations honored first · Forecast-bias adjustment on chronic over-askers
-
-**What improves:** Higher fill on the demand that matters · Fewer stranded launches and lost key-account orders · An allocation that's defensible after the fact
-
-**The knowledge it keeps.** Every allocation becomes a Decision Object — what was asked, what was given, and how it turned out. Next season the model already knows which channel over-asked and by how much. And a model is never quite finished: every deployment it runs in leaves it a little sharper at the trade-off.
-
----
-
-## Supplier Disruption Response
-`Solutions · Planning · Supplier & Procurement`
-
-**A supplier's lead time just doubled, and the orders riding on it are now at risk.**
-
-**The decision.** An email lands: your supplier's lead time slipped from six days to fourteen. Three open orders depend on it — one for a tier-A account with a penalty clause. You have hours to decide: wait, expedite, reroute to an alternate, or re-promise the customer.
-
-**Why it's hard today.** The signal is buried in an inbox, the contract terms are in a PDF, the alternate's SLA is in another system, and the account's importance is in someone's head. By the time you've assembled all of it, the window to act has already narrowed.
-
-**Why your systems don't help.** Your ERP records the order; it doesn't read the supplier's email, know the penalty clause triggers at ten days, or recognize this account is growing. It surfaces a late PO, not a decision.
-
-**Operational context assembled:** Inbound supplier signals (last 48h) · Affected open orders and their accounts · Contract penalty terms · Alternate suppliers — SLA and cost · Account tier and growth
-
-```
-decision-workspace · order #4821
-⚠ Margin risk — Order #4821 · Northwind Logistics
-Evidence assembled
- · Supplier lead time slipped 6 → 14 days (3 signals, last 48h)
- · Contract penalty clause triggers above a 10-day delay
- · Alternate supplier in-SLA at +4% unit cost
- · Account flagged priority tier A
-Recommendation · reroute to alternate supplier
- Policy: +4% spend within auto-approve threshold · awaiting human sign-off
-[ Decision Object #4821 ] [ Evidence ×4 ] [ Policy ✓ ] [ Approve ] [ Override ]
-```
-
-**Governed by your policy:** Spend within auto-approve threshold · Penalty-clause avoidance · Tier-A protection · Approved alternates only
-
-**What improves:** Penalties avoided · Tier-A orders protected · A response faster than an inbox allows
-
-**The knowledge it keeps.** The decision, its evidence, and the outcome persist. The next time this supplier slips, the system starts from what happened last time — and gets sharper with every deployment it runs in.
-
----
-
-## Trailer Dwell Optimization
-`Solutions · Execution · Transportation & Yard Operations`
-
-**A trailer has sat past its dwell window, and detention is now ticking.**
-
-**The decision.** A loaded trailer has idled in the yard three hours past its target. The detention clock is running, a door is freeing up, and another carrier is waiting. Hold it, move it to a door, release it back to the carrier, or reassign the load?
-
-**Why it's hard today.** The trailer's position drifts, the appointment schedule lives in the TMS, the detention terms are in the carrier contract, and door availability changes by the minute. No one screen shows all four at once — and the cost of guessing wrong is detention dollars or a missed departure.
-
-**Why your systems don't help.** Your yard system knows where the trailer is; it doesn't know the detention clause, the downstream appointment, or that this carrier's SLA makes releasing it the cheaper move. It shows a dot on a map, not a decision — and that dot is an estimate, not the truth.
-
-**Operational context assembled:** Live yard position and dwell time, with confidence · Appointment and door schedule · Detention clock and carrier terms · Downstream load priority
-
-```
-decision-workspace · yard · trailer T-2207
-⚠ Dwell 3h 12m over target — trailer T-2207, detention accruing
-Evidence assembled
- · Position confidence high; idle at staging row 9
- · Door 14 frees in ~15 min
- · Carrier SLA: release-empty avoids detention after 4h
- · Inbound carrier waiting on a door
-Recommendation · reposition to door 14, release the empty
- Policy: within detention threshold · dock capacity ok · awaiting yard-lead sign-off
-[ Decision Object #2207 ] [ Evidence ×4 ] [ Policy ✓ ] [ Approve ] [ Hold ]
-```
-
-**Governed by your policy:** Detention-cost thresholds · Carrier contract terms · Dock capacity and safety · Appointment priority
-
-**What improves:** Lower detention spend · Higher dock throughput · More on-time departures
-
-**The knowledge it keeps.** Each call — and whether it actually cleared the congestion — is kept, so the yard's own patterns (which carriers, which doors, which hours) sharpen the next decision, and the model improves with every yard it runs in.
-
----
-
-## Work-in-Process Bottlenecks
-`Solutions · Execution · Manufacturing Operations`
-
-**A work cell is starving while the material it needs sits two buildings away.**
-
-**The decision.** Cell 4 is about to run dry. The material it needs is staged two buildings over, another cell is backing up behind it, and the shift changes in ninety minutes. Expedite the move, resequence the line, pull a different order forward, or hold?
-
-**Why it's hard today.** WIP location is approximate, the schedule is mid-shift, labor is finite, and the bottleneck moves the moment you act on it. The floor knows it's stuck before any system flags it — and an experienced supervisor's instinct is the only thing bridging the gap.
-
-**Why your systems don't help.** Your MES shows the schedule, not the reality on the floor — where material actually is, how confident that reading is, and which move keeps the most cells running. It reports the bottleneck after it has already formed.
-
-**Operational context assembled:** WIP location and confidence by cell · Live schedule and cell status · Material staging and transit · Labor available this shift
-
-```
-decision-workspace · floor · cell 4
-⚠ Cell 4 starving — ~22 min to dry, Cell 6 backing up
-Evidence assembled
- · Required lot staged in Bldg C (move ~12 min)
- · Resequencing two orders keeps 4 cells running
- · Shift change in 90 min; one mover available
- · Priority order due end of shift
-Recommendation · expedite the lot, resequence two orders
- Policy: within changeover limit · labor ok · priority order protected · awaiting supervisor
-[ Decision Object #C4-118 ] [ Evidence ×4 ] [ Policy ✓ ] [ Approve ] [ Adjust ]
-```
-
-**Governed by your policy:** Changeover-cost limits · Labor and safety constraints · Schedule-adherence rules · Priority-order protection
-
-**What improves:** Higher line utilization · Fewer starved cells and shift-end misses · Less reliance on one supervisor's memory
-
-**The knowledge it keeps.** The move and its result are kept, so the floor's recurring bottlenecks — and what actually cleared them — become the model's, not just the veteran supervisor's, sharpening with every plant it runs in.
-
----
-
-## Claims Adjudication
-`Solutions · Execution · Claims & Service Operations`
-
-**A claim is filed, and it has to be decided against a contract no one has read in a year.**
-
-**The decision.** A claim comes in. Coverage depends on the contract terms, the component's history, the shop's track record, and a few faint fraud signals — and the customer is waiting. Approve, deny, partial-pay, request more, or escalate?
-
-**Why it's hard today.** The contract is a PDF, the prior claims are in one system, the shop's pattern in another, the fraud signal is subtle. Adjudicate too fast and you leak loss; too slow and the customer churns. Consistency across adjusters is nearly impossible by hand.
-
-**Why your systems don't help.** Your claims system stores the claim; it doesn't read the contract, recall this shop's history, or weigh the fraud signal against the SLA. It routes a task, not a decision.
-
-**Operational context assembled:** Contract terms and coverage · Claim and component history · Shop / provider track record · Fraud and anomaly signals · SLA and authority limits
-
-```
-decision-workspace · claim #88412
-⚠ Coverage ambiguity — claim #88412, component out of standard window
-Evidence assembled
- · Contract covers component; one exclusion applies partially
- · Shop history clean; 0 anomalies in 24 months
- · Fraud score low; documentation complete
- · Within adjuster authority limit
-Recommendation · approve at contracted rate, flag partial exclusion
- Policy: within authority · compliant · reserve threshold ok · awaiting adjuster sign-off
-[ Decision Object #88412 ] [ Evidence ×4 ] [ Policy ✓ ] [ Approve ] [ Escalate ]
-```
-
-**Governed by your policy:** Coverage rules and exclusions · Authority limits by role · Regulatory compliance · Reserve thresholds
-
-**What improves:** A tighter loss ratio · Faster, more consistent cycle time · Defensible, audit-ready decisions
-
-**The knowledge it keeps.** Every adjudication is preserved with its reasoning, so similar claims are decided consistently — and the patterns (a shop, a component, a fraud signature) sharpen with each one, and with every book it runs in.
-
----
-
-_Under the hood, every one of these runs the same operating model: verified context assembled, options weighed and adversarially challenged, the decision governed by policy, the outcome learned. The decision changes from one to the next. The architecture does not. → See **How It Works**._
+_Under the hood, every one runs the same operating model: verified context assembled, options weighed and adversarially challenged, the decision governed by policy, the outcome learned. The decision changes from one to the next. The architecture does not. → See **How It Works**._
