@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { Display, Heading, Eyebrow, Lead, Prose, MonoLabel } from "@/components/site/typography";
 import { Reveal } from "@/components/site/reveal";
+import { WorkspaceTabs } from "@/components/site/workspace-tabs";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { GROUPS } from "@/lib/solutions-data";
@@ -105,20 +106,47 @@ export default function SolutionsPage() {
           </Section>
         ))}
 
-        {/* 3 · The reveal — one architecture; the model sharpens with use. */}
-        <Section>
-          <Container className="flex flex-col gap-6">
+        {/* 3a · The realization — felt, not asserted; the Workspace returns. */}
+        <Section className="border-t border-border/60">
+          <Container className="flex flex-col gap-12">
             <Reveal className="flex max-w-3xl flex-col gap-6">
-              <SectionHeader
-                eyebrow="One platform"
-                title="Read across the columns, and the realization arrives on its own."
-                lead="These come from operations that share almost nothing. Yet a planner and a yard lead are running the same shape of decision — and the same architecture governs both, configured to each."
-              />
-              <Prose className="max-w-3xl">
-                That is why this is not a list of products. Each is a{" "}
-                <span className="text-foreground">Decision Model</span> on one architecture — and a
-                model is never quite finished. Every operation it runs in leaves it a little sharper,
-                until the model itself becomes the asset.
+              <Eyebrow>One platform</Eyebrow>
+              <Heading className="text-h2">Only the decision changes. The operating system doesn&apos;t.</Heading>
+              <Prose>
+                At first glance, an inventory allocation, a slipping supplier, a trailer past its
+                window, a starved work cell, and a contested claim look like five different
+                businesses. Read a few, though, and the same journey shows through each: reality is
+                assembled from systems that don&apos;t talk to each other; the evidence is weighed;
+                the alternatives are challenged; policy draws the line; a governed Decision Object is
+                made; and the outcome becomes something the organization keeps. The content changes
+                completely. The path never does.
+              </Prose>
+            </Reveal>
+
+            <Reveal>
+              <WorkspaceTabs className="mx-auto max-w-2xl" />
+            </Reveal>
+
+            <Reveal>
+              <p className="mx-auto max-w-2xl text-center text-sm text-muted-foreground">
+                Five operational worlds. One Decision Workspace underneath. This was never five
+                products.
+              </p>
+            </Reveal>
+          </Container>
+        </Section>
+
+        {/* 3b · The moat seed — planted, gently; the full reveal waits for the Library. */}
+        <Section>
+          <Container className="flex max-w-3xl flex-col gap-5">
+            <Reveal className="flex flex-col gap-5">
+              <MonoLabel className="text-foreground/80">And it compounds</MonoLabel>
+              <Prose>
+                Every Decision Model begins with a single operational problem. Every deployment makes
+                it more complete — a new constraint, an edge case no one anticipated, a pattern that
+                only shows up at scale, a governance rule learned the hard way. So the platform
+                doesn&apos;t simply accumulate customers. It accumulates increasingly sophisticated
+                Decision Models — until the model itself becomes an operational asset.
               </Prose>
             </Reveal>
           </Container>

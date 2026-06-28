@@ -53,7 +53,13 @@ _Real-time calls as events happen — on the floor, in the yard, on the live eve
 - **Adjuster Assignment** — Route each claim to the right adjuster or shop.
 - **Service Exceptions** — Decide the make-good when service falls out of SLA.
 
-**One platform — read across the columns, and the realization arrives on its own.** These come from operations that share almost nothing. Yet a planner and a yard lead are running the same shape of decision — and the same architecture governs both, configured to each. That is why this is not a list of products. Each is a **Decision Model** on one architecture — and a model is never quite finished. Every operation it runs in leaves it a little sharper, until the model itself becomes the asset.
+### One platform · Only the decision changes. The operating system doesn't.
+
+At first glance, an inventory allocation, a slipping supplier, a trailer past its window, a starved work cell, and a contested claim look like five different businesses. Read a few, though, and the same journey shows through each: reality is assembled from systems that don't talk to each other; the evidence is weighed; the alternatives are challenged; policy draws the line; a governed Decision Object is made; and the outcome becomes something the organization keeps. The content changes completely. The path never does.
+
+_[Visual: the **Decision Workspace**, tabbed across the five worlds — Inventory · Supplier · Yard · Manufacturing · Claims. Clicking a tab swaps the decision inside; the window never changes.]_ **Five operational worlds. One Decision Workspace underneath. This was never five products.**
+
+**And it compounds.** Every Decision Model begins with a single operational problem. Every deployment makes it more complete — a new constraint, an edge case no one anticipated, a pattern that only shows up at scale, a governance rule learned the hard way. So the platform doesn't simply accumulate customers. It accumulates increasingly sophisticated Decision Models — until the model itself becomes an operational asset.
 
 > **Don't see your decision? It's probably the same shape.** Tell us the call your team makes from memory, under pressure, with money on the line. We'll show you what it looks like governed. → **Request access**
 
