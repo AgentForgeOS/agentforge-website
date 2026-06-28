@@ -82,14 +82,13 @@ export default function ArchitecturePage() {
               <Eyebrow>Reference architecture</Eyebrow>
               <Display className="text-h1">The Operational Intelligence Architecture.</Display>
               <Lead>
-                The homepage made the case for a decision layer. This page is how it is built —
-                one operating model, examined stage by stage, until you could draw it from memory.
+                Operational intelligence has a center — the{" "}
+                <span className="text-foreground">decision</span>. Every construct in this
+                architecture exists to produce one, govern one, or learn from one.
               </Lead>
               <Prose>
-                The architecture has a center: the{" "}
-                <span className="text-foreground">decision</span>. Every other construct exists to
-                produce one, govern one, or learn from one. That is the path a decision travels —
-                and the rest of this page is a zoom into each step of it.
+                A decision travels a fixed path: from the evidence that first signals it, through
+                the choice itself, to the pattern it leaves behind for the next one.
               </Prose>
             </Reveal>
 
@@ -232,7 +231,7 @@ export default function ArchitecturePage() {
               <SectionHeader
                 eyebrow="Decision Object"
                 title="The lifecycle ends in an object, not an answer."
-                lead="This is the architectural control point. Why can't a recommendation simply be a model's response? Because a response evaporates the moment it is read — it cannot be governed, audited, or learned from."
+                lead="This is the architectural control point. A model's response evaporates the moment it is read — it cannot be governed, audited, or learned from. So a decision is never allowed to remain a response."
               />
             </Reveal>
 
@@ -240,9 +239,8 @@ export default function ArchitecturePage() {
               <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
                 <div className="flex flex-col gap-5">
                   <Prose>
-                    So AgentForge never lets a decision stay a response. Every one becomes a durable
-                    artifact the organization owns — and everything downstream depends on that single
-                    design choice:
+                    It becomes a durable artifact the organization owns instead — and everything
+                    downstream depends on that single design choice:
                   </Prose>
                   <ul className="flex flex-col gap-2.5 text-sm leading-relaxed text-muted-foreground">
                     <li className="flex gap-2.5">
@@ -433,20 +431,22 @@ export default function ArchitecturePage() {
               <SectionHeader
                 eyebrow="The platform"
                 title="Open where you have capability. Proprietary where the value concentrates."
-                lead="All of this sits behind one deliberate boundary. Detect and Anticipate are open — they embrace the technologies an enterprise already runs. Decide and Learn are the proprietary core: the assembly of context, the Decision Object, and the loops that learn."
+                lead="All of this sits behind one deliberate boundary. Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn."
               />
             </Reveal>
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
               <Reveal className="flex flex-col gap-5">
                 <Prose>
-                  Each stage can evolve independently — a new sensing source, a better forecaster —
-                  while the way decisions are made, governed, and remembered stays constant. The
-                  control point is not the sensors or the models; it is the operating model that turns
-                  context into governed, compounding decisions.
+                  The RTLS, vision, forecasting, and optimization providers an enterprise already
+                  runs — or new ones adopted over time — integrate through one contract and feed the
+                  same operating model. AgentForge does not compete with them; it gives them a
+                  decision layer to feed. Each can evolve independently while the way decisions are
+                  made, governed, and remembered stays constant.
                 </Prose>
                 <Prose>
-                  That is what AgentForge owns. The rest of the ecosystem plugs in around it, and the
-                  operating model never changes.
+                  The control point is not the sensors or the models — it is the operating model that
+                  turns context into governed, compounding decisions. That is what AgentForge owns;
+                  the ecosystem plugs in around it.
                 </Prose>
               </Reveal>
               <Reveal delay={0.1}>
