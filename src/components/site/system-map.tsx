@@ -2,73 +2,79 @@ import { Fragment } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * SystemMap — the one drawing of the whole operating model. Shown whole at the
- * top and at the close; shown with a single node lit at the head of each section,
- * so the page reads as successive zoom-ins on the same diagram rather than a
- * sequence of independent chapters. Operational intelligence is a loop: context →
- * decision → object → governance → learning → (patterns feed back to context).
+ * SystemMap — the one drawing of the whole operating model, as a closed LOOP,
+ * not a pipeline. AgentForge is a feedback system: a decision is produced,
+ * governed, executed, and its outcome learned from — and what is learned feeds
+ * the next decision. Shown whole at the top and the close; shown with one node
+ * lit at the head of each section, so the page reads as zoom-ins on one diagram.
+ *
+ *   Context → Decide → Decision Object → Govern
+ *      ▲                                    │ execute
+ *   Patterns ← Learn ← Outcome ← Execute ◀──┘
  */
-const NODES = [
-  { id: "context", label: "Context", sub: "assemble reality" },
-  { id: "lifecycle", label: "Lifecycle", sub: "produce the decision" },
-  { id: "object", label: "Decision Object", sub: "make it durable" },
-  { id: "governance", label: "Governance", sub: "authorize it" },
-  { id: "learning", label: "Learning", sub: "compound it" },
-] as const;
+export type SystemNode = "context" | "decide" | "object" | "govern" | "learn";
 
-export type SystemNode = (typeof NODES)[number]["id"];
+const TOP: { id?: SystemNode; label: string }[] = [
+  { id: "context", label: "Context" },
+  { id: "decide", label: "Decide" },
+  { id: "object", label: "Decision Object" },
+  { id: "govern", label: "Govern" },
+];
 
-export function SystemMap({
-  active,
-  detailed,
-  className,
-}: {
-  active?: SystemNode;
-  detailed?: boolean;
-  className?: string;
-}) {
+const BOTTOM: { id?: SystemNode; label: string }[] = [
+  { id: "learn", label: "Patterns" },
+  { id: "learn", label: "Learn" },
+  { label: "Outcome" },
+  { label: "Execute" },
+];
+
+function Node({ label, on }: { label: string; on: boolean }) {
   return (
-    <div className={cn("relative rounded-xl border border-border bg-card px-4 pt-9 pb-4 md:px-6", className)}>
-      {/* the loop — learning feeds patterns back to context */}
-      <div
-        className="pointer-events-none absolute inset-x-6 top-3.5 h-4 rounded-t-lg border-x border-t border-dashed border-hairline-strong"
-        aria-hidden
-      />
-      <span className="absolute left-1/2 top-1.5 -translate-x-1/2 whitespace-nowrap bg-card px-2 font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
-        ↺ learning feeds back
-      </span>
+    <span
+      className={cn(
+        "flex flex-1 items-center justify-center rounded-lg border px-1.5 py-2 text-center font-mono text-[10px] uppercase tracking-wide sm:text-[11px]",
+        on ? "border-brand/50 bg-brand/[0.06] text-brand" : "border-border text-foreground/60",
+      )}
+    >
+      {label}
+    </span>
+  );
+}
 
-      <div className="flex items-stretch justify-between gap-1 sm:gap-2">
-        {NODES.map((n, i) => {
-          const on = active === n.id;
-          return (
-            <Fragment key={n.id}>
-              {i > 0 ? (
-                <span className="self-center text-xs text-muted-foreground/40" aria-hidden>
-                  →
-                </span>
-              ) : null}
-              <span
-                className={cn(
-                  "flex flex-1 flex-col items-center justify-center gap-0.5 rounded-lg border px-1.5 py-2 text-center",
-                  on ? "border-brand/50 bg-brand/[0.06]" : "border-border",
-                )}
-              >
-                <span
-                  className={cn(
-                    "font-mono text-[10px] uppercase tracking-wide sm:text-[11px]",
-                    on ? "text-brand" : "text-foreground/60",
-                  )}
-                >
-                  {n.label}
-                </span>
-                {detailed ? (
-                  <span className="text-[10px] leading-tight text-muted-foreground">{n.sub}</span>
-                ) : null}
-              </span>
-            </Fragment>
-          );
-        })}
+const Arrow = ({ d }: { d: string }) => (
+  <span className="shrink-0 self-center px-0.5 text-xs text-muted-foreground/40" aria-hidden>
+    {d}
+  </span>
+);
+
+export function SystemMap({ active, className }: { active?: SystemNode; className?: string }) {
+  return (
+    <div className={cn("rounded-xl border border-border bg-card p-4 md:p-5", className)}>
+      <div className="flex items-stretch gap-1">
+        {TOP.map((n, i) => (
+          <Fragment key={n.label}>
+            {i > 0 ? <Arrow d="→" /> : null}
+            <Node label={n.label} on={!!active && n.id === active} />
+          </Fragment>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between px-1 py-1.5">
+        <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted-foreground/60">
+          ↑ feeds the next decision
+        </span>
+        <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-muted-foreground/60">
+          execute ↓
+        </span>
+      </div>
+
+      <div className="flex items-stretch gap-1">
+        {BOTTOM.map((n, i) => (
+          <Fragment key={n.label}>
+            {i > 0 ? <Arrow d="←" /> : null}
+            <Node label={n.label} on={!!active && n.id === active} />
+          </Fragment>
+        ))}
       </div>
     </div>
   );

@@ -6,18 +6,17 @@ Any system that sets out to govern operational decisions arrives at the same arc
 
 Operational intelligence is a loop. Reality is assembled into context; a decision is produced and made durable; it is governed, acted on, and learned from — and the learning sharpens the next turn.
 
-### The system, drawn once
+### The system, drawn once — a loop, not a pipeline
 
 ```
-                       ↺  learning feeds back
-   ┌───────────────────────────────────────────────────────────────┐
-   │                                                               │
- Context  →  Lifecycle  →  [ Decision Object ]  →  Governance  →  Learning
- assemble     produce         make it durable        authorize     compound
- reality     the decision                              it            it
+   Context  →  Decide  →  Decision Object  →  Govern
+      ▲                                          │ execute
+      │                                          ▼
+   Patterns  ←  Learn  ←  Outcome  ←  Execute  ◀─┘
+   ( ↑ feeds the next decision )
 ```
 
-_(This diagram reappears in each section with one node highlighted — the "you are here.")_
+_The architecture is recursive: every governed decision is executed, its outcome learned from, and what is learned feeds the next decision. This diagram reappears in each section with one node highlighted — the "you are here."_
 
 ---
 
@@ -57,10 +56,10 @@ _Verified context is the input. Turning it into a decision is a fixed sequence �
 
 ---
 
-## Decision Lifecycle  · ▸ Lifecycle
+## Decision Lifecycle  · ▸ Decide
 ### A decision produced ad hoc cannot be trusted.
 
-So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. **The LLM has no authority.**
+So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. Language models contribute reasoning; authority remains with policy and human judgment.
 
 1. **Situation** — An evidence threshold is crossed and the system recognizes a decision is required — before a human would have noticed.
 2. **Context Assembly** — Verified operational context is assembled from heterogeneous sources into one current picture.
@@ -115,7 +114,7 @@ Recommendation · reroute to alternate supplier
 
 ---
 
-## Governance  · ▸ Governance
+## Governance  · ▸ Govern
 ### AI assists. People govern. The platform remembers.
 
 A decision that can move the business has to answer to the business. So before any decision becomes an action, it must clear the organization's authority — and because the decision is now a persistent object, there is something durable to attach that authority to.
@@ -126,11 +125,11 @@ A decision that can move the business has to answer to the business. So before a
 
 Two distinct boundaries are enforced: **policy** decides what is **authorized**, and **constraints** decide what is **feasible**. A decision stays advisory until a human — or an explicit policy — clears it. Autonomy is bounded and never escalates quietly; the organization sets how far the system may act on its own, and that boundary is always visible. Every consequential decision leaves an immutable trail.
 
-_Every governed decision — and the outcome it produces — becomes the material the system learns from._
+_Once cleared, the decision executes. What actually happens next — the outcome — is what the system learns from._
 
 ---
 
-## Learning  · ▸ Learning
+## Learning  · ▸ Learn
 ### A system that decides the same way forever cannot improve.
 
 The only way to get better is to learn from what actually happened — which is possible only because every decision persisted as an object with its outcome. Two loops turn on it: one closes in real time, one closes over time. The second is what compounds.
@@ -147,12 +146,12 @@ Acting changes operational reality, which Detect reassembles — so the next dec
 ```
 Each outcome updates the patterns, so the next adversarial challenge is more calibrated and every decision quietly improves the ones that follow.
 
-**Pattern generation**
+**How one outcome changes every decision after it**
 ```
-Decision Objects → Outcomes → Pattern Detection → Playbook Evolution → Future Recommendations
+Decision → Outcome → Decision Object updated → Pattern extracted → Confidence rises → Next recommendation shifts
 ```
 
-Playbooks are not written once and frozen. A new deployment starts on playbook rules; over time, patterns calibrate to your decisions — your suppliers, your exceptions, your judgment. That history is institutional memory: it stays queryable, it stays yours, and it is the one thing a competitor cannot replicate without having lived your operation.
+This is the whole moat, in a single line. A closed decision doesn't just resolve a situation — its outcome updates the Decision Object, which sharpens a pattern, which moves that pattern's confidence, which changes the recommendation the next time the situation recurs. A new deployment begins on playbook rules; with every cycle the patterns calibrate to your operation — your suppliers, your exceptions, your judgment — until the system reasons like your most experienced operator, on your operation specifically. That accumulated history is institutional memory: queryable, owned by you, and impossible to replicate without having lived your decisions.
 
 ---
 

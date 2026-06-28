@@ -93,7 +93,7 @@ export default function ArchitecturePage() {
             </Reveal>
 
             <Reveal>
-              <SystemMap detailed className="mx-auto max-w-3xl" />
+              <SystemMap className="mx-auto max-w-3xl" />
             </Reveal>
           </Container>
         </section>
@@ -178,9 +178,9 @@ export default function ArchitecturePage() {
               <SectionHeader
                 eyebrow="Decision Lifecycle"
                 title="A decision produced ad hoc cannot be trusted."
-                lead="So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. The LLM has no authority."
+                lead="So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. Language models contribute reasoning; authority remains with policy and human judgment."
               />
-              <SystemMap active="lifecycle" className="max-w-2xl" />
+              <SystemMap active="decide" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -341,7 +341,7 @@ export default function ArchitecturePage() {
                 title="AI assists. People govern. The platform remembers."
                 lead="A decision that can move the business has to answer to the business. So before any decision becomes an action, it must clear the organization's authority — and because the decision is now a persistent object, there is something durable to attach that authority to."
               />
-              <SystemMap active="governance" className="max-w-2xl" />
+              <SystemMap active="govern" className="max-w-2xl" />
             </Reveal>
             <Reveal>
               <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -367,8 +367,8 @@ export default function ArchitecturePage() {
             </Reveal>
             <Reveal>
               <p className="max-w-3xl text-base text-foreground/85">
-                Every governed decision — and the outcome it produces — becomes the material the
-                system learns from.
+                Once cleared, the decision executes. What actually happens next — the outcome — is
+                what the system learns from.
               </p>
             </Reveal>
           </Container>
@@ -383,7 +383,7 @@ export default function ArchitecturePage() {
                 title="A system that decides the same way forever cannot improve."
                 lead="The only way to get better is to learn from what actually happened — which is possible only because every decision persisted as an object with its outcome. Two loops turn on it: one closes in real time, one closes over time. The second is what compounds."
               />
-              <SystemMap active="learning" className="max-w-2xl" />
+              <SystemMap active="learn" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -409,16 +409,27 @@ export default function ArchitecturePage() {
 
             <Reveal>
               <div className="flex flex-col gap-4">
-                <Subheading>Pattern generation</Subheading>
+                <Subheading>How one outcome changes every decision after it</Subheading>
                 <Sequence
-                  items={["Decision Objects", "Outcomes", "Pattern Detection", "Playbook Evolution", "Future Recommendations"]}
+                  items={[
+                    "Decision",
+                    "Outcome",
+                    "Decision Object updated",
+                    "Pattern extracted",
+                    "Confidence rises",
+                    "Next recommendation shifts",
+                  ]}
                 />
                 <Prose className="max-w-3xl">
-                  Playbooks are not written once and frozen. A new deployment starts on playbook rules;
-                  over time, patterns calibrate to your decisions — your suppliers, your exceptions,
-                  your judgment. That history is institutional memory: it stays queryable, it stays
-                  yours, and it is the one thing a competitor cannot replicate without having lived
-                  your operation.
+                  This is the whole moat, in a single line. A closed decision doesn&apos;t just
+                  resolve a situation — its outcome updates the Decision Object, which sharpens a
+                  pattern, which moves that pattern&apos;s confidence, which changes the recommendation
+                  the next time the situation recurs. A new deployment begins on playbook rules; with
+                  every cycle the patterns calibrate to your operation — your suppliers, your
+                  exceptions, your judgment — until the system reasons like your most experienced
+                  operator, on your operation specifically. That accumulated history is institutional
+                  memory: queryable, owned by you, and impossible to replicate without having lived
+                  your decisions.
                 </Prose>
               </div>
             </Reveal>
