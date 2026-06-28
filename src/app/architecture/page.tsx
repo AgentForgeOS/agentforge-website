@@ -9,6 +9,7 @@ import { IllContext, IllDecisionObject, IllPolicyGates, IllMemory } from "@/comp
 import { ContextAssembly } from "@/components/site/context-assembly";
 import { PlatformLifecycle } from "@/components/site/platform";
 import { SpecCard, Sequence } from "@/components/site/architecture-blocks";
+import { SystemMap } from "@/components/site/system-map";
 import {
   Terminal,
   TerminalFlag,
@@ -24,10 +25,8 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Architecture — AgentForge",
   description:
-    "The reference architecture for Operational Intelligence. The decision is the center; every construct exists to produce, govern, or learn from one. Operational context, the decision lifecycle, the Decision Object, governance, and the two learning loops.",
+    "The reference architecture for Operational Intelligence. Any system that governs operational decisions converges on the same constructs: operational context, the decision lifecycle, the Decision Object, governance, and learning.",
 };
-
-const CAUSAL_CHAIN = ["Evidence", "Situation", "Decision", "Action", "Outcome", "Learning", "Pattern"];
 
 const LIFECYCLE = [
   {
@@ -75,27 +74,26 @@ export default function ArchitecturePage() {
       <SiteHeader />
 
       <main className="flex-1">
-        {/* 1 · The operating model — the decision is the center. */}
+        {/* 1 · The whole system — the inevitable architecture, drawn once. */}
         <section className="pt-20 pb-16 md:pt-28 md:pb-20">
           <Container className="flex flex-col gap-12">
             <Reveal className="flex max-w-3xl flex-col gap-6">
               <Eyebrow>Reference architecture</Eyebrow>
               <Display className="text-h1">The Operational Intelligence Architecture.</Display>
               <Lead>
-                Operational intelligence has a center — the{" "}
-                <span className="text-foreground">decision</span>. Every construct in this
-                architecture exists to produce one, govern one, or learn from one.
+                Any system that sets out to govern operational decisions arrives at the same
+                architecture — not by imitation, but because the problem demands it. These are the
+                constructs it converges on, and how they fit together.
               </Lead>
               <Prose>
-                A decision travels a fixed path: from the evidence that first signals it, through
-                the choice itself, to the pattern it leaves behind for the next one.
+                Operational intelligence is a loop. Reality is assembled into context; a decision is
+                produced and made durable; it is governed, acted on, and learned from — and the
+                learning sharpens the next turn.
               </Prose>
             </Reveal>
 
             <Reveal>
-              <div className="rounded-xl border border-border bg-card px-6 py-10 md:px-12">
-                <Sequence items={CAUSAL_CHAIN} accent="Decision" className="justify-center" />
-              </div>
+              <SystemMap detailed className="mx-auto max-w-3xl" />
             </Reveal>
           </Container>
         </section>
@@ -103,12 +101,13 @@ export default function ArchitecturePage() {
         {/* 2 · Operational Context — what a decision reasons over. */}
         <Section className="border-y border-border/60 bg-card/30">
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="Operational Context"
                 title="A decision is only as good as the reality it reasons over."
-                lead="So before anything else, the system assembles verified operational context — never the hallucinated kind. Nothing downstream invents the world it acts on."
+                lead="So the first thing any decision system needs is the truth — what is actually happening, right now. In operations that is never simply read; it has to be assembled, and assembled honestly, because everything downstream inherits its errors."
               />
+              <SystemMap active="context" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -175,12 +174,13 @@ export default function ArchitecturePage() {
         {/* 3 · The Decision Lifecycle — how a decision is produced. */}
         <Section>
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="Decision Lifecycle"
-                title="Every decision is produced by the same nine steps."
-                lead="One path makes decisions comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. The LLM has no authority."
+                title="A decision produced ad hoc cannot be trusted."
+                lead="So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. The LLM has no authority."
               />
+              <SystemMap active="lifecycle" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -217,8 +217,8 @@ export default function ArchitecturePage() {
 
             <Reveal>
               <p className="max-w-3xl text-base text-foreground/85">
-                Run this lifecycle and the result is not a message that scrolls away. It is a
-                persistent object.
+                Run this path and the result is not a message that scrolls away. It is a persistent
+                object.
               </p>
             </Reveal>
           </Container>
@@ -227,12 +227,13 @@ export default function ArchitecturePage() {
         {/* 4 · The Decision Object — why the artifact must exist. */}
         <Section className="border-y border-border/60 bg-card/30">
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="Decision Object"
                 title="The lifecycle ends in an object, not an answer."
                 lead="This is the architectural control point. A model's response evaporates the moment it is read — it cannot be governed, audited, or learned from. So a decision is never allowed to remain a response."
               />
+              <SystemMap active="object" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -260,9 +261,7 @@ export default function ArchitecturePage() {
                       <span><span className="text-foreground">Every future recommendation</span> is retrieved from it — patterns are distilled from accumulated objects.</span>
                     </li>
                   </ul>
-                  <Prose>
-                    Once you see why it must exist, what it carries becomes obvious.
-                  </Prose>
+                  <Prose>Once you see why it must exist, what it carries becomes obvious.</Prose>
                 </div>
                 <div className="rounded-xl border border-border bg-background/50 px-6 py-12 md:px-12">
                   <IllDecisionObject />
@@ -336,12 +335,13 @@ export default function ArchitecturePage() {
         {/* 5 · Governance — applied to the object, not the model. */}
         <Section>
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="Governance"
                 title="AI assists. People govern. The platform remembers."
-                lead="Because the decision is now a persistent object, governance has something durable to attach to. It is applied to the Decision Object — not to the model — and no recommendation becomes an action until it clears the same gates."
+                lead="A decision that can move the business has to answer to the business. So before any decision becomes an action, it must clear the organization's authority — and because the decision is now a persistent object, there is something durable to attach that authority to."
               />
+              <SystemMap active="governance" className="max-w-2xl" />
             </Reveal>
             <Reveal>
               <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -377,12 +377,13 @@ export default function ArchitecturePage() {
         {/* 6 · Learning — what the system learns from. */}
         <Section className="border-y border-border/60 bg-card/30">
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="Learning"
-                title="Persistent decisions are what make learning possible."
-                lead="Because every decision persists with its outcome, the system has a corpus to learn from. Two loops turn on the same Decision Object — one closes in real time, one closes over time. The second is what compounds."
+                title="A system that decides the same way forever cannot improve."
+                lead="The only way to get better is to learn from what actually happened — which is possible only because every decision persisted as an object with its outcome. Two loops turn on it: one closes in real time, one closes over time. The second is what compounds."
               />
+              <SystemMap active="learning" className="max-w-2xl" />
             </Reveal>
 
             <Reveal>
@@ -424,15 +425,16 @@ export default function ArchitecturePage() {
           </Container>
         </Section>
 
-        {/* 7 · Platform boundaries — open vs proprietary. */}
+        {/* 7 · Platform boundaries — zoom back out to the whole. */}
         <Section>
           <Container className="flex flex-col gap-12">
-            <Reveal>
+            <Reveal className="flex flex-col gap-8">
               <SectionHeader
                 eyebrow="The platform"
                 title="Open where you have capability. Proprietary where the value concentrates."
-                lead="All of this sits behind one deliberate boundary. Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn."
+                lead="Step back to the whole. One operating model sits behind a single boundary: Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn."
               />
+              <SystemMap className="max-w-2xl" />
             </Reveal>
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
               <Reveal className="flex flex-col gap-5">
@@ -456,14 +458,15 @@ export default function ArchitecturePage() {
           </Container>
         </Section>
 
-        {/* 8 · Request access. */}
+        {/* 8 · Inevitability + request access. */}
         <Section className="border-t border-border/60 bg-card/30">
           <Container className="flex flex-col items-center gap-8 text-center">
             <Reveal className="flex max-w-2xl flex-col items-center gap-6">
-              <Heading className="max-w-2xl">This is the architecture. We&apos;re building it.</Heading>
+              <Heading className="max-w-2xl">Any system that governs operational decisions arrives here.</Heading>
               <Lead className="mx-auto text-center">
-                Built with operators who run these decisions every day — in supply chains and claims
-                organizations, where being wrong is expensive and being right is invisible.
+                These constructs are not unique to AgentForge — they are what the problem demands. We
+                are simply building the first implementation, with operators who run these decisions
+                every day, where being wrong is expensive and being right is invisible.
               </Lead>
               <a
                 href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"

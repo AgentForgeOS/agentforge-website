@@ -1,21 +1,30 @@
 # The Operational Intelligence Architecture
 
-> _Reference architecture._ This is a faithful text transcription of the AgentForge Architecture page (`/architecture`) for review. Diagrams and spec cards are rendered as labeled lists and flows.
+> _Reference architecture._ A faithful text transcription of the AgentForge Architecture page (`/architecture`) for review. The page is built around one recurring **system diagram** (below); each section zooms into one node of it before the page returns to the whole.
 
-Operational intelligence has a center — **the decision**. Every construct in this architecture exists to produce one, govern one, or learn from one.
+Any system that sets out to govern operational decisions arrives at the same architecture — not by imitation, but because the problem demands it. These are the constructs it converges on, and how they fit together.
 
-A decision travels a fixed path: from the evidence that first signals it, through the choice itself, to the pattern it leaves behind for the next one.
+Operational intelligence is a loop. Reality is assembled into context; a decision is produced and made durable; it is governed, acted on, and learned from — and the learning sharpens the next turn.
+
+### The system, drawn once
 
 ```
-Evidence → Situation → [ Decision ] → Action → Outcome → Learning → Pattern
+                       ↺  learning feeds back
+   ┌───────────────────────────────────────────────────────────────┐
+   │                                                               │
+ Context  →  Lifecycle  →  [ Decision Object ]  →  Governance  →  Learning
+ assemble     produce         make it durable        authorize     compound
+ reality     the decision                              it            it
 ```
+
+_(This diagram reappears in each section with one node highlighted — the "you are here.")_
 
 ---
 
-## Operational Context
+## Operational Context  · ▸ Context
 ### A decision is only as good as the reality it reasons over.
 
-So before anything else, the system assembles verified operational context — never the hallucinated kind. Nothing downstream invents the world it acts on.
+So the first thing any decision system needs is the truth — what is actually happening, right now. In operations that is never simply read; it has to be assembled, and assembled honestly, because everything downstream inherits its errors.
 
 Enterprise systems manage deterministic transactions. Operations are different: the truth is distributed across machines, people, and physical space, and no instrument observes all of it. Assets and people move; positioning drifts as RF environments shift; battery-powered devices sleep, so absence of signal is not absence of the thing.
 
@@ -48,10 +57,10 @@ _Verified context is the input. Turning it into a decision is a fixed sequence �
 
 ---
 
-## Decision Lifecycle
-### Every decision is produced by the same nine steps.
+## Decision Lifecycle  · ▸ Lifecycle
+### A decision produced ad hoc cannot be trusted.
 
-One path makes decisions comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. **The LLM has no authority.**
+So once context exists, the decision is produced from it the same way every time. One fixed path is what makes a decision comparable, auditable, and improvable. And the path is deterministic — generation, scoring, and confidence are functions of the context. The model enriches the reasoning; it never controls the outcome. **The LLM has no authority.**
 
 1. **Situation** — An evidence threshold is crossed and the system recognizes a decision is required — before a human would have noticed.
 2. **Context Assembly** — Verified operational context is assembled from heterogeneous sources into one current picture.
@@ -63,11 +72,11 @@ One path makes decisions comparable, auditable, and improvable. And the path is 
 8. **Human Decision & Execution** — A human approves, modifies, rejects, or delegates — the system never executes on its own authority.
 9. **Outcome & Learning** — The outcome and feedback are captured and folded back into institutional memory as new patterns.
 
-_Run this lifecycle and the result is not a message that scrolls away. It is a persistent object._
+_Run this path and the result is not a message that scrolls away. It is a persistent object._
 
 ---
 
-## Decision Object
+## Decision Object  · ▸ Decision Object
 ### The lifecycle ends in an object, not an answer.
 
 This is the architectural control point. A model's response evaporates the moment it is read — it cannot be governed, audited, or learned from. So a decision is never allowed to remain a response.
@@ -106,10 +115,10 @@ Recommendation · reroute to alternate supplier
 
 ---
 
-## Governance
+## Governance  · ▸ Governance
 ### AI assists. People govern. The platform remembers.
 
-Because the decision is now a persistent object, governance has something durable to attach to. It is applied to the Decision Object — not to the model — and no recommendation becomes an action until it clears the same gates.
+A decision that can move the business has to answer to the business. So before any decision becomes an action, it must clear the organization's authority — and because the decision is now a persistent object, there is something durable to attach that authority to.
 
 ```
 ✓ Policy Evaluation → ✓ Authority Check → ✓ Compliance → ✓ Escalation → ✓ Human Approval → ✓ Audit
@@ -121,10 +130,10 @@ _Every governed decision — and the outcome it produces — becomes the materia
 
 ---
 
-## Learning
-### Persistent decisions are what make learning possible.
+## Learning  · ▸ Learning
+### A system that decides the same way forever cannot improve.
 
-Because every decision persists with its outcome, the system has a corpus to learn from. Two loops turn on the same Decision Object — one closes in real time, one closes over time. The second is what compounds.
+The only way to get better is to learn from what actually happened — which is possible only because every decision persisted as an object with its outcome. Two loops turn on it: one closes in real time, one closes over time. The second is what compounds.
 
 **Operational loop · real time**
 ```
@@ -147,10 +156,10 @@ Playbooks are not written once and frozen. A new deployment starts on playbook r
 
 ---
 
-## The Platform
+## The Platform  · ▸ the whole, again
 ### Open where you have capability. Proprietary where the value concentrates.
 
-All of this sits behind one deliberate boundary. Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn.
+Step back to the whole. One operating model sits behind a single boundary: Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn.
 
 ```
                       AgentForge Platform
@@ -166,8 +175,8 @@ The control point is not the sensors or the models — it is the operating model
 
 ---
 
-## This is the architecture. We're building it.
+## Any system that governs operational decisions arrives here.
 
-Built with operators who run these decisions every day — in supply chains and claims organizations, where being wrong is expensive and being right is invisible.
+These constructs are not unique to AgentForge — they are what the problem demands. We are simply building the first implementation, with operators who run these decisions every day, where being wrong is expensive and being right is invisible.
 
 **Request access** → hello@agentforgeos.ai
