@@ -17,16 +17,16 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-8">
           <Link
-            href="/decisions"
-            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            Decisions
-          </Link>
-          <Link
             href="/architecture"
             className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
           >
-            Architecture
+            How It Works
+          </Link>
+          <Link
+            href="/solutions"
+            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
+          >
+            Solutions
           </Link>
           <a
             href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
