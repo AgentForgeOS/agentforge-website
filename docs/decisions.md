@@ -27,7 +27,7 @@ Set two that look nothing alike side by side, and the structure repeats — a si
 | **Policy & constraints** | Detention thresholds, carrier contracts, dock capacity, safety rules. | Coverage rules, authority limits, regulatory compliance, reserve thresholds. |
 | **Outcome** | Detention spend, dock throughput, on-time departure. | Payout accuracy, loss ratio, cycle time, compliance. |
 
-Different yard, different ledger — the same five questions. That sameness is not a coincidence. It is the structure of operational judgment itself.
+Different yard, different ledger — the same five questions. That repetition is the quiet, decisive fact: an operational decision is not a one-off act of judgment. It has a form — and anything with a form can be modeled.
 
 ---
 
@@ -38,14 +38,14 @@ Because the shape is shared, there is no separate product for trailers and anoth
 
 That captured structure has a name: a **Decision Model** — the reusable representation of one recurring operational decision. Where a Decision Object is a single decision, made and recorded, a Decision Model is the form it takes every time the situation returns.
 
-Define the model once — the situation that triggers it, the evidence it requires, the options, the policy, the outcome it answers to — and the architecture produces governed decisions of it on demand. Configuring a new decision is not building a new system.
+Define the model once — the situation that triggers it, the evidence it requires, the options, the policy, the outcome it answers to — and the architecture produces governed decisions of it on demand. Configuring a new decision is not building a new system. And a model is never quite finished: every deployment it runs in leaves it a little sharper.
 
 ---
 
 ## The reach
 ### One architecture. A widening field of decisions.
 
-These come from industries that share almost nothing — and every one is the same architecture, configured to a different decision.
+These come from industries that share almost nothing. The shape of the decision never changes — only the content does. One architecture, configured to each.
 
 **Supply chain**
 - **Inventory Rebalancing** — Move stock before one site stocks out and another overstocks.

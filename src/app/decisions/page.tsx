@@ -145,8 +145,9 @@ export default function DecisionsPage() {
 
             <Reveal>
               <p className="max-w-3xl text-base text-foreground/85">
-                Different yard, different ledger — the same five questions. That sameness is not a
-                coincidence. It is the structure of operational judgment itself.
+                Different yard, different ledger — the same five questions. That repetition is the
+                quiet, decisive fact: an operational decision is not a one-off act of judgment. It
+                has a form — and anything with a form can be modeled.
               </p>
             </Reveal>
           </Container>
@@ -176,7 +177,8 @@ export default function DecisionsPage() {
                     Define the model once — the situation that triggers it, the evidence it requires,
                     the options, the policy, the outcome it answers to — and the architecture produces
                     governed decisions of it on demand. Configuring a new decision is not building a
-                    new system.
+                    new system. And a model is never quite finished: every deployment it runs in
+                    leaves it a little sharper.
                   </Prose>
                 </div>
                 <div className="rounded-xl border border-border bg-card px-6 py-12 md:px-12">
@@ -194,7 +196,7 @@ export default function DecisionsPage() {
               <SectionHeader
                 eyebrow="The reach"
                 title="One architecture. A widening field of decisions."
-                lead="These come from industries that share almost nothing — and every one is the same architecture, configured to a different decision."
+                lead="These come from industries that share almost nothing. The shape of the decision never changes — only the content does. One architecture, configured to each."
               />
             </Reveal>
 
