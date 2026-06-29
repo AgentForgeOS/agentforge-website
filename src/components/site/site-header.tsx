@@ -28,6 +28,12 @@ export function SiteHeader() {
           >
             Solutions
           </Link>
+          <Link
+            href="/evaluating"
+            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
+          >
+            Evaluating
+          </Link>
           <a
             href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
             className={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-3")}
