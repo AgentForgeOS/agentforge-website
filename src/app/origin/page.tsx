@@ -11,9 +11,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Origin",
+  title: "Conviction",
   description:
-    "Every generation of enterprise software solved a different problem. This is the story of the one it didn't — operational judgment, the last unmanaged layer — and how it became impossible to ignore.",
+    "Every generation of enterprise software removed one kind of operational uncertainty. The next removes the uncertainty of judgment. AgentForge wasn't invented because AI became exciting — it became impossible not to build once the missing layer came into view.",
 };
 
 /**
@@ -68,7 +68,7 @@ export default function OriginPage() {
         <section className="pt-20 pb-12 md:pt-28 md:pb-16">
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
-              <Eyebrow>Origin</Eyebrow>
+              <Eyebrow>Conviction</Eyebrow>
               <Display className="text-h1">
                 Every generation of enterprise software solved a different problem.
               </Display>
@@ -120,20 +120,25 @@ export default function OriginPage() {
               <Eyebrow>Lived, not theorized</Eyebrow>
               <Heading>We didn&apos;t arrive at this in a conference room.</Heading>
               <Prose>
-                This isn&apos;t a conclusion we reasoned our way into. It&apos;s one we watched form —
-                the same way, across years and across industries.
+                This isn&apos;t a conclusion we reasoned our way into. It&apos;s one we watched form,
+                slowly, from a particular vantage point — the inside of operations most software
+                never reaches.
               </Prose>
               <Prose>
-                AgentForge is the third enterprise platform we&apos;ve built. The most direct path to
-                it ran through Cognosos — one of the leading real-time visibility platforms, deployed
-                deep inside manufacturing, logistics, automotive, and healthcare operations. For
-                years we worked alongside the teams who run mission-critical systems: not in demos,
-                but in the environments where being wrong has consequences.
+                The most direct path to AgentForge ran through Cognosos, a real-time visibility
+                platform. Building it meant spending years in the least forgiving operations there
+                are: factories, distribution centers, vehicle yards, hospitals, and the supply chains
+                that connect them. Not in demos — in the places where being wrong has consequences.
+                The company itself isn&apos;t the point. The years inside those environments are.
               </Prose>
               <Prose>
-                We had built the visibility layer the industry still sells as the answer.{" "}
+                That is where this gap reveals itself. You don&apos;t find it by studying enterprise
+                software from the outside — you find it by building the layer everyone treats as the
+                answer, deploying it where failure isn&apos;t an option, and watching what people
+                still had to do by hand afterward.{" "}
                 <span className="text-foreground">
-                  Which is exactly why we could see where it stopped.
+                  We had built the visibility layer the industry still sells as the answer, which is
+                  exactly why we could see where it stopped.
                 </span>
               </Prose>
             </Reveal>
@@ -145,10 +150,11 @@ export default function OriginPage() {
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
               <Eyebrow>The turn</Eyebrow>
-              <Heading>Visibility was never the destination.</Heading>
+              <Heading>The better operations could see, the more obvious the real bottleneck became.</Heading>
               <Prose>
-                The dashboards got better. The forecasts got sharper. The view got closer to real
-                time. And still, every time something unexpected happened, the same scene played out.
+                Visibility was never the destination. The dashboards got better, the forecasts got
+                sharper, the view got closer to real time — and still, every time something unexpected
+                happened, the same scene played out.
               </Prose>
               <Prose>
                 Someone stopped and began assembling the picture by hand. They searched across
@@ -158,12 +164,23 @@ export default function OriginPage() {
                 they made the call.
               </Prose>
               <Prose>
-                The information was already there. That was the quiet realization: the bottleneck had
-                moved. It was no longer getting the data, or seeing the operation, or forecasting what
-                came next. It was{" "}
-                <span className="text-foreground">the judgment in the moment</span> — the most
-                consequential step in the entire operation, and the only one no software had ever
-                supported.
+                Here is the part that mattered most, and it took years to see clearly: every
+                improvement in visibility made that moment more conspicuous, not less. The closer an
+                operation got to seeing everything, the more plainly the real constraint stood out —
+                and it was no longer getting the data, seeing the floor, or forecasting what came
+                next. It was{" "}
+                <span className="text-foreground">the judgment in the moment</span>, the most
+                consequential step in the operation and the only one no software had ever touched.
+              </Prose>
+              <Prose>
+                That is the pattern beneath every era of enterprise software:{" "}
+                <span className="text-foreground">
+                  each layer, by succeeding, exposes the one above it.
+                </span>{" "}
+                Records made forecasting worth doing. Forecasting made real-time visibility worth
+                building. And visibility, working exactly as intended, made operational judgment
+                impossible to keep ignoring. Seen that way, AgentForge isn&apos;t something anyone set
+                out to invent. It&apos;s the layer the previous ones had been pointing to all along.
               </Prose>
             </Reveal>
           </Container>
@@ -205,24 +222,25 @@ export default function OriginPage() {
               <Eyebrow>Execution</Eyebrow>
               <Heading>Why we believe we can build it.</Heading>
               <Prose>
-                Ideas about enterprise software are cheap. The hard part has never been imagining the
+                Ideas about enterprise software are cheap. The hard part was never imagining the
                 system — it&apos;s getting difficult software to live inside a real operation and earn
-                its keep.
+                its keep. What gives us conviction isn&apos;t that we&apos;ve built enterprise
+                platforms before. It&apos;s what building them taught us about this exact problem.
               </Prose>
               <Prose>
-                That part we know firsthand. We&apos;ve built enterprise platforms more than once.
-                We&apos;ve put mission-critical software into environments that don&apos;t forgive
-                failure. We&apos;ve integrated with the messy reality of systems that were never
-                designed to cooperate. We&apos;ve earned operational trust the only way it can be
-                earned — slowly, and in production. And we&apos;ve learned, usually the hard way, just
-                how unforgiving enterprise adoption really is.
+                We learned that operational trust is earned slowly and lost instantly, and that no
+                demo ever shortcuts it. We learned that enterprise deployment is unforgiving in ways
+                no architecture diagram warns you about — that the edge cases are the job, not a
+                footnote to it. And we learned the lesson that shapes AgentForge most directly:
+                software that tries to replace how an operation already works gets rejected, and only
+                software that adapts to the workflow already in place ever earns a seat in it.
               </Prose>
               <Prose>
-                We say none of this to impress. We say it because we are not underestimating what
-                building this layer will take —{" "}
+                We say none of this to impress. We say it because it is exactly what building this
+                layer will demand, and we are not underestimating it.{" "}
                 <span className="text-foreground">
-                  and that clear-eyed respect for the difficulty is the part we&apos;d point to, more
-                  than any idea.
+                  That clear-eyed respect for the difficulty is the part we&apos;d point to, more than
+                  any idea.
                 </span>
               </Prose>
             </Reveal>
@@ -243,18 +261,21 @@ export default function OriginPage() {
                 </div>
                 <Prose>
                   These observations were carried into AgentForge by its founder, Nish Parikh — not
-                  as secondhand research, but as what he watched form firsthand, across years of
-                  building the layers that came before it.
+                  as secondhand research, but as a conviction that formed slowly, over a career spent
+                  building the layers that came before this one.
                 </Prose>
                 <Prose>
-                  AgentForge is his third enterprise software company. He helped build Cognosos — the
-                  visibility platform named earlier — and the years spent deploying it inside real
-                  operations are where the missing layer stopped being an abstraction.
+                  The throughline of that career is almost the opposite of a credential. The more
+                  successful the visibility platforms he helped build became, the more convinced he
+                  grew that visibility was no longer the thing holding operations back. He had spent
+                  years giving enterprises an ever-clearer view of their operations — and kept
+                  watching that clarity stop at exactly the moment a decision had to be made.
                 </Prose>
                 <Prose>
-                  He isn&apos;t building AgentForge because the idea is novel. He&apos;s building it
-                  because, after seeing that same gap in operation after operation, leaving it
-                  unbuilt stopped being an option.
+                  So AgentForge is less his third company than the conclusion the earlier ones kept
+                  pointing toward. He isn&apos;t building it because the idea is novel — he&apos;s
+                  building it because, after watching the same missing layer surface in operation
+                  after operation, leaving it unbuilt stopped being an option.
                 </Prose>
               </div>
             </Reveal>
@@ -266,15 +287,27 @@ export default function OriginPage() {
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
               <Eyebrow>Looking ahead</Eyebrow>
-              <Heading>What we&apos;re actually building.</Heading>
+              <Heading>The next layer.</Heading>
               <Prose>
-                We don&apos;t believe enterprises need another AI application. There are already more
-                of those than anyone asked for.
+                Every generation of enterprise software took one kind of uncertainty out of running a
+                business. Records settled what was true. Planning narrowed what was coming. Visibility
+                resolved what was happening right now. Each, in its time, went from novelty to
+                something no serious operation would run without.
               </Prose>
               <Prose>
-                We believe they need a system for operational judgment — a place where the most
-                important decisions are made with full context, under real governance, and get better
-                every time. That is the company we&apos;re building.
+                We believe the next layer removes the uncertainty that&apos;s left — the uncertainty
+                of what to do about it. Operational judgment becomes something a system can assemble,
+                govern, and improve, instead of something that lives only in people&apos;s heads and
+                walks out the door when they do.
+              </Prose>
+              <Prose>
+                If we&apos;re right, judgment won&apos;t stay the exception. It will become as ordinary
+                a part of the enterprise as the system of record and the system of awareness are
+                today — a layer no operation of consequence runs without.{" "}
+                <span className="text-foreground">
+                  That is the conviction we&apos;re building on. Not another application. The next
+                  layer.
+                </span>
               </Prose>
               <div className="pt-2">
                 <a

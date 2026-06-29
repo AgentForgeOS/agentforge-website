@@ -38,7 +38,7 @@ export function SiteHeader() {
             href="/origin"
             className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
           >
-            Origin
+            Conviction
           </Link>
           <a
             href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
