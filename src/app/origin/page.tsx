@@ -44,16 +44,16 @@ function Lineage() {
   );
 }
 
-/**
- * FounderAvatar — on-brand monogram placeholder so the live page is never a
- * broken image. To use a real photo: drop the file at public/founder.jpg and
- * replace the inner content with:
- *   <img src="/founder.jpg" alt="Nish Parikh" className="size-full object-cover" />
- */
+/** FounderAvatar — the founder's portrait, framed to head-and-shoulders. */
 function FounderAvatar() {
   return (
-    <div className="flex size-40 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-card">
-      <span className="font-mono text-2xl tracking-[0.2em] text-brand">NP</span>
+    <div className="size-40 shrink-0 overflow-hidden rounded-xl border border-border bg-card">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/founder.jpg"
+        alt="Nish Parikh, founder of AgentForge"
+        className="size-full object-cover object-[center_30%]"
+      />
     </div>
   );
 }

@@ -82,7 +82,7 @@ We say none of this to impress. We say it because it is exactly what building th
 
 ## The founder
 
-**[Photo — placeholder monogram "NP" until a real photo is dropped at `public/founder.jpg`]**
+**[Photo — Nish Parikh headshot, `public/founder.jpg`, framed head-and-shoulders]**
 
 **Nish Parikh** · Founder, AgentForge
 
