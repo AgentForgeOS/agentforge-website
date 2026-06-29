@@ -44,6 +44,20 @@ function Lineage() {
   );
 }
 
+/**
+ * FounderAvatar — on-brand monogram placeholder so the live page is never a
+ * broken image. To use a real photo: drop the file at public/founder.jpg and
+ * replace the inner content with:
+ *   <img src="/founder.jpg" alt="Nish Parikh" className="size-full object-cover" />
+ */
+function FounderAvatar() {
+  return (
+    <div className="flex size-40 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-card">
+      <span className="font-mono text-2xl tracking-[0.2em] text-brand">NP</span>
+    </div>
+  );
+}
+
 export default function OriginPage() {
   return (
     <div className="flex min-h-dvh flex-col">
@@ -211,6 +225,38 @@ export default function OriginPage() {
                   than any idea.
                 </span>
               </Prose>
+            </Reveal>
+          </Container>
+        </Section>
+
+        {/* Founder — the reader meets the steward. Brief, humble, evidence-based;
+            placed before the close so the mission still gets the last word. */}
+        <Section className="py-14 md:py-20">
+          <Container className="max-w-3xl">
+            <Reveal className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
+              <FounderAvatar />
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
+                  <Eyebrow>The founder</Eyebrow>
+                  <p className="text-lg font-medium text-foreground">Nish Parikh</p>
+                  <p className="text-sm text-muted-foreground">Founder, AgentForge</p>
+                </div>
+                <Prose>
+                  These observations were carried into AgentForge by its founder, Nish Parikh — not
+                  as secondhand research, but as what he watched form firsthand, across years of
+                  building the layers that came before it.
+                </Prose>
+                <Prose>
+                  AgentForge is his third enterprise software company. He helped build Cognosos — the
+                  visibility platform named earlier — and the years spent deploying it inside real
+                  operations are where the missing layer stopped being an abstraction.
+                </Prose>
+                <Prose>
+                  He isn&apos;t building AgentForge because the idea is novel. He&apos;s building it
+                  because, after seeing that same gap in operation after operation, leaving it
+                  unbuilt stopped being an option.
+                </Prose>
+              </div>
             </Reveal>
           </Container>
         </Section>

@@ -78,6 +78,20 @@ We say none of this to impress. We say it because we are not underestimating wha
 
 ---
 
+## The founder
+
+**[Photo — placeholder monogram "NP" until a real photo is dropped at `public/founder.jpg`]**
+
+**Nish Parikh** · Founder, AgentForge
+
+These observations were carried into AgentForge by its founder, Nish Parikh — not as secondhand research, but as what he watched form firsthand, across years of building the layers that came before it.
+
+AgentForge is his third enterprise software company. He helped build Cognosos — the visibility platform named earlier — and the years spent deploying it inside real operations are where the missing layer stopped being an abstraction.
+
+He isn't building AgentForge because the idea is novel. He's building it because, after seeing that same gap in operation after operation, leaving it unbuilt stopped being an option.
+
+---
+
 ## 6 · Looking ahead
 
 **What we're actually building.**
