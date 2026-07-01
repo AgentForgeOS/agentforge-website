@@ -82,15 +82,23 @@ We say none of this to impress. We say it because it is exactly what building th
 
 ## The founder
 
-**[Photo — Nish Parikh headshot, `public/founder.jpg`, framed head-and-shoulders]**
+**The builder behind AgentForge.**
 
-**Nish Parikh** · Founder, AgentForge
+**[Photo — Nish Parikh headshot, `public/founder.jpg`]** · **Nish Parikh** · Founder, AgentForge
 
-These observations were carried into AgentForge by its founder, Nish Parikh — not as secondhand research, but as a conviction that formed slowly, over a career spent building the layers that came before this one.
+Looking back, AgentForge feels less like the beginning of something new than the continuation of a career spent building enterprise platforms.
 
-The throughline of that career is almost the opposite of a credential. The more successful the visibility platforms he helped build became, the more convinced he grew that visibility was no longer the thing holding operations back. He had spent years giving enterprises an ever-clearer view of their operations — and kept watching that clarity stop at exactly the moment a decision had to be made.
+Across nearly three decades of building enterprise platforms, Nish has worked on systems that helped enterprises operate with greater confidence — from synchronizing data across disconnected systems, to bringing critical information to mobile workers, to making physical operations visible in real time.
 
-So AgentForge is less his third company than the conclusion the earlier ones kept pointing toward. He isn't building it because the idea is novel — he's building it because, after watching the same missing layer surface in operation after operation, leaving it unbuilt stopped being an option.
+Each platform solved an important problem. Each also revealed another one.
+
+It was while co-founding Cognosos that something unexpected became impossible to ignore. As customers gained unprecedented visibility into their operations, the hardest decisions were still being made outside the software — in spreadsheets, email threads, whiteboard conversations, and in the experience of people who had seen similar situations before.
+
+That realization stayed with him long after individual customer meetings ended.
+
+AgentForge grew from a simple conviction: if operational judgment has become one of the most valuable assets inside an enterprise, it deserves to become something organizations can build, govern, improve, and pass from one generation to the next.
+
+Like the platforms before it, AgentForge is an attempt to solve a fundamental systems problem. The difference is that this time, the system isn't information. **It's judgment.**
 
 ---
 

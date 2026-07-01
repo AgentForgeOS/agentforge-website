@@ -247,36 +247,54 @@ export default function OriginPage() {
           </Container>
         </Section>
 
-        {/* Founder — the reader meets the steward. Brief, humble, evidence-based;
-            placed before the close so the mission still gets the last word. */}
+        {/* Founder — the human close: introduce the person behind AgentForge and
+            ground the page's conviction. Placed before the mission's final word. */}
         <Section className="py-14 md:py-20">
-          <Container className="max-w-3xl">
-            <Reveal className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
-              <FounderAvatar />
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  <Eyebrow>The founder</Eyebrow>
-                  <p className="text-lg font-medium text-foreground">Nish Parikh</p>
-                  <p className="text-sm text-muted-foreground">Founder, AgentForge</p>
+          <Container className="flex max-w-3xl flex-col gap-8">
+            <Reveal className="flex flex-col gap-6">
+              <Eyebrow>The founder</Eyebrow>
+              <Heading>The builder behind AgentForge.</Heading>
+              <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
+                <div className="flex shrink-0 flex-col gap-3">
+                  <FounderAvatar />
+                  <div>
+                    <p className="text-base font-medium text-foreground">Nish Parikh</p>
+                    <p className="text-sm text-muted-foreground">Founder, AgentForge</p>
+                  </div>
                 </div>
-                <Prose>
-                  These observations were carried into AgentForge by its founder, Nish Parikh — not
-                  as secondhand research, but as a conviction that formed slowly, over a career spent
-                  building the layers that came before this one.
-                </Prose>
-                <Prose>
-                  The throughline of that career is almost the opposite of a credential. The more
-                  successful the visibility platforms he helped build became, the more convinced he
-                  grew that visibility was no longer the thing holding operations back. He had spent
-                  years giving enterprises an ever-clearer view of their operations — and kept
-                  watching that clarity stop at exactly the moment a decision had to be made.
-                </Prose>
-                <Prose>
-                  So AgentForge is less his third company than the conclusion the earlier ones kept
-                  pointing toward. He isn&apos;t building it because the idea is novel — he&apos;s
-                  building it because, after watching the same missing layer surface in operation
-                  after operation, leaving it unbuilt stopped being an option.
-                </Prose>
+                <div className="flex flex-col gap-4">
+                  <Prose>
+                    Looking back, AgentForge feels less like the beginning of something new than the
+                    continuation of a career spent building enterprise platforms.
+                  </Prose>
+                  <Prose>
+                    Across nearly three decades of building enterprise platforms, Nish has worked on
+                    systems that helped enterprises operate with greater confidence — from
+                    synchronizing data across disconnected systems, to bringing critical information
+                    to mobile workers, to making physical operations visible in real time.
+                  </Prose>
+                  <Prose>Each platform solved an important problem. Each also revealed another one.</Prose>
+                  <Prose>
+                    It was while co-founding Cognosos that something unexpected became impossible to
+                    ignore. As customers gained unprecedented visibility into their operations, the
+                    hardest decisions were still being made outside the software — in spreadsheets,
+                    email threads, whiteboard conversations, and in the experience of people who had
+                    seen similar situations before.
+                  </Prose>
+                  <Prose>
+                    That realization stayed with him long after individual customer meetings ended.
+                  </Prose>
+                  <Prose>
+                    AgentForge grew from a simple conviction: if operational judgment has become one of
+                    the most valuable assets inside an enterprise, it deserves to become something
+                    organizations can build, govern, improve, and pass from one generation to the next.
+                  </Prose>
+                  <Prose>
+                    Like the platforms before it, AgentForge is an attempt to solve a fundamental
+                    systems problem. The difference is that this time, the system isn&apos;t
+                    information. <span className="text-foreground">It&apos;s judgment.</span>
+                  </Prose>
+                </div>
               </div>
             </Reveal>
           </Container>
