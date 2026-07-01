@@ -3,10 +3,18 @@ import { cn } from "@/lib/utils";
 import { Container } from "./container";
 import { Logo } from "./logo";
 import { buttonVariants } from "@/components/ui/button";
+import { MobileNav } from "./mobile-nav";
+
+const NAV = [
+  { href: "/architecture", label: "How It Works" },
+  { href: "/solutions", label: "Solutions" },
+  { href: "/evaluating", label: "Evaluating" },
+  { href: "/origin", label: "Conviction" },
+];
 
 /**
- * SiteHeader — shared across pages. Minimal by design: the mark, one page link,
- * one quiet ask. Conviction, not conversion.
+ * SiteHeader — shared across pages. Minimal by design. Desktop shows the inline
+ * nav; below `sm`, <MobileNav> supplies a hamburger so every page stays reachable.
  */
 export function SiteHeader() {
   return (
@@ -15,31 +23,18 @@ export function SiteHeader() {
         <Link href="/" aria-label="AgentForge — home">
           <Logo />
         </Link>
-        <nav className="flex items-center gap-8">
-          <Link
-            href="/architecture"
-            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            How It Works
-          </Link>
-          <Link
-            href="/solutions"
-            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            Solutions
-          </Link>
-          <Link
-            href="/evaluating"
-            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            Evaluating
-          </Link>
-          <Link
-            href="/origin"
-            className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline"
-          >
-            Conviction
-          </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-8 sm:flex">
+          {NAV.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {l.label}
+            </Link>
+          ))}
           <a
             href="/access"
             className={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-3")}
@@ -47,6 +42,9 @@ export function SiteHeader() {
             Request access
           </a>
         </nav>
+
+        {/* Mobile nav (hamburger + panel) */}
+        <MobileNav links={NAV} className="sm:hidden" />
       </Container>
     </header>
   );
