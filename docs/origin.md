@@ -64,7 +64,7 @@ It would be easy to assume a company like this starts because language models ar
 
 Not because any single model got smart enough to trust on its own, but because the surrounding layers finally existed. Operational data could be assembled. Context could be modeled. A decision could be made inspectable, governed, and improved — instead of left to memory. The pieces were in place to treat operational judgment as engineering rather than intuition.
 
-Everything on the rest of this site — the architecture, the Decision Objects, the governance, the judgment that compounds with every deployment — is what follows once you take that one observation seriously. AgentForge is simply what you build when you decide the missing layer finally deserves a system of its own.
+The architecture, the Decision Objects, the governance, the judgment that compounds with every deployment — all of it follows once you take that one observation seriously. AgentForge is simply what you build when you decide the missing layer finally deserves a system of its own.
 
 ---
 

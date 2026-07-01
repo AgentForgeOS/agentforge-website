@@ -30,19 +30,16 @@ export default function EvaluatingPage() {
               <Eyebrow>Evaluating AgentForge</Eyebrow>
               <Display className="text-h1">Could you actually trust this inside your enterprise?</Display>
               <Lead>
-                By now the category, the architecture, and the operational decisions are familiar.
-                This is the question that remains — the one a careful team asks before adopting
-                anything new. The honest answer is the rest of this page, before you have to ask
-                for it.
+                It&apos;s the question that matters most, and it deserves a straight answer, not
+                reassurance. AgentForge earns that trust the same way every time:{" "}
+                <span className="text-foreground">
+                  it adapts to your enterprise instead of asking your enterprise to adapt to it
+                </span>{" "}
+                — your systems, your workflows, and your governance all stay as they are.
               </Lead>
               <Prose>
-                One idea runs underneath every answer below:{" "}
-                <span className="text-foreground">
-                  AgentForge adapts to your enterprise; it doesn&apos;t ask your enterprise to adapt
-                  to it.
-                </span>{" "}
-                Your systems stay. Your workflows stay. Your governance stays. What changes is that
-                the decisions between them finally have a system of their own.
+                What changes isn&apos;t your stack. It&apos;s that the decisions running across it
+                finally have a system of their own.
               </Prose>
             </Reveal>
           </Container>

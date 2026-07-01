@@ -34,7 +34,7 @@ export default function SolutionsPage() {
               <Lead>
                 These are the operational decisions teams make every day — the planning calls that
                 follow the forecast, and the execution calls made live, on the floor and in the
-                yard. Find yours below.
+                yard. Find yours.
               </Lead>
             </Reveal>
           </Container>

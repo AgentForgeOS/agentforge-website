@@ -206,10 +206,10 @@ export default function OriginPage() {
                 rather than intuition.
               </Prose>
               <Prose>
-                Everything on the rest of this site — the architecture, the Decision Objects, the
-                governance, the judgment that compounds with every deployment — is what follows once
-                you take that one observation seriously. AgentForge is simply what you build when you
-                decide the missing layer finally deserves a system of its own.
+                The architecture, the Decision Objects, the governance, the judgment that compounds
+                with every deployment — all of it follows once you take that one observation
+                seriously. AgentForge is simply what you build when you decide the missing layer
+                finally deserves a system of its own.
               </Prose>
             </Reveal>
           </Container>

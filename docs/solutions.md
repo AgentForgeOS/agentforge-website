@@ -6,7 +6,7 @@
 
 ## Landing — `/solutions`
 
-**Find your operation.** These are the operational decisions teams make every day — the planning calls that follow the forecast, and the execution calls made live, on the floor and in the yard. Find yours below.
+**Find your operation.** These are the operational decisions teams make every day — the planning calls that follow the forecast, and the execution calls made live, on the floor and in the yard. Find yours.
 
 ### Planning decisions
 _The forward-looking calls your forecasting and commerce systems leave unmade._

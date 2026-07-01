@@ -10,9 +10,9 @@
 
 **Headline:** Could you actually trust this inside your enterprise?
 
-**Lead:** By now the category, the architecture, and the operational decisions are familiar. This is the question that remains — the one a careful team asks before adopting anything new. The honest answer is the rest of this page, before you have to ask for it.
+**Lead:** It's the question that matters most, and it deserves a straight answer, not reassurance. AgentForge earns that trust the same way every time: **it adapts to your enterprise instead of asking your enterprise to adapt to it** — your systems, your workflows, and your governance all stay as they are.
 
-One idea runs underneath every answer below: **AgentForge adapts to your enterprise; it doesn't ask your enterprise to adapt to it.** Your systems stay. Your workflows stay. Your governance stays. What changes is that the decisions between them finally have a system of their own.
+What changes isn't your stack. It's that the decisions running across it finally have a system of their own.
 
 ---
 
