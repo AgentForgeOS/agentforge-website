@@ -23,7 +23,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Architecture — AgentForge",
+  title: "Architecture",
   description:
     "The reference architecture for Operational Intelligence. Any system that governs operational decisions converges on the same constructs: operational context, the decision lifecycle, the Decision Object, governance, and learning.",
 };

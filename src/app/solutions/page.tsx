@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { GROUPS } from "@/lib/solutions-data";
 
 export const metadata: Metadata = {
-  title: "Solutions — AgentForge",
+  title: "Solutions",
   description:
     "Find your operation. The planning calls that follow the forecast, and the execution calls made live on the floor and in the yard — every one a Decision Model on the same architecture.",
 };

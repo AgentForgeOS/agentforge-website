@@ -33,7 +33,7 @@ export async function generateMetadata({
   const m = DEEP_BY_SLUG[slug];
   if (!m) return {};
   return {
-    title: `${m.name} — AgentForge`,
+    title: m.name,
     description: `${m.situationLine} How AgentForge governs the ${m.name} decision.`,
   };
 }

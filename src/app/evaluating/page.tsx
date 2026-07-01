@@ -12,7 +12,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Evaluating AgentForge",
+  title: "Evaluating",
   description:
     "The questions a serious enterprise asks before trusting a new layer — answered with clarity, honesty, and confidence. AgentForge adapts to your enterprise, not the other way around.",
 };
