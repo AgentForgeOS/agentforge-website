@@ -425,7 +425,7 @@ export default function Home() {
               </Lead>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+                  href="/access"
                   className={cn(buttonVariants({ size: "lg" }), "group px-5")}
                 >
                   Request access

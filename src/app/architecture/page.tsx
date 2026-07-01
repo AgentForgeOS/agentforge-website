@@ -480,7 +480,7 @@ export default function ArchitecturePage() {
                 every day, where being wrong is expensive and being right is invisible.
               </Lead>
               <a
-                href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+                href="/access"
                 className={cn(buttonVariants({ size: "lg" }), "group mt-1 px-5")}
               >
                 Request access

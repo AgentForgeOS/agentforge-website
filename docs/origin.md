@@ -104,4 +104,4 @@ We believe the next layer removes the uncertainty that's left — the uncertaint
 
 If we're right, judgment won't stay the exception. It will become as ordinary a part of the enterprise as the system of record and the system of awareness are today — a layer no operation of consequence runs without. **That is the conviction we're building on. Not another application. The next layer.**
 
-**CTA:** Start the conversation → mailto:hello@agentforgeos.ai
+**CTA:** Start the conversation → /access (request-access form)

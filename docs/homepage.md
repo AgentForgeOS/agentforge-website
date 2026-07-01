@@ -143,4 +143,4 @@ Your systems of record remember. Your systems of awareness notice. The decision 
 
 The day this clicks, you stop asking your ERP to be your decision system — and start asking what is. We're building it.
 
-**Request access** → hello@agentforgeos.ai
+**Request access** → /access (request-access form)

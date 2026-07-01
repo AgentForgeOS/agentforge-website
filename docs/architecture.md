@@ -178,4 +178,4 @@ The control point is not the sensors or the models — it is the operating model
 
 These constructs are not unique to AgentForge — they are what the problem demands. We are simply building the first implementation, with operators who run these decisions every day, where being wrong is expensive and being right is invisible.
 
-**Request access** → hello@agentforgeos.ai
+**Request access** → /access (request-access form)

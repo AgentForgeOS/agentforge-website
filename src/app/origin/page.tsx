@@ -311,7 +311,7 @@ export default function OriginPage() {
               </Prose>
               <div className="pt-2">
                 <a
-                  href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+                  href="/access"
                   className={cn(buttonVariants({ size: "lg" }), "group px-5")}
                 >
                   Start the conversation

@@ -191,7 +191,7 @@ export default function EvaluatingPage() {
                 them honestly with you than approximate them here.
               </Lead>
               <a
-                href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+                href="/access"
                 className={cn(buttonVariants({ size: "lg" }), "group mt-1 px-5")}
               >
                 Start the conversation

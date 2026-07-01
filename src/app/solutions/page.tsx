@@ -162,7 +162,7 @@ export default function SolutionsPage() {
                 We&apos;ll show you what it looks like governed.
               </Lead>
               <a
-                href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+                href="/access"
                 className={cn(buttonVariants({ size: "lg" }), "group mt-1 px-5")}
               >
                 Request access

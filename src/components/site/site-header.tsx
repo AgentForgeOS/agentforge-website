@@ -41,7 +41,7 @@ export function SiteHeader() {
             Conviction
           </Link>
           <a
-            href="mailto:hello@agentforgeos.ai?subject=AgentForge%20access"
+            href="/access"
             className={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-3")}
           >
             Request access

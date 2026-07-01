@@ -92,4 +92,4 @@ That accumulated judgment, not the code beneath it, is what compounds. We'll tel
 
 Some questions deserve a conversation, not a webpage. What this costs, how it would deploy in your environment, the exact compliance posture for your industry, and what other operators have seen — those depend on your operation, and we'd rather answer them honestly with you than approximate them here.
 
-**CTA:** Start the conversation → mailto:hello@agentforgeos.ai
+**CTA:** Start the conversation → /access (request-access form)
