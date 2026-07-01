@@ -407,6 +407,13 @@ export default function Home() {
                 Designed with operators in supply chains and claims organizations — not from
                 a whiteboard.
               </p>
+              <a
+                href="/origin"
+                className="group inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand/80"
+              >
+                Read the full story — and who&apos;s behind it
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
             </Reveal>
           </Container>
         </Section>

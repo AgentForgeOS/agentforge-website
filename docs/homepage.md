@@ -135,6 +135,8 @@ That's a twenty-five-year arc the market is only now naming — from systems of 
 
 _Designed with operators in supply chains and claims organizations — not from a whiteboard._
 
+**Read the full story — and who's behind it** → /origin (link to the Conviction page)
+
 ---
 
 ## Close
