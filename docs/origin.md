@@ -98,7 +98,9 @@ That realization stayed with him long after individual customer meetings ended.
 
 AgentForge grew from a simple conviction: if operational judgment has become one of the most valuable assets inside an enterprise, it deserves to become something organizations can build, govern, improve, and pass from one generation to the next.
 
-Like the platforms before it, AgentForge is an attempt to solve a fundamental systems problem. The difference is that this time, the system isn't information. **It's judgment.**
+Like the platforms before it, AgentForge is an attempt to solve a fundamental systems problem. The difference is that this time, the system isn't information.
+
+**It's judgment.**
 
 ---
 

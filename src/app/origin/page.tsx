@@ -292,8 +292,9 @@ export default function OriginPage() {
                   <Prose>
                     Like the platforms before it, AgentForge is an attempt to solve a fundamental
                     systems problem. The difference is that this time, the system isn&apos;t
-                    information. <span className="text-foreground">It&apos;s judgment.</span>
+                    information.
                   </Prose>
+                  <Prose className="text-foreground">It&apos;s judgment.</Prose>
                 </div>
               </div>
             </Reveal>
