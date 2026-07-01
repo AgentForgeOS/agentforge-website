@@ -4,10 +4,9 @@ import { Logo } from "./logo";
 import { LifecycleRail } from "./lifecycle";
 
 /**
- * Footer nav. Note the labels can differ from the top nav (as with How It
- * Works → /architecture): the "Company" group gives a plainly-legible home for
- * "who's behind AgentForge" — "Who we are" → the Conviction page — which the
- * editorial nav label doesn't signal.
+ * Footer nav. Labels can differ from the top nav (as How It Works →
+ * /architecture): the "Company" group gives plainly-legible entry points —
+ * "Our Story" → the Conviction page, and a general Contact email.
  */
 const GROUPS = [
   {
@@ -21,7 +20,8 @@ const GROUPS = [
   {
     heading: "Company",
     links: [
-      { href: "/origin", label: "Who we are" },
+      { href: "/origin", label: "Our Story" },
+      { href: "mailto:info@agentforgeos.ai?subject=AgentForge%20inquiry", label: "Contact" },
       { href: "/access", label: "Request access" },
     ],
   },
@@ -43,15 +43,20 @@ export function SiteFooter() {
                 <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-muted-foreground/60">
                   {g.heading}
                 </p>
-                {g.links.map((l) => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
+                {g.links.map((l) => {
+                  const external = l.href.startsWith("mailto:") || l.href.startsWith("http");
+                  const className =
+                    "text-sm text-muted-foreground transition-colors hover:text-foreground";
+                  return external ? (
+                    <a key={l.href} href={l.href} className={className}>
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link key={l.href} href={l.href} className={className}>
+                      {l.label}
+                    </Link>
+                  );
+                })}
               </div>
             ))}
           </div>
