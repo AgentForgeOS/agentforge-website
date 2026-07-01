@@ -77,7 +77,7 @@ export default function ArchitecturePage() {
         {/* 1 · The whole system — the inevitable architecture, drawn once. */}
         <section className="pt-20 pb-16 md:pt-28 md:pb-20">
           <Container className="flex flex-col gap-12">
-            <Reveal className="flex max-w-3xl flex-col gap-6">
+            <Reveal className="mx-auto flex w-full max-w-3xl flex-col gap-6">
               <Eyebrow>Reference architecture</Eyebrow>
               <Display className="text-h1">The Operational Intelligence Architecture.</Display>
               <Lead>
