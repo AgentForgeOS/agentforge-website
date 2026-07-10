@@ -105,7 +105,7 @@ export default function ArchitecturePage() {
               <SectionHeader
                 eyebrow="Operational Context"
                 title="A decision is only as good as the reality it reasons over."
-                lead="So the first thing any decision system needs is the truth — what is actually happening, right now. In operations that is never simply read; it has to be assembled, and assembled honestly, because everything downstream inherits its errors."
+                lead="So the first thing any decision system needs is the truth — what is actually happening, right now. In operations that is never simply read; it has to be assembled, and assembled honestly, because everything downstream inherits its errors. The assembly is two-handed: the structure of the operation enters deterministically, from the systems of record; language models read what people wrote — emails, documents, notes — and what they contribute enters as evidence, carrying its source and its confidence."
               />
               <SystemMap active="context" className="max-w-2xl" />
             </Reveal>
