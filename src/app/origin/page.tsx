@@ -5,7 +5,7 @@ import { Container } from "@/components/site/container";
 import { Section } from "@/components/site/section";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
-import { Display, Heading, Eyebrow, Lead, Prose } from "@/components/site/typography";
+import { Display, Heading, Eyebrow, Prose } from "@/components/site/typography";
 import { Reveal } from "@/components/site/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -49,12 +49,8 @@ export default function OriginPage() {
             <Reveal className="flex flex-col gap-6">
               <Eyebrow>Conviction</Eyebrow>
               <Display className="text-h1">
-                Every generation of enterprise software solved a different problem.
+                Operational judgment deserves a system of its own.
               </Display>
-              <Lead>
-                This is the person who kept running into the one it didn&apos;t — and why he
-                finally gave it a system.
-              </Lead>
             </Reveal>
           </Container>
         </section>
@@ -82,10 +78,21 @@ export default function OriginPage() {
                   </Prose>
                   <Prose>
                     It was while co-founding Cognosos, a real-time visibility platform, that the
-                    pattern became impossible to ignore. As customers gained unprecedented
-                    visibility into their operations, the hardest decisions were still being made
-                    outside the software — in spreadsheets, email threads, and the experience of
-                    people who had seen similar situations before.
+                    gap became impossible to ignore. Building it meant years inside the least
+                    forgiving operations there are — factories, distribution centers, vehicle
+                    yards, hospitals — and every time something unexpected happened, the same
+                    scene played out. Someone stopped and assembled the picture by hand: searching
+                    across systems, reading back through email threads, pulling up a spreadsheet
+                    maintained on the side, and calling the colleague who simply knew. Then, under
+                    pressure, they made the call.
+                  </Prose>
+                  <Prose>
+                    Every improvement in visibility made that moment more conspicuous, not less.
+                    The hardest decisions were still being made outside the software — and that,
+                    he became convinced, was the real bottleneck. Not getting the data or seeing
+                    the floor, but{" "}
+                    <span className="text-foreground">the judgment in the moment</span>, the one
+                    step no software had ever touched.
                   </Prose>
                   <Prose>
                     AgentForgeOS grew from a simple conviction: if operational judgment has become
@@ -104,41 +111,7 @@ export default function OriginPage() {
           </Container>
         </Section>
 
-        {/* 2 · The turn — the lived moment (merged "Lived, not theorized" + "The turn"). */}
-        <Section className="py-14 md:py-20">
-          <Container className="flex max-w-3xl flex-col gap-6">
-            <Reveal className="flex flex-col gap-6">
-              <Eyebrow>The turn</Eyebrow>
-              <Heading>
-                The better operations could see, the more obvious the real bottleneck became.
-              </Heading>
-              <Prose>
-                Building Cognosos meant years inside the least forgiving operations there are —
-                factories, distribution centers, vehicle yards, hospitals — watching what people
-                still had to do by hand after the dashboards got good.
-              </Prose>
-              <Prose>
-                Every time something unexpected happened, the same scene played out. Someone
-                stopped and assembled the picture themselves. They searched across systems, read
-                back through email threads, pulled up a spreadsheet maintained on the side, and
-                called the colleague who simply knew — the one whose judgment lived nowhere but
-                their own experience. Then, under time pressure, they made the call.
-              </Prose>
-              <Prose>
-                Every improvement in visibility made that moment more conspicuous, not less. The
-                real constraint was no longer getting the data or seeing the floor — it was{" "}
-                <span className="text-foreground">the judgment in the moment</span>, the most
-                consequential step in the operation and the only one no software had ever
-                touched. That is the pattern beneath every era of enterprise software:{" "}
-                <span className="text-foreground">
-                  each layer, by succeeding, exposes the one above it.
-                </span>
-              </Prose>
-            </Reveal>
-          </Container>
-        </Section>
-
-        {/* 3 · Why now. */}
+        {/* 2 · Why now. */}
         <Section className="border-y border-border/60 bg-card/30 py-14 md:py-20">
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
