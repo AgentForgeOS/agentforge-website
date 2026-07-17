@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * LifecycleMark — the AgentForge glyph. Three operational signals converging
+ * LifecycleMark — the AgentForgeOS glyph. Three operational signals converging
  * into one governed decision core. This is where the single blue accent lives;
  * it appears here and almost nowhere else. The mark is the brand's recurring
  * geometry in its most compact form (see <LifecycleRail> for the extended motif).
@@ -43,7 +43,7 @@ export function Logo({
       <LifecycleMark />
       {showWordmark ? (
         <span className="text-[0.95rem] font-medium tracking-tight text-foreground">
-          AgentForge
+          AgentForgeOS
         </span>
       ) : null}
     </span>

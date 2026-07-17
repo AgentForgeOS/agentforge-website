@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 // Default share card for every route — the polished preview that renders when
 // the link is pasted into email/Slack/iMessage. Obsidian + single blue accent.
-export const alt = "AgentForge — Operational Decision Intelligence";
+export const alt = "AgentForgeOS — Operational Decision Intelligence";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -35,7 +35,7 @@ export default function Image() {
             </div>
           </div>
           <div style={{ color: "#e7ebf3", fontSize: 108, fontWeight: 600, letterSpacing: -3 }}>
-            AgentForge
+            AgentForgeOS
           </div>
           <div style={{ color: "#9aa3b7", fontSize: 38, marginTop: 26, maxWidth: 940, lineHeight: 1.35 }}>
             The governed decision layer for high-stakes enterprise operations.

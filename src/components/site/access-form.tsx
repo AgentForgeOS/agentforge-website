@@ -33,7 +33,7 @@ export function AccessForm() {
   function mailtoFallback() {
     const body = `Name: ${form.name}\nWork email: ${form.email}\nCompany: ${form.company}\nRole / operation: ${form.role}\n\n${form.message}`;
     window.location.href = `mailto:hello@agentforgeos.ai?subject=${encodeURIComponent(
-      "AgentForge — access request",
+      "AgentForgeOS — access request",
     )}&body=${encodeURIComponent(body)}`;
   }
 
@@ -54,8 +54,8 @@ export function AccessForm() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `AgentForge access request — ${form.name || "unknown"}`,
-          from_name: form.name || "AgentForge website",
+          subject: `AgentForgeOS access request — ${form.name || "unknown"}`,
+          from_name: form.name || "AgentForgeOS website",
           name: form.name,
           email: form.email,
           company: form.company,
@@ -126,7 +126,7 @@ export function AccessForm() {
         <label htmlFor="message" className={labelClass}>
           What would you like to explore? <span className="font-normal text-muted-foreground">· optional</span>
         </label>
-        <textarea id="message" name="message" rows={4} value={form.message} onChange={set("message")} className={cn(fieldClass, "resize-y")} placeholder="The decision or operation you're weighing AgentForge for." />
+        <textarea id="message" name="message" rows={4} value={form.message} onChange={set("message")} className={cn(fieldClass, "resize-y")} placeholder="The decision or operation you're weighing AgentForgeOS for." />
       </div>
 
       {status === "error" && (

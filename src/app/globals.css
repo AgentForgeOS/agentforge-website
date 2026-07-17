@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ===========================================================================
-   AgentForge design system — token layer
+   AgentForgeOS design system — token layer
    Obsidian-dark, single accent (refined enterprise blue). Components never
    hardcode color; everything resolves through a token. See README.md.
    =========================================================================== */

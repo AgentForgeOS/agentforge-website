@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
  * ContextAssembly — the Detect pipeline as a reference-architecture diagram.
  * Heterogeneous sensing and enterprise sources are normalized, then assembled
  * into one operational picture. The accent sits on Context Assembly — the layer
- * AgentForge owns. The hardware/sensing layer stays deliberately open and muted:
+ * AgentForgeOS owns. The hardware/sensing layer stays deliberately open and muted:
  * the control point is the assembly of reality, not the sensors that feed it.
  */
 const SOURCES = [
@@ -73,7 +73,7 @@ export function ContextAssembly({ className }: { className?: string }) {
                 </span>
                 {"accent" in p && p.accent ? (
                   <span className="rounded border border-brand/40 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-brand">
-                    AgentForge
+                    AgentForgeOS
                   </span>
                 ) : null}
               </div>

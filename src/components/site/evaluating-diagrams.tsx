@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * StackDiagram — answers "overlay or control point?" AgentForge sits ABOVE the
+ * StackDiagram — answers "overlay or control point?" AgentForgeOS sits ABOVE the
  * systems of record and awareness, reads across both, makes the governed
  * decision, and hands execution back down. The systems stay; the decision is
  * the new, durable thing.
@@ -10,7 +10,7 @@ export function StackDiagram({ className }: { className?: string }) {
   return (
     <div className={cn("rounded-xl border border-border bg-card p-6 md:p-10", className)}>
       <div className="rounded-lg border border-brand/40 bg-brand/[0.05] px-5 py-4 text-center">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">AgentForge · Decision Layer</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">AgentForgeOS · Decision Layer</p>
         <p className="mt-1 text-xs text-muted-foreground">assemble context · decide · govern · learn</p>
       </div>
 
@@ -31,7 +31,7 @@ export function StackDiagram({ className }: { className?: string }) {
       </div>
 
       <p className="mt-5 text-center text-xs leading-relaxed text-muted-foreground">
-        Your systems stay. AgentForge decides across them — and hands execution back to the
+        Your systems stay. AgentForgeOS decides across them — and hands execution back to the
         systems that already own it.
       </p>
     </div>
@@ -54,7 +54,7 @@ function Dial({ label, opts }: { label: string; opts: string[] }) {
 }
 
 /**
- * GovernanceBoundary — answers "can I run this on my terms?" AgentForge adapts
+ * GovernanceBoundary — answers "can I run this on my terms?" AgentForgeOS adapts
  * INSIDE the enterprise's boundary; deployment, model, approval, and audit are
  * the enterprise's dials, not the product's limitations.
  */
@@ -66,7 +66,7 @@ export function GovernanceBoundary({ className }: { className?: string }) {
       </p>
 
       <div className="mx-auto mb-6 w-fit rounded-lg border border-brand/40 bg-brand/[0.05] px-5 py-2.5">
-        <span className="font-mono text-[11px] uppercase tracking-wider text-brand">AgentForge adapts within it</span>
+        <span className="font-mono text-[11px] uppercase tracking-wider text-brand">AgentForgeOS adapts within it</span>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">

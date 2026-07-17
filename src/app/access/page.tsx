@@ -10,7 +10,7 @@ import { AccessForm } from "@/components/site/access-form";
 export const metadata: Metadata = {
   title: "Request access",
   description:
-    "AgentForge is early, and deliberately so — we work closely with a small number of design partners. Tell us about your operation and we'll be in touch.",
+    "AgentForgeOS is early, and deliberately so — we work closely with a small number of design partners. Tell us about your operation and we'll be in touch.",
 };
 
 export default function AccessPage() {
@@ -25,7 +25,7 @@ export default function AccessPage() {
               <Eyebrow>Request access</Eyebrow>
               <Display className="text-h1">Start the conversation.</Display>
               <Lead>
-                AgentForge is early, and deliberately so — we work closely with a small number of
+                AgentForgeOS is early, and deliberately so — we work closely with a small number of
                 design partners while the decision layer proves itself in real operations. Tell us
                 about your operation, and if there&apos;s a fit, you&apos;ll hear from a person.
               </Lead>

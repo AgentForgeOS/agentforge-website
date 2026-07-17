@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * SystemMap — the one drawing of the whole operating model, as a closed LOOP,
- * not a pipeline. AgentForge is a feedback system: a decision is produced,
+ * not a pipeline. AgentForgeOS is a feedback system: a decision is produced,
  * governed, executed, and its outcome learned from — and what is learned feeds
  * the next decision. Shown whole at the top and the close; shown with one node
  * lit at the head of each section, so the page reads as zoom-ins on one diagram.

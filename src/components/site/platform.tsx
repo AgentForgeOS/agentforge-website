@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { LifecycleMark } from "./logo";
 
 /**
- * PlatformLifecycle — the strategic positioning diagram. AgentForge spans the
+ * PlatformLifecycle — the strategic positioning diagram. AgentForgeOS spans the
  * whole Operational Intelligence loop (Detect → Anticipate → Decide → Learn),
  * but the commercial architecture is deliberate: Detect and Anticipate stay
  * OPEN (your existing tools, or ours); Decide and Learn are the PROPRIETARY
@@ -24,7 +24,7 @@ export function PlatformLifecycle({ className }: { className?: string }) {
       <div className="mb-8 flex items-center justify-center gap-2">
         <LifecycleMark className="size-4" />
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-          AgentForge Platform
+          AgentForgeOS Platform
         </span>
       </div>
 
@@ -58,7 +58,7 @@ export function PlatformLifecycle({ className }: { className?: string }) {
 
       <div className="mt-7 grid grid-cols-2 gap-3">
         <Band label="Open" sub="Your existing tools, or ours" />
-        <Band label="AgentForge Core" sub="Proprietary" accent />
+        <Band label="AgentForgeOS Core" sub="Proprietary" accent />
       </div>
     </div>
   );

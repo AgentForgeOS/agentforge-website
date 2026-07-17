@@ -452,13 +452,13 @@ export default function ArchitecturePage() {
                 <Prose>
                   The RTLS, vision, forecasting, and optimization providers an enterprise already
                   runs — or new ones adopted over time — integrate through one contract and feed the
-                  same operating model. AgentForge does not compete with them; it gives them a
+                  same operating model. AgentForgeOS does not compete with them; it gives them a
                   decision layer to feed. Each can evolve independently while the way decisions are
                   made, governed, and remembered stays constant.
                 </Prose>
                 <Prose>
                   The control point is not the sensors or the models — it is the operating model that
-                  turns context into governed, compounding decisions. That is what AgentForge owns;
+                  turns context into governed, compounding decisions. That is what AgentForgeOS owns;
                   the ecosystem plugs in around it.
                 </Prose>
               </Reveal>
@@ -475,7 +475,7 @@ export default function ArchitecturePage() {
             <Reveal className="flex max-w-2xl flex-col items-center gap-6">
               <Heading className="max-w-2xl">Any system that governs operational decisions arrives here.</Heading>
               <Lead className="mx-auto text-center">
-                These constructs are not unique to AgentForge — they are what the problem demands. We
+                These constructs are not unique to AgentForgeOS — they are what the problem demands. We
                 are simply building the first implementation, with operators who run these decisions
                 every day, where being wrong is expensive and being right is invisible.
               </Lead>

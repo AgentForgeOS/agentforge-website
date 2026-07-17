@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Evaluating",
   description:
-    "The questions a serious enterprise asks before trusting a new layer — answered with clarity, honesty, and confidence. AgentForge adapts to your enterprise, not the other way around.",
+    "The questions a serious enterprise asks before trusting a new layer — answered with clarity, honesty, and confidence. AgentForgeOS adapts to your enterprise, not the other way around.",
 };
 
 export default function EvaluatingPage() {
@@ -27,11 +27,11 @@ export default function EvaluatingPage() {
         <section className="pt-20 pb-12 md:pt-28 md:pb-16">
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
-              <Eyebrow>Evaluating AgentForge</Eyebrow>
+              <Eyebrow>Evaluating AgentForgeOS</Eyebrow>
               <Display className="text-h1">Could you actually trust this inside your enterprise?</Display>
               <Lead>
                 It&apos;s the question that matters most, and it deserves a straight answer, not
-                reassurance. AgentForge earns that trust the same way every time:{" "}
+                reassurance. AgentForgeOS earns that trust the same way every time:{" "}
                 <span className="text-foreground">
                   it adapts to your enterprise instead of asking your enterprise to adapt to it
                 </span>{" "}
@@ -51,8 +51,8 @@ export default function EvaluatingPage() {
             <Reveal>
               <SectionHeader
                 eyebrow="Your stack"
-                title="AgentForge doesn't replace your systems of record. It orchestrates decisions across them."
-                lead="Your ERP is your system of truth; your sensing and telemetry are your eyes. Neither was built to decide — and AgentForge isn't built to be either of them."
+                title="AgentForgeOS doesn't replace your systems of record. It orchestrates decisions across them."
+                lead="Your ERP is your system of truth; your sensing and telemetry are your eyes. Neither was built to decide — and AgentForgeOS isn't built to be either of them."
               />
             </Reveal>
             <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
@@ -61,13 +61,13 @@ export default function EvaluatingPage() {
                   It sits above both, reads across them, and makes the governed decision they hand to
                   a person today. The decision becomes a durable Decision Object; the action flows
                   back into the systems that already own it. Nothing gets ripped out, and nothing
-                  competes for the database write — the system of record keeps the state, AgentForge
+                  competes for the database write — the system of record keeps the state, AgentForgeOS
                   keeps the decision.
                 </Prose>
                 <Prose>
                   And because each decision is re-grounded on current context before it executes, a
                   change underneath it doesn&apos;t strand the decision — it informs the next one.
-                  AgentForge is the decision control point, not a second source of truth.
+                  AgentForgeOS is the decision control point, not a second source of truth.
                 </Prose>
               </Reveal>
               <Reveal delay={0.1}>
@@ -82,10 +82,10 @@ export default function EvaluatingPage() {
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
               <Eyebrow>Your workflow</Eyebrow>
-              <Heading>Your people keep their systems. AgentForge inserts at the decision, not in front of it.</Heading>
+              <Heading>Your people keep their systems. AgentForgeOS inserts at the decision, not in front of it.</Heading>
               <Prose>
                 A planner doesn&apos;t leave the planning system. An adjuster doesn&apos;t learn a new
-                process. An operator doesn&apos;t abandon the screens they know. AgentForge inserts
+                process. An operator doesn&apos;t abandon the screens they know. AgentForgeOS inserts
                 itself at the operational decision point inside those workflows — assembling the
                 context, surfacing a governed recommendation, and capturing what was decided.
               </Prose>
@@ -110,14 +110,14 @@ export default function EvaluatingPage() {
                 and asked anyway, it will answer confidently.
               </Prose>
               <Prose>
-                AgentForge reasons only over verified operational context it has assembled and scored,
+                AgentForgeOS reasons only over verified operational context it has assembled and scored,
                 never over invented detail. And the model never holds authority: generation and
                 scoring are deterministic functions of that context; the language model contributes
                 reasoning, while the decision is governed by policy and cleared by a person.
               </Prose>
               <Prose>
                 Assembling that operational reality — from messy, incomplete, heterogeneous evidence —
-                is the genuinely hard part. It is also the part AgentForge owns.
+                is the genuinely hard part. It is also the part AgentForgeOS owns.
               </Prose>
             </Reveal>
           </Container>
@@ -129,7 +129,7 @@ export default function EvaluatingPage() {
             <Reveal>
               <SectionHeader
                 eyebrow="Your governance"
-                title="AgentForge adapts to your governance — not the other way around."
+                title="AgentForgeOS adapts to your governance — not the other way around."
                 lead="Enterprises don't share one risk posture, and a decision layer shouldn't pretend they do. Where it runs, which models it reasons with, and how much it may act on its own are your decisions, not ours."
               />
             </Reveal>

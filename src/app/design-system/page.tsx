@@ -225,7 +225,7 @@ export default function DesignSystemPage() {
             <SectionHeader
               eyebrow="Foundations / Illustration"
               title="An illustration language"
-              lead="Six canonical diagrams, all drawn from the same atoms — signal nodes, connectors, one accented decision. Reusable across the site, decks, and whitepapers, so every diagram is unmistakably AgentForge — never clip-art, never Lucidchart."
+              lead="Six canonical diagrams, all drawn from the same atoms — signal nodes, connectors, one accented decision. Reusable across the site, decks, and whitepapers, so every diagram is unmistakably AgentForgeOS — never clip-art, never Lucidchart."
             />
           </Reveal>
           <Reveal>
@@ -326,7 +326,7 @@ export default function DesignSystemPage() {
             </TextSpec>
             <TextSpec label="Lead · 18px muted">
               <Lead>
-                AgentForge governs high-stakes operational decisions, assembling evidence
+                AgentForgeOS governs high-stakes operational decisions, assembling evidence
                 from fragmented systems into a single, explainable brief.
               </Lead>
             </TextSpec>
@@ -527,7 +527,7 @@ export default function DesignSystemPage() {
         <Container className="flex flex-col gap-8 border-t border-border pt-12">
           <LifecycleRail className="max-w-xs opacity-70" />
           <p className="font-mono text-xs text-muted-foreground">
-            AgentForge · obsidian · one accent · mission control, not a chatbot
+            AgentForgeOS · obsidian · one accent · mission control, not a chatbot
           </p>
         </Container>
       </Section>

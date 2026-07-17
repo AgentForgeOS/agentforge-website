@@ -17,22 +17,22 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 export const metadata: Metadata = {
   metadataBase: new URL("https://agentforgeos.ai"),
   title: {
-    default: "AgentForge — Operational Decision Intelligence",
-    template: "%s · AgentForge",
+    default: "AgentForgeOS — Operational Decision Intelligence",
+    template: "%s · AgentForgeOS",
   },
   description:
     "The governed decision-intelligence layer for high-stakes enterprise operations.",
   openGraph: {
     type: "website",
-    siteName: "AgentForge",
+    siteName: "AgentForgeOS",
     url: "/",
-    title: "AgentForge — Operational Decision Intelligence",
+    title: "AgentForgeOS — Operational Decision Intelligence",
     description:
       "The governed decision-intelligence layer for high-stakes enterprise operations.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgentForge — Operational Decision Intelligence",
+    title: "AgentForgeOS — Operational Decision Intelligence",
     description:
       "The governed decision-intelligence layer for high-stakes enterprise operations.",
   },

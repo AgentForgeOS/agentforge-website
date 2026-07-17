@@ -29,9 +29,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "AgentForge — The Decision Layer for the Enterprise",
+  title: "AgentForgeOS — The Decision Layer for the Enterprise",
   description:
-    "Every enterprise has systems that record work and systems that notice change. Almost none have a system that helps them decide. AgentForge is building the decision layer.",
+    "Every enterprise has systems that record work and systems that notice change. Almost none have a system that helps them decide. AgentForgeOS is building the decision layer.",
 };
 
 const LAYERS: {
@@ -179,14 +179,14 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 3 · AgentForge — the early transition. What it IS: the loop, and one decision
+        {/* 3 · AgentForgeOS — the early transition. What it IS: the loop, and one decision
             in motion. By here the visitor understands the product. */}
         <Section id="architecture" className="scroll-mt-20 border-y border-border/60 bg-card/30">
           <Container className="flex flex-col gap-12">
             <Reveal>
               <SectionHeader
-                eyebrow="AgentForge"
-                title="AgentForge is the decision layer."
+                eyebrow="AgentForgeOS"
+                title="AgentForgeOS is the decision layer."
                 lead="The missing system, built as one continuous loop — Detect, Anticipate, Decide, Learn. It sits on top of the systems you already run and does the one thing they don't: it helps your people decide — evidence assembled, policy applied, every call remembered."
               />
             </Reveal>
@@ -277,7 +277,7 @@ export default function Home() {
               <SectionHeader
                 eyebrow="Decide & Learn"
                 title="Every decision becomes a governed object — and the system compounds."
-                lead="This is where AgentForge runs deepest: the decision itself, and the memory it leaves behind."
+                lead="This is where AgentForgeOS runs deepest: the decision itself, and the memory it leaves behind."
               />
             </Reveal>
             <Reveal>
@@ -310,7 +310,7 @@ export default function Home() {
           </Container>
         </Section>
 
-        {/* 6 · The platform — zoom out: AgentForge owns the whole lifecycle.
+        {/* 6 · The platform — zoom out: AgentForgeOS owns the whole lifecycle.
             Decide is the flagship; Detect/Anticipate stay open, Decide/Learn are core. */}
         <Section>
           <Container className="flex flex-col gap-12">
@@ -326,12 +326,12 @@ export default function Home() {
                 <Prose>
                   Most enterprises already have pieces of the first two stages scattered
                   across their stack — the systems that sense what&apos;s happening and the
-                  models that project what&apos;s next. AgentForge gives them a common
+                  models that project what&apos;s next. AgentForgeOS gives them a common
                   operational language and draws them into a single governed decision.
                 </Prose>
                 <Prose>
                   Where the value concentrates — the decision itself, and the memory it
-                  leaves behind — is where AgentForge runs deepest.{" "}
+                  leaves behind — is where AgentForgeOS runs deepest.{" "}
                   <span className="text-foreground">Decide</span> and{" "}
                   <span className="text-foreground">Learn</span> are the proprietary core;
                   Detect and Anticipate stay open.
@@ -343,7 +343,7 @@ export default function Home() {
             </div>
             <Reveal>
               <p className="max-w-3xl text-lg leading-relaxed text-foreground/90 text-pretty">
-                AgentForge defines the open architecture for operational intelligence:
+                AgentForgeOS defines the open architecture for operational intelligence:
                 bring the Detect and Anticipate capabilities you already have, or adopt new
                 ones over time — the operating model never changes.
               </p>
@@ -401,7 +401,7 @@ export default function Home() {
                 That&apos;s a twenty-five-year arc the market is only now naming — from
                 systems of record, to systems of awareness, to the operational decision
                 itself. We watched it happen from the inside, before there were words for it.
-                AgentForge is the layer we kept wishing existed.
+                AgentForgeOS is the layer we kept wishing existed.
               </Prose>
               <p className="text-sm text-muted-foreground/80">
                 Designed with operators in supply chains and claims organizations — not from

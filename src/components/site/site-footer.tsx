@@ -21,7 +21,7 @@ const GROUPS = [
     heading: "Company",
     links: [
       { href: "/origin", label: "Our Story" },
-      { href: "mailto:info@agentforgeos.ai?subject=AgentForge%20inquiry", label: "Contact" },
+      { href: "mailto:info@agentforgeos.ai?subject=AgentForgeOS%20inquiry", label: "Contact" },
       { href: "/access", label: "Request access" },
     ],
   },

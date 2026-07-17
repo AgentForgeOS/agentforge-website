@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 /**
- * AgentForge illustration language.
+ * AgentForgeOS illustration language.
  *
  * Six canonical diagrams, all built from ONE shared grammar — signal nodes,
  * connectors, and a single accented decision core. The recurring idea is

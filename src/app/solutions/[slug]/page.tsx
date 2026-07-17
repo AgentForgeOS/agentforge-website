@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!m) return {};
   return {
     title: m.name,
-    description: `${m.situationLine} How AgentForge governs the ${m.name} decision.`,
+    description: `${m.situationLine} How AgentForgeOS governs the ${m.name} decision.`,
   };
 }
 
@@ -106,12 +106,12 @@ export default async function DecisionModelPage({
           </Container>
         </Section>
 
-        {/* What AgentForge assembles + the governed decision. */}
+        {/* What AgentForgeOS assembles + the governed decision. */}
         <Section className="py-14 md:py-20">
           <Container className="flex flex-col gap-12">
             <Reveal>
               <SectionHeader
-                eyebrow="What AgentForge does"
+                eyebrow="What AgentForgeOS does"
                 title="It assembles the picture you can't see, and makes the call under your rules."
                 lead={m.recommendation}
               />
