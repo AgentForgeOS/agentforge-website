@@ -50,8 +50,8 @@ const LAYERS: {
   {
     n: "02",
     name: "System of Awareness",
-    verb: "Notices what's changing.",
-    body: "Observability, monitoring, BI, anomaly detection. The systems that surface signal — increasingly standard.",
+    verb: "Notices what's changing — and projects what's next.",
+    body: "Observability, monitoring, BI, planning and forecasting. The systems that surface signal — increasingly standard.",
   },
   {
     n: "03",
@@ -246,10 +246,11 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <MonoLabel className="text-foreground/80">Detect — assemble reality</MonoLabel>
                   <Prose>
-                    Enterprise systems record transactions. RTLS and IoT track movement.
-                    Cameras observe activity. Language models read the policies and the
-                    paperwork. Each captures one slice of what&apos;s happening — Detect
-                    assembles them into a single, trusted operational picture.
+                    Enterprise systems record transactions. Planning systems project demand
+                    and supply. RTLS and IoT track movement. Cameras observe activity.
+                    Language models read the policies and the paperwork. Each captures one
+                    slice of what&apos;s happening — Detect assembles them into a single,
+                    trusted operational picture.
                   </Prose>
                 </div>
                 <div className="flex flex-col gap-3">

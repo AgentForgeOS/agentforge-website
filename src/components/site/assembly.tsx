@@ -8,7 +8,18 @@ import { cn } from "@/lib/utils";
  * (the single accent — the flagship). The technologies are deliberately small,
  * interchangeable inputs: the moat is the operating model, not any one of them.
  */
-const INPUTS = ["ERP", "WMS", "MES", "RTLS", "IoT", "Vision", "ML", "Weather", "Markets"];
+const INPUTS = [
+  "ERP",
+  "Planning",
+  "WMS",
+  "MES",
+  "RTLS",
+  "IoT",
+  "Vision",
+  "ML",
+  "Weather",
+  "Markets",
+];
 
 const STAGES = [
   { k: "Detect", sub: "Assemble reality" },

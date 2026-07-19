@@ -26,7 +26,7 @@ The same three jobs sit behind every operational decision.
 | | | |
 |---|---|---|
 | **01 · System of Record** | Remembers what happened. | ERP, CRM, the data warehouse. The systems of truth — mature, trusted, everywhere. |
-| **02 · System of Awareness** | Notices what's changing. | Observability, monitoring, BI, anomaly detection. The systems that surface signal — increasingly standard. |
+| **02 · System of Awareness** | Notices what's changing — and projects what's next. | Observability, monitoring, BI, planning and forecasting. The systems that surface signal — increasingly standard. |
 | **03 · The decision itself** _(No system)_ | Deciding what to do about it. | Made by a person under pressure — from memory, in a spreadsheet, on a deadline. No system stands behind it. |
 
 ---
@@ -66,13 +66,13 @@ Recommendation · reroute to alternate supplier
 
 Every operation already runs dozens of systems, each producing a partial truth. None of them, alone, is a decision.
 
-**Detect — assemble reality.** Enterprise systems record transactions. RTLS and IoT track movement. Cameras observe activity. Language models read the policies and the paperwork. Each captures one slice of what's happening — Detect assembles them into a single, trusted operational picture.
+**Detect — assemble reality.** Enterprise systems record transactions. Planning systems project demand and supply. RTLS and IoT track movement. Cameras observe activity. Language models read the policies and the paperwork. Each captures one slice of what's happening — Detect assembles them into a single, trusted operational picture.
 
 **Anticipate — explore futures.** Anticipate takes that picture forward. Forecasting, simulation, optimization, and risk evaluation weigh the possible futures — what's likely, what could happen instead — before any recommendation exists. Only then is there enough to govern a decision.
 
 ```
 Partial truths
-  ERP · WMS · MES · RTLS · IoT · Vision · ML · Weather · Markets
+  ERP · Planning · WMS · MES · RTLS · IoT · Vision · ML · Weather · Markets
         ↓ (converge)
   Detect (assemble reality) → Anticipate (explore futures) → [ Decide (govern the choice) ]
 ```
