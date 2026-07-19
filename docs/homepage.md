@@ -1,6 +1,6 @@
-# AgentForge — Homepage
+# AgentForgeOS — Homepage
 
-> A faithful text transcription of the AgentForge homepage (`/`) for review. Illustrations and diagrams are described or rendered as code blocks.
+> A faithful text transcription of the AgentForgeOS homepage (`/`) for review. Illustrations and diagrams are described or rendered as code blocks.
 
 ---
 
@@ -31,8 +31,8 @@ The same three jobs sit behind every operational decision.
 
 ---
 
-## AgentForge
-### AgentForge is the decision layer.
+## AgentForgeOS
+### AgentForgeOS is the decision layer.
 
 The missing system, built as one continuous loop — Detect, Anticipate, Decide, Learn. It sits on top of the systems you already run and does the one thing they don't: it helps your people decide — evidence assembled, policy applied, every call remembered.
 
@@ -82,7 +82,7 @@ Partial truths
 ## Decide & Learn
 ### Every decision becomes a governed object — and the system compounds.
 
-This is where AgentForge runs deepest: the decision itself, and the memory it leaves behind.
+This is where AgentForgeOS runs deepest: the decision itself, and the memory it leaves behind.
 
 - **Evidence assembly** — Heterogeneous signals converge into one decision.
 - **Decision Object** — Lineage in, the decision contained, effect out.
@@ -97,19 +97,19 @@ Everything is a **Decision Object**: assembled from evidence, made under explici
 
 Operational intelligence is a continuous lifecycle — Detect, Anticipate, Decide, Learn. It compounds only when every decision sharpens the next one. The value isn't in any individual capability, but in the operating model that connects them into one continuously improving system.
 
-Most enterprises already have pieces of the first two stages scattered across their stack — the systems that sense what's happening and the models that project what's next. AgentForge gives them a common operational language and draws them into a single governed decision.
+Most enterprises already have pieces of the first two stages scattered across their stack — the systems that sense what's happening and the models that project what's next. AgentForgeOS gives them a common operational language and draws them into a single governed decision.
 
-Where the value concentrates — the decision itself, and the memory it leaves behind — is where AgentForge runs deepest. **Decide** and **Learn** are the proprietary core; Detect and Anticipate stay open.
+Where the value concentrates — the decision itself, and the memory it leaves behind — is where AgentForgeOS runs deepest. **Decide** and **Learn** are the proprietary core; Detect and Anticipate stay open.
 
 ```
-                      AgentForge Platform
+                      AgentForgeOS Platform
 
    Detect   →   Anticipate   →   Decide   →   Learn
-   └──────── Open ────────┘     └─ AgentForge Core ─┘
+   └──────── Open ────────┘     └─ AgentForgeOS Core ─┘
    Your existing tools, or ours      Proprietary
 ```
 
-AgentForge defines the open architecture for operational intelligence: bring the Detect and Anticipate capabilities you already have, or adopt new ones over time — the operating model never changes.
+AgentForgeOS defines the open architecture for operational intelligence: bring the Detect and Anticipate capabilities you already have, or adopt new ones over time — the operating model never changes.
 
 ---
 
@@ -131,7 +131,7 @@ Operational decision intelligence didn't begin with generative AI. It began with
 
 Building those systems made the real gap impossible to unsee. Enterprises had spent decades learning what happened, and were starting to invest in seeing what's happening now. But the consequential operational decision still came down to a person, stitching judgment together from disconnected systems.
 
-That's a twenty-five-year arc the market is only now naming — from systems of record, to systems of awareness, to the operational decision itself. We watched it happen from the inside, before there were words for it. AgentForge is the layer we kept wishing existed.
+That's a twenty-five-year arc the market is only now naming — from systems of record, to systems of awareness, to the operational decision itself. We watched it happen from the inside, before there were words for it. AgentForgeOS is the layer we kept wishing existed.
 
 _Designed with operators in supply chains and claims organizations — not from a whiteboard._
 

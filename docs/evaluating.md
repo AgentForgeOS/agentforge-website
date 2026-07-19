@@ -1,4 +1,4 @@
-# Evaluating AgentForge
+# Evaluating AgentForgeOS
 
 > Page mirror for review. The live page composes this from the design system; this file is the faithful text. Route: `/evaluating` · nav: **Evaluating**.
 
@@ -6,11 +6,11 @@
 
 ## Open
 
-**Eyebrow:** Evaluating AgentForge
+**Eyebrow:** Evaluating AgentForgeOS
 
 **Headline:** Could you actually trust this inside your enterprise?
 
-**Lead:** It's the question that matters most, and it deserves a straight answer, not reassurance. AgentForge earns that trust the same way every time: **it adapts to your enterprise instead of asking your enterprise to adapt to it** — your systems, your workflows, and your governance all stay as they are.
+**Lead:** It's the question that matters most, and it deserves a straight answer, not reassurance. AgentForgeOS earns that trust the same way every time: **it adapts to your enterprise instead of asking your enterprise to adapt to it** — your systems, your workflows, and your governance all stay as they are.
 
 What changes isn't your stack. It's that the decisions running across it finally have a system of their own.
 
@@ -18,27 +18,27 @@ What changes isn't your stack. It's that the decisions running across it finally
 
 ## 1 · Your stack
 
-**AgentForge doesn't replace your systems of record. It orchestrates decisions across them.**
+**AgentForgeOS doesn't replace your systems of record. It orchestrates decisions across them.**
 
-_Your ERP is your system of truth; your sensing and telemetry are your eyes. Neither was built to decide — and AgentForge isn't built to be either of them._
+_Your ERP is your system of truth; your sensing and telemetry are your eyes. Neither was built to decide — and AgentForgeOS isn't built to be either of them._
 
-It sits above both, reads across them, and makes the governed decision they hand to a person today. The decision becomes a durable Decision Object; the action flows back into the systems that already own it. Nothing gets ripped out, and nothing competes for the database write — the system of record keeps the state, AgentForge keeps the decision.
+It sits above both, reads across them, and makes the governed decision they hand to a person today. The decision becomes a durable Decision Object; the action flows back into the systems that already own it. Nothing gets ripped out, and nothing competes for the database write — the system of record keeps the state, AgentForgeOS keeps the decision.
 
-And because each decision is re-grounded on current context before it executes, a change underneath it doesn't strand the decision — it informs the next one. AgentForge is the decision control point, not a second source of truth.
+And because each decision is re-grounded on current context before it executes, a change underneath it doesn't strand the decision — it informs the next one. AgentForgeOS is the decision control point, not a second source of truth.
 
 **[Diagram — StackDiagram]**
-- Top band: **AgentForge · Decision Layer** — assemble context · decide · govern · learn
+- Top band: **AgentForgeOS · Decision Layer** — assemble context · decide · govern · learn
 - ↑ reads across · governed decision ↓
 - Foundations: **Systems of Record** (ERP · CRM · WMS — the truth, and the state) · **Systems of Awareness** (sensing · telemetry · BI — what's happening now)
-- Caption: Your systems stay. AgentForge decides across them — and hands execution back to the systems that already own it.
+- Caption: Your systems stay. AgentForgeOS decides across them — and hands execution back to the systems that already own it.
 
 ---
 
 ## 2 · Your workflow
 
-**Your people keep their systems. AgentForge inserts at the decision, not in front of it.**
+**Your people keep their systems. AgentForgeOS inserts at the decision, not in front of it.**
 
-A planner doesn't leave the planning system. An adjuster doesn't learn a new process. An operator doesn't abandon the screens they know. AgentForge inserts itself at the operational decision point inside those workflows — assembling the context, surfacing a governed recommendation, and capturing what was decided.
+A planner doesn't leave the planning system. An adjuster doesn't learn a new process. An operator doesn't abandon the screens they know. AgentForgeOS inserts itself at the operational decision point inside those workflows — assembling the context, surfacing a governed recommendation, and capturing what was decided.
 
 The existing approvals still happen. The existing policies still apply. The only thing that disappears is the scramble before the decision — not the workflow around it.
 
@@ -50,15 +50,15 @@ The existing approvals still happen. The existing policies still apply. The only
 
 The fastest way to get an operational decision wrong is to reason brilliantly over the wrong picture of reality. A general model, however capable, doesn't know your supplier slipped, your trailer is dwelling, or your contract's exclusion clause — and asked anyway, it will answer confidently.
 
-AgentForge reasons only over verified operational context it has assembled and scored, never over invented detail. And the model never holds authority: generation and scoring are deterministic functions of that context; the language model contributes reasoning, while the decision is governed by policy and cleared by a person.
+AgentForgeOS reasons only over verified operational context it has assembled and scored, never over invented detail. And the model never holds authority: generation and scoring are deterministic functions of that context; the language model contributes reasoning, while the decision is governed by policy and cleared by a person.
 
-Assembling that operational reality — from messy, incomplete, heterogeneous evidence — is the genuinely hard part. It is also the part AgentForge owns.
+Assembling that operational reality — from messy, incomplete, heterogeneous evidence — is the genuinely hard part. It is also the part AgentForgeOS owns.
 
 ---
 
 ## 4 · Your governance
 
-**AgentForge adapts to your governance — not the other way around.**
+**AgentForgeOS adapts to your governance — not the other way around.**
 
 _Enterprises don't share one risk posture, and a decision layer shouldn't pretend they do. Where it runs, which models it reasons with, and how much it may act on its own are your decisions, not ours._
 
@@ -67,7 +67,7 @@ Run it as SaaS, in your own cloud, in a private VPC, or hybrid. Reason with a ma
 What stays constant is the part that has to: a human is accountable above the threshold you set, every consequential decision leaves an immutable trail, and autonomy never escalates quietly.
 
 **[Diagram — GovernanceBoundary]**
-- Header: Your enterprise · your governance → **AgentForge adapts within it**
+- Header: Your enterprise · your governance → **AgentForgeOS adapts within it**
 - Deployment: SaaS · Your cloud · Private VPC · Hybrid
 - Model: Managed LLM · Private model
 - Human approval: Required above your threshold

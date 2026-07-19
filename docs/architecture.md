@@ -1,6 +1,6 @@
 # The Operational Intelligence Architecture
 
-> _Reference architecture._ A faithful text transcription of the AgentForge Architecture page (`/architecture`) for review. The page is built around one recurring **system diagram** (below); each section zooms into one node of it before the page returns to the whole.
+> _Reference architecture._ A faithful text transcription of the AgentForgeOS Architecture page (`/architecture`) for review. The page is built around one recurring **system diagram** (below); each section zooms into one node of it before the page returns to the whole.
 
 Any system that sets out to govern operational decisions arrives at the same architecture — not by imitation, but because the problem demands it. These are the constructs it converges on, and how they fit together.
 
@@ -45,7 +45,7 @@ Heterogeneous sources
         ↓
   Signal Normalization
         ↓
-  Context Assembly        ← AgentForge
+  Context Assembly        ← AgentForgeOS
         ↓
   Operational Reality
         ↓
@@ -161,21 +161,21 @@ This is the whole moat, in a single line. A closed decision doesn't just resolve
 Step back to the whole. One operating model sits behind a single boundary: Detect and Anticipate are an open ecosystem; Decide and Learn are the proprietary core — the assembly of context, the Decision Object, and the loops that learn.
 
 ```
-                      AgentForge Platform
+                      AgentForgeOS Platform
 
    Detect   →   Anticipate   →   Decide   →   Learn
-   └──────── Open ────────┘     └─ AgentForge Core ─┘
+   └──────── Open ────────┘     └─ AgentForgeOS Core ─┘
    Your existing tools, or ours      Proprietary
 ```
 
-The RTLS, vision, forecasting, and optimization providers an enterprise already runs — or new ones adopted over time — integrate through one contract and feed the same operating model. AgentForge does not compete with them; it gives them a decision layer to feed. Each can evolve independently while the way decisions are made, governed, and remembered stays constant.
+The RTLS, vision, forecasting, and optimization providers an enterprise already runs — or new ones adopted over time — integrate through one contract and feed the same operating model. AgentForgeOS does not compete with them; it gives them a decision layer to feed. Each can evolve independently while the way decisions are made, governed, and remembered stays constant.
 
-The control point is not the sensors or the models — it is the operating model that turns context into governed, compounding decisions. That is what AgentForge owns; the ecosystem plugs in around it.
+The control point is not the sensors or the models — it is the operating model that turns context into governed, compounding decisions. That is what AgentForgeOS owns; the ecosystem plugs in around it.
 
 ---
 
 ## Any system that governs operational decisions arrives here.
 
-These constructs are not unique to AgentForge — they are what the problem demands. We are simply building the first implementation, with operators who run these decisions every day, where being wrong is expensive and being right is invisible.
+These constructs are not unique to AgentForgeOS — they are what the problem demands. We are simply building the first implementation, with operators who run these decisions every day, where being wrong is expensive and being right is invisible.
 
 **Request access** → /access (request-access form)
