@@ -15,10 +15,9 @@ const INPUTS = [
   "MES",
   "RTLS",
   "IoT",
-  "Vision",
   "ML",
-  "Weather",
-  "Markets",
+  "Email",
+  "Meeting notes",
 ];
 
 const STAGES = [

@@ -247,10 +247,10 @@ export default function Home() {
                   <MonoLabel className="text-foreground/80">Detect — assemble reality</MonoLabel>
                   <Prose>
                     Enterprise systems record transactions. Planning systems project demand
-                    and supply. RTLS and IoT track movement. Cameras observe activity.
-                    Language models read the policies and the paperwork. Each captures one
-                    slice of what&apos;s happening — Detect assembles them into a single,
-                    trusted operational picture.
+                    and supply. RTLS and IoT track movement. Language models read the
+                    policies, the paperwork, and the conversations where decisions actually
+                    get made. Each captures one slice of what&apos;s happening — Detect
+                    assembles them into a single, trusted operational picture.
                   </Prose>
                 </div>
                 <div className="flex flex-col gap-3">

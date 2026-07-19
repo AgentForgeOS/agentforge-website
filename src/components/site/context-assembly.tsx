@@ -14,9 +14,9 @@ const SOURCES = [
   "WMS",
   "RTLS",
   "IoT",
-  "Computer Vision",
   "ML Models",
-  "External Signals",
+  "Email",
+  "Meeting Notes",
 ];
 
 const PIPELINE = [

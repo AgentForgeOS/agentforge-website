@@ -66,13 +66,13 @@ Recommendation · reroute to alternate supplier
 
 Every operation already runs dozens of systems, each producing a partial truth. None of them, alone, is a decision.
 
-**Detect — assemble reality.** Enterprise systems record transactions. Planning systems project demand and supply. RTLS and IoT track movement. Cameras observe activity. Language models read the policies and the paperwork. Each captures one slice of what's happening — Detect assembles them into a single, trusted operational picture.
+**Detect — assemble reality.** Enterprise systems record transactions. Planning systems project demand and supply. RTLS and IoT track movement. Language models read the policies, the paperwork, and the conversations where decisions actually get made. Each captures one slice of what's happening — Detect assembles them into a single, trusted operational picture.
 
 **Anticipate — explore futures.** Anticipate takes that picture forward. Forecasting, simulation, optimization, and risk evaluation weigh the possible futures — what's likely, what could happen instead — before any recommendation exists. Only then is there enough to govern a decision.
 
 ```
 Partial truths
-  ERP · Planning · WMS · MES · RTLS · IoT · Vision · ML · Weather · Markets
+  ERP · Planning · WMS · MES · RTLS · IoT · ML · Email · Meeting notes
         ↓ (converge)
   Detect (assemble reality) → Anticipate (explore futures) → [ Decide (govern the choice) ]
 ```
