@@ -26,7 +26,7 @@ export function StackDiagram({ className }: { className?: string }) {
         </div>
         <div className="rounded-lg border border-border bg-background/40 px-4 py-4 text-center">
           <p className="font-mono text-[11px] uppercase tracking-wider text-foreground/80">Systems of Awareness</p>
-          <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">sensing · telemetry · BI — what's happening now</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">sensing · telemetry · planning · BI — what's happening, what's next</p>
         </div>
       </div>
 

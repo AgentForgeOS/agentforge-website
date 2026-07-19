@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
  */
 const SOURCES = [
   "ERP",
+  "Planning",
   "MES",
   "WMS",
   "RTLS",

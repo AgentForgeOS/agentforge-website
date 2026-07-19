@@ -30,7 +30,7 @@ Enterprise systems manage deterministic transactions. Operations are different: 
 Context is therefore probabilistic, assembled from three kinds of evidence — **structured** (operational systems), **observed** (extracted from documents and telemetry), and **experiential** (past decisions with known outcomes). Detect reconciles them into one current picture and carries its uncertainty forward, rather than hiding it.
 
 **Detect** — _Assemble the best available representation of operational reality._
-- **Inputs:** ERP · RTLS · IoT · Vision · Documents · Weather · Markets · Human Signals
+- **Inputs:** ERP · Planning · RTLS · IoT · Vision · Documents · Weather · Markets · Human Signals
 - **Produces:** Operational Context
 - **Output:** Verified Ground Truth · Confidence Scores · Missing Evidence · Contradictions
 
@@ -41,7 +41,7 @@ Context is therefore probabilistic, assembled from three kinds of evidence — *
 
 ```
 Heterogeneous sources
-  ERP · MES · WMS · RTLS · IoT · Computer Vision · ML Models · External Signals
+  ERP · Planning · MES · WMS · RTLS · IoT · Computer Vision · ML Models · External Signals
         ↓
   Signal Normalization
         ↓

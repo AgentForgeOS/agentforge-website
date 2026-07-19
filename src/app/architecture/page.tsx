@@ -141,7 +141,7 @@ export default function ArchitecturePage() {
                   name="Detect"
                   summary="Assemble the best available representation of operational reality."
                   rows={[
-                    { label: "Inputs", values: ["ERP", "RTLS", "IoT", "Vision", "Documents", "Weather", "Markets", "Human Signals"] },
+                    { label: "Inputs", values: ["ERP", "Planning", "RTLS", "IoT", "Vision", "Documents", "Weather", "Markets", "Human Signals"] },
                     { label: "Produces", values: ["Operational Context"], accent: true },
                     { label: "Output", values: ["Verified Ground Truth", "Confidence Scores", "Missing Evidence", "Contradictions"] },
                   ]}

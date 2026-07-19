@@ -29,7 +29,7 @@ And because each decision is re-grounded on current context before it executes, 
 **[Diagram — StackDiagram]**
 - Top band: **AgentForgeOS · Decision Layer** — assemble context · decide · govern · learn
 - ↑ reads across · governed decision ↓
-- Foundations: **Systems of Record** (ERP · CRM · WMS — the truth, and the state) · **Systems of Awareness** (sensing · telemetry · BI — what's happening now)
+- Foundations: **Systems of Record** (ERP · CRM · WMS — the truth, and the state) · **Systems of Awareness** (sensing · telemetry · planning · BI — what's happening, what's next)
 - Caption: Your systems stay. AgentForgeOS decides across them — and hands execution back to the systems that already own it.
 
 ---
