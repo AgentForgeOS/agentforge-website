@@ -164,8 +164,48 @@ export default function ArchitecturePage() {
 
             <Reveal>
               <p className="max-w-3xl text-base text-foreground/85">
-                Verified context is the input. Turning it into a decision is a fixed sequence — the
-                same one, every time.
+                Verified context is the input. But operations do not announce their situations —
+                before anything is decided, something has to be noticed.
+              </p>
+            </Reveal>
+          </Container>
+        </Section>
+
+        {/* 2.5 · Continuous Understanding — noticing precedes deciding. */}
+        <Section>
+          <Container className="flex flex-col gap-12">
+            <Reveal className="flex flex-col gap-8">
+              <SectionHeader
+                eyebrow="Continuous Understanding"
+                title="The system notices before anyone asks."
+                lead="The loop opens one stage earlier than decisions. The full lifecycle is See, Understand, Decide, Learn — and Understand is a maintained state, not a scan. The system holds an evolving assessment of every operational entity it has been asked to understand: confidence that rises and falls with evidence, expectations of what should happen next."
+              />
+            </Reveal>
+
+            <Reveal>
+              <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
+                <Prose>
+                  When reality departs from expectation far enough to matter, a situation is
+                  raised: evidenced, costed, linked to the precedents it resembles. Anything may
+                  propose — a rule, a statistical baseline, an external system, a person, a
+                  reasoning model — but nothing raises an alert on its own. Every proposal passes
+                  one governed checkpoint, carrying its evidence with it. Even silence is
+                  evidence: an expected observation that fails to arrive is itself a warning.
+                </Prose>
+                <Prose>
+                  The memory makes this compound. Detection tools can say a number is unusual. A
+                  system that remembers every prior situation, every decision, and every outcome
+                  can say what the unusual number <span className="text-foreground">resembles</span> —
+                  and what it cost last time. The same institutional memory that sharpens each
+                  decision also sharpens what deserves attention at all: the loop closes twice.
+                </Prose>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <p className="max-w-3xl text-base text-foreground/85">
+                A raised situation is a claim on attention. Turning it into a decision is a fixed
+                sequence — the same one, every time.
               </p>
             </Reveal>
           </Container>
