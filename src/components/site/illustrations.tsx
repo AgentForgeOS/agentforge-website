@@ -145,6 +145,38 @@ export function IllMemory() {
   );
 }
 
+/** 7 · Continuous understanding — many producers propose; one governed
+ *  checkpoint (the dashed gate) admits; a situation is raised (the accent).
+ *  Memory beneath feeds both the proposers and the gate — the loop closes
+ *  twice. Same grammar: the gate reuses the PolicyGates dashed line; the
+ *  accent appears once, on the raised situation. */
+export function IllUnderstanding() {
+  return (
+    <Frame>
+      {/* producers converge on the gate */}
+      <Link d="M28,24 L138,58" />
+      <Link d="M28,48 L138,62" />
+      <Link d="M28,72 L138,68" />
+      <Link d="M28,96 L138,72" />
+      {/* the one governed checkpoint */}
+      <line x1={138} y1={32} x2={138} y2={96} strokeWidth={1.5} strokeDasharray="3 5" className="stroke-muted-foreground" />
+      {/* past the gate: the raised situation */}
+      <Link d="M138,66 H186" />
+      {/* memory feeds back — to the proposers and to the gate itself */}
+      <Link d="M108,120 C60,122 36,110 30,102" faint />
+      <Link d="M112,120 C130,120 137,110 138,100" faint />
+      <MemoryNode cx={110} cy={120} />
+      <MemoryNode cx={93} cy={124} />
+      <MemoryNode cx={127} cy={124} />
+      <SignalNode cx={28} cy={24} />
+      <SignalNode cx={28} cy={48} />
+      <SignalNode cx={28} cy={72} />
+      <SignalNode cx={28} cy={96} />
+      <DecisionNode cx={188} cy={66} />
+    </Frame>
+  );
+}
+
 /**
  * The master illustration — the entire operational-intelligence story as one
  * abstract metaphor, built from the same grammar. Heterogeneous signals (left)

@@ -5,7 +5,7 @@ import { Container } from "@/components/site/container";
 import { Section, SectionHeader } from "@/components/site/section";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
-import { IllContext, IllDecisionObject, IllPolicyGates, IllMemory } from "@/components/site/illustrations";
+import { IllContext, IllDecisionObject, IllPolicyGates, IllMemory, IllUnderstanding } from "@/components/site/illustrations";
 import { ContextAssembly } from "@/components/site/context-assembly";
 import { PlatformLifecycle } from "@/components/site/platform";
 import { SpecCard, Sequence } from "@/components/site/architecture-blocks";
@@ -183,22 +183,27 @@ export default function ArchitecturePage() {
             </Reveal>
 
             <Reveal>
-              <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">
-                <Prose>
-                  When reality departs from expectation far enough to matter, a situation is
-                  raised: evidenced, costed, linked to the precedents it resembles. Anything may
-                  propose — a rule, a statistical baseline, an external system, a person, a
-                  reasoning model — but nothing raises an alert on its own. Every proposal passes
-                  one governed checkpoint, carrying its evidence with it. Even silence is
-                  evidence: an expected observation that fails to arrive is itself a warning.
-                </Prose>
-                <Prose>
-                  The memory makes this compound. Detection tools can say a number is unusual. A
-                  system that remembers every prior situation, every decision, and every outcome
-                  can say what the unusual number <span className="text-foreground">resembles</span> —
-                  and what it cost last time. The same institutional memory that sharpens each
-                  decision also sharpens what deserves attention at all: the loop closes twice.
-                </Prose>
+              <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+                <div className="flex flex-col gap-5">
+                  <Prose>
+                    When reality departs from expectation far enough to matter, a situation is
+                    raised: evidenced, costed, linked to the precedents it resembles. Anything may
+                    propose — a rule, a statistical baseline, an external system, a person, a
+                    reasoning model — but nothing raises an alert on its own. Every proposal passes
+                    one governed checkpoint, carrying its evidence with it. Even silence is
+                    evidence: an expected observation that fails to arrive is itself a warning.
+                  </Prose>
+                  <Prose>
+                    The memory makes this compound. Detection tools can say a number is unusual. A
+                    system that remembers every prior situation, every decision, and every outcome
+                    can say what the unusual number <span className="text-foreground">resembles</span> —
+                    and what it cost last time. The same institutional memory that sharpens each
+                    decision also sharpens what deserves attention at all: the loop closes twice.
+                  </Prose>
+                </div>
+                <div className="rounded-xl border border-border bg-background/50 px-6 py-12 md:px-12">
+                  <IllUnderstanding />
+                </div>
               </div>
             </Reveal>
 
