@@ -179,3 +179,31 @@ The control point is not the sensors or the models — it is the operating model
 These constructs are not unique to AgentForgeOS — they are what the problem demands. We are simply building the first implementation, with operators who run these decisions every day, where being wrong is expensive and being right is invisible.
 
 **Request access** → /access (request-access form)
+
+---
+
+## DRAFT ADDENDUM — the Understanding layer (2026-07-27; NOT yet on the live page)
+
+> Staged for the next architecture-page revision alongside the marketing plan / formal
+> launch. Source: `agentforge-demo/docs/product/understanding-layer-architecture.md`
+> (the ratified whitepaper). Voice-checked: architect's register, no comparisons.
+
+The loop above begins at Context — but operations do not announce their situations. Before
+anything can be decided, something has to be *noticed*. The architecture therefore opens
+one stage earlier:
+
+**See → Understand → Decide → Learn.**
+
+**Understand** is a maintained state, not a scan. The system holds an evolving assessment
+of every operational entity it has been asked to understand — confidence that rises and
+falls with evidence, expectations of what should happen next. When reality departs from
+expectation far enough to matter, a **Situation** is raised: evidenced, costed, linked to
+the precedents it resembles. Anything may propose — a rule, a statistical baseline, an
+external system, a person, a reasoning model — but nothing raises an alert on its own.
+Every proposal passes one governed checkpoint, carrying its evidence with it.
+
+The memory makes this compound. Detection tools can say a number is unusual. A system
+that remembers every prior situation, every decision, and every outcome can say what the
+unusual number *resembles* — and what it cost last time. The same institutional memory
+that sharpens each decision also sharpens what deserves attention at all: the loop closes
+twice.
