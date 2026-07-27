@@ -30,8 +30,12 @@ export const metadata: Metadata = {
 
 const LIFECYCLE = [
   {
+    n: "Continuous Understanding",
+    t: "The preceding layer, always on: beliefs held, expectations checked, proposals gated. When one crosses the attention threshold, a situation is raised — and the lifecycle begins.",
+  },
+  {
     n: "Situation",
-    t: "An evidence threshold is crossed and the system recognizes a decision is required — before a human would have noticed.",
+    t: "The raised situation enters the path: the question is on the record — evidenced, costed, and linked to what it resembles. The lifecycle turns it into an answer.",
   },
   {
     n: "Context Assembly",
@@ -239,7 +243,7 @@ export default function ArchitecturePage() {
                     )}
                   >
                     <span className="pt-0.5 font-mono text-xs text-brand">
-                      {String(i + 1).padStart(2, "0")}
+                      {String(i).padStart(2, "0")}
                     </span>
                     <div className="flex flex-col gap-1.5">
                       <div className="flex flex-wrap items-center gap-2">
