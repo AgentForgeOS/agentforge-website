@@ -150,6 +150,10 @@ figcaption b{color:var(--ink); font-weight:600}
 .plate{max-width:660px}
 .plate.wide{max-width:880px}
 .plate.tall{max-width:600px}
+/* The assistant panel was captured at 1x, so it is only 555px wide. Held
+   under its native size rather than stretched: soft is better than smeared,
+   and a narrow sidebar reads correctly small. Recapture at 2x to enlarge. */
+.plate.ask{max-width:470px}
 
 /* ---- the loop ---- */
 .loop{margin-top:3rem; display:grid; gap:3.4rem}
@@ -268,7 +272,8 @@ figcaption b{color:var(--ink); font-weight:600}
   /* Buttons become outlines: a filled accent block is the same toner gamble. */
   .btn{ background:transparent !important; color:var(--accent) !important; border:1px solid var(--accent) !important }
   .btn-ghost{ color:var(--ink) !important; border-color:var(--line) !important }
-  .colophon{ color:var(--muted) !important; border-top-color:var(--line) !important }
+  .colophon{ color:var(--muted) !important; border-top-color:var(--line) !important;
+             break-inside:avoid; page-break-inside:avoid }
   .cta-alt{ color:var(--ink-soft) !important }
   .colophon a{ color:var(--accent) !important }
   /* TYPOGRAPHY IS SET SEPARATELY FOR PAPER.
@@ -630,6 +635,21 @@ figcaption b{color:var(--ink); font-weight:600}
     </p>
 
     <p>
+      So you can ask it things. Not a search box over documents — the question becomes a query the
+      page runs, and the answer is the page.
+    </p>
+
+    <figure class="plate ask">
+      <img src="img/uw-ask.png" alt="The Ask the book panel: a question about month-by-month frequency for OUT-GULF-02, answered with actual against expected claims for each month.">
+      <figcaption>
+        Asked over a nineteen-month window rather than the six-month one used everywhere else on
+        this page — <b>the panel answers over whatever window the page is showing, and says which</b>.
+        A wider window gives a lower lift, 1.29× against 1.53×, because it includes the quiet
+        months. Same dealer, same engine, different question.
+      </figcaption>
+    </figure>
+
+    <p>
       It also names its own limits, on the screen, without being asked. These three are quoted from
       the panel that sits under every finding:
     </p>
@@ -671,7 +691,9 @@ figcaption b{color:var(--ink); font-weight:600}
     </p>
     <p>
       <b>For the evaluation: one file.</b> No integration, no connection to your systems, nothing
-      installed.
+      installed. <b>De-identify it before it leaves you</b> — hash the dealer, contract and vehicle
+      identifiers on your side and keep the key. This is a book of numbers and dates; it does not
+      need to say who anyone is.
     </p>
     <p>
       <b>For production</b>, the system needs the book kept current — but that is a data feed, not a
@@ -736,7 +758,10 @@ figcaption b{color:var(--ink); font-weight:600}
 
       <div class="colophon">
         <p>
-          Underwriting Surveillance is built by <b>AgentForgeOS</b>.
+          Underwriting Surveillance is built by <b>AgentForgeOS</b>. Nish Parikh co-founded
+          Cognosos, a real-time visibility platform running in vehicle yards, distribution centres
+          and hospitals, after nearly three decades building enterprise systems for operations that
+          cannot afford to be wrong.
         </p>
         <p>
           Every figure, dealer name and product code on this page is from our synthetic
