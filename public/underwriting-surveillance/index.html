@@ -207,20 +207,15 @@ figcaption b{color:var(--ink); font-weight:600}
 @media(max-width:560px){ .asof-scale{display:none} }
 
 /* The same device as the hero's turn, on paper stock rather than ink. */
+/* The boundary statement on paper stock — the same weight as the hero's, so
+   "you decide" reads with the same force in DECIDE as it does in the hero. */
+.boundary-ink{margin-top:1.4rem; font-size:1.02rem; color:var(--ink)}
+
 .turn-ink{
   font-family:"Source Serif 4",Georgia,serif;
   font-size:clamp(1.3rem,2.9vw,1.75rem); line-height:1.25;
   color:var(--ink); margin:2rem 0; max-width:34ch;
 }
-
-/* ---- quoted from the product ----
-   Not a screenshot. The content is prose, and a picture of prose is unreadable
-   at any width the page can afford, unselectable, unsearchable, and 190KB.
-   Quoting it plainly — and saying where it comes from — carries the same
-   evidence and can actually be read. */
-.quotes{margin:2.2rem 0 0; border-left:2px solid var(--accent); padding-left:1.5rem}
-.quotes p{margin:0 0 1rem; color:var(--ink); font-size:1.02rem; line-height:1.5}
-.quotes p:last-child{margin-bottom:0}
 
 /* ---- three questions ---- */
 .questions{margin:2rem 0; border-left:2px solid var(--accent); padding-left:1.5rem}
@@ -460,13 +455,13 @@ figcaption b{color:var(--ink); font-weight:600}
       <p class="eyebrow">Found as it happens</p>
       <h2>Eight quiet months, one warning, then it crossed.</h2>
       <p class="lede">
-        The same dealer, replayed at each of the last twelve months — every verdict computed using
-        only the data that existed at that point, with everything after it hidden.
+        The same dealer, month by month, as it would have looked at the time. Each month's reading
+        uses only the claims that had actually come in by then.
       </p>
+      <p class="turn-ink">Nothing for eight months. A first warning in March. By April it was worth acting on.</p>
       <p>
-        This is the difference the product is actually selling. Not a cleverer report at quarter
-        end: a verdict that changes month by month as the evidence accumulates, and says so the
-        month it changes.
+        That is the part a quarterly review cannot do. Not a better report at quarter end — a
+        reading that changes as the claims arrive, and tells you the month it changes.
       </p>
     </div>
 
@@ -481,8 +476,8 @@ figcaption b{color:var(--ink); font-weight:600}
         <input type="range" id="asofRange" min="0" max="11" value="11" step="1"
                aria-label="Move the observation point between July 2024 and June 2025">
         <p class="asof-note">
-          Drag it back. Everything after the month you land on disappears, because that is what the
-          watch could see at the time. The verdict is the one it would have reached that month.
+          Drag it back. Everything after the month you land on disappears, because that is all
+          anyone could have seen at the time.
         </p>
       </div>
     </div>
@@ -491,17 +486,15 @@ figcaption b{color:var(--ink); font-weight:600}
       <img src="img/uw-timeline-gulf02.png" alt="Twelve monthly verdicts for OUT-GULF-02: eight months no finding, one advisory, then three actionable.">
       <figcaption>
         <b>“Crossed the actionable line in 2025-04, after first showing as advisory in 2025-03.”</b>
-        The product's own reading of those twelve months, and the note it puts underneath them:
-        <i>each bar is the verdict the watch would have reached that month, seeing only the data
-        available to it.</i>
+        Twelve months of readings, each one made with only the claims in hand that month.
       </figcaption>
     </figure>
 
     <div class="narrow">
       <p>
-        Two things are worth noticing. The system stayed silent through eight months of ordinary
-        variation, which is what makes the ninth month mean something. And the first signal was an
-        <i>advisory</i>, not an alarm — a month of warning before anything was worth acting on.
+        The eight quiet months are the point. A dealer running a bit hot is ordinary, and being
+        told so every month is worthless. This one was left alone until the pattern was real — and
+        the first signal was a warning, not an alarm, which bought a month.
       </p>
     </div>
   </div>
@@ -514,58 +507,54 @@ figcaption b{color:var(--ink); font-weight:600}
   <div class="wrap">
     <div class="narrow">
       <p class="eyebrow">Investigate</p>
-      <h2>Open the finding and the work is already done.</h2>
+      <h2>Something changed. Now: why?</h2>
       <p class="lede">
-        The comparison is against <b>your own expectations, not a benchmark</b>. The expected line is
-        built from your pricing assumptions, contract by contract, each at its own age — so a
-        dealer's own mix is already inside it.
+        Every dealer is measured against what his own contracts were priced to cost — his vehicle
+        mix, his products, his terms.
       </p>
       <p>
-        Which is why <i>"they just sell riskier vehicles"</i> stops being an explanation. It was
-        accounted for before anybody asked.
+        So <i>"he just sells riskier cars"</i> is already in the comparison, and stops being an
+        answer.
       </p>
     </div>
 
     <figure class="plate l">
       <img src="img/uw-verdict.png" alt="The verdict for OUT-GULF-02: expected claims 96.1, actual 147, frequency 1.53x, severity 1.12x.">
       <figcaption>
-        <b>Frequency and severity are separated deliberately</b> — a book can deteriorate because
-        claims arrive more often or because each one costs more, and the two call for different
-        responses. Note what the panel volunteers: <b>every other dealer runs 1.20× too</b>, so part
-        of this is book-wide and no dealer action fixes that part.
+        Claims arriving <b>53% more often</b> than priced for. Severity is the other half of the
+        question, and here it is almost on plan — <b>the problem is how often, not how much</b>.
+        Worth reading the last line: every other dealer is running 20% hot too, so part of this is
+        the whole book, and nothing done to this dealer touches that part.
       </figcaption>
     </figure>
 
     <div class="narrow">
       <p>
-        That last line is the kind of thing a report written to justify itself would leave out. The
-        finding is worth less if you act on the wrong half of it.
+        Which matters, because the two have different answers. Claims arriving more often is a
+        pricing and eligibility conversation. Claims costing more is a repair and adjudication one.
       </p>
     </div>
 
     <figure class="plate r wide">
       <img src="img/ex-freqsev.png" alt="Frequency 1.53x, severity 1.12x, combined 1.71x against par.">
       <figcaption>
-        Both run over par, and the split is quantified: <b>frequency explains 79% of the combined
-        deviation, severity 21%</b>. A pricing conversation and a claims-cost conversation are not
-        the same conversation.
+        Both above plan, and the split measured: <b>roughly four-fifths of it is how often claims
+        arrive</b>, one-fifth how much they cost.
       </figcaption>
     </figure>
 
     <div class="narrow">
       <p>
-        From there, slice it however you suspect — by product, vehicle class, mileage band, repair
-        facility, agency, F&amp;I desk, adjuster decision. Follow the questions the system raises, or
-        ask your own in plain English.
+        From there, cut it however you suspect — by product, vehicle class, mileage band, repair
+        facility, agency, F&amp;I desk, adjuster decision. Or ask in plain English and get an answer.
       </p>
     </div>
 
     <figure class="plate l">
       <img src="img/ex-drivers.png" alt="Variance drivers ranked by vehicle class, with the full set of grouping dimensions above.">
       <figcaption>
-        The same variance, re-cut by vehicle class. <b>Every dimension along the top is a live
-        control</b>, and the dots mark which rows carry enough data to be credible — so a thin slice
-        is visibly thin rather than quietly misleading.
+        The same money, re-cut by vehicle class. <b>Every heading across the top is a live
+        control.</b> Slices too small to judge are marked as such, so nobody acts on four claims.
       </figcaption>
     </figure>
   </div>
@@ -578,31 +567,32 @@ figcaption b{color:var(--ink); font-weight:600}
   <div class="wrap">
     <div class="narrow">
       <p class="eyebrow">Decide</p>
-      <h2>Then: here is what is worth doing about it.</h2>
+      <h2>And here is what you could do about it.</h2>
       <p class="lede">
-        The actions your business has already sanctioned, ranked — each with what it costs, how fast
-        it acts, whether it can be undone, and <b>what it cannot fix</b>.
+        Most tools stop at the finding. This one lays out the options your business already uses,
+        and what each one actually buys you.
       </p>
       <p>
-        One is recommended, with the reasoning shown. <b>A person decides. Nothing executes
-        anywhere.</b>
+        For each: what it costs, how fast it bites, whether you can undo it, and <b>what it will
+        not fix</b>. One is recommended, and you can see why.
       </p>
+      <p class="boundary-ink"><b>You decide. Nothing happens in your systems.</b></p>
     </div>
 
     <figure class="plate r tall">
       <img src="img/uw-decision.png" alt="Five ranked options for OUT-GULF-02, the top one recommended at 0.70.">
       <figcaption>
-        Five options, scored. <b>Keeping watch is itself an option</b> — ranked last, but priced, at
-        roughly one month of excess. And recovery dollars are deliberately not shown: the panel says
-        so in its own words, because those would be planning assumptions rather than evidence.
+        Five options, ranked. <b>Doing nothing for another cycle is one of them</b> — with a price
+        on it, about a month of excess claims. No recovery estimate is shown, because that number
+        would be a guess.
       </figcaption>
     </figure>
 
     <div class="narrow">
       <p>
-        Every option names its limit. Re-pricing fixes new business and cannot touch the in-force
-        book. Tightening terms is the fastest brake and costs the most relationship. Doing nothing
-        for one more cycle is a real choice with a real price on it.
+        Each option is honest about its limits. Re-pricing fixes what you write from here and
+        cannot touch contracts already in force. Tightening terms works fastest and costs the most
+        goodwill. A conversation with the dealer risks least and may fix nothing.
       </p>
     </div>
   </div>
@@ -613,57 +603,43 @@ figcaption b{color:var(--ink); font-weight:600}
 <!-- ============ 7 · WHY TRUST IT ============ -->
 <section>
   <div class="wrap narrow">
+    <p class="eyebrow">Why you can trust the numbers</p>
     <h2>AI does the reading. The arithmetic is arithmetic.</h2>
     <p class="lede">
-      The AI reads your contracts and claims, works through the dimensions, explains what is driving
-      a finding, and recommends an action. <b>The numbers underneath are computed
-      deterministically</b> — the same book produces the same answer every time, and every figure
-      traces back to the contracts and claims behind it.
+      AI is what reads the whole book every cycle, works out what is driving a finding, answers
+      your questions and drafts the options.
     </p>
     <p>
-      The product states its own boundary, on the screen, permanently: the model translates your
-      question and narrates the result. It never calculates. With generation switched off, the
-      finding is identical.
+      <b>The numbers themselves are calculated from your contracts and claims, not written by a
+      model.</b> Ask the same question twice and you get the same answer, and every figure can be
+      traced back to the claims behind it.
     </p>
     <p>
-      That is the difference between an answer you can act on and one you have to check. An
+      That is the difference between a number you can act on and one you have to go and check. An
       underwriting position has to survive a carrier, a client and an auditor.
     </p>
-    <p>
-      <b>And the reasoning is kept.</b> What was known at the time, what was decided, what was
-      rejected and why. The next time the question comes up, the answer starts from a record rather
-      than somebody's memory.
-    </p>
 
-    <p>
-      So you can ask it things. Not a search box over documents — the question becomes a query the
-      page runs, and the answer is the page.
-    </p>
+    <p><b>Ask the book a question in plain English.</b></p>
 
     <figure class="plate ask">
       <img src="img/uw-ask.png" alt="The Ask the book panel: a question about month-by-month frequency for OUT-GULF-02, answered with actual against expected claims for each month.">
       <figcaption>
-        Asked over a nineteen-month window rather than the six-month one used everywhere else on
-        this page — <b>the panel answers over whatever window the page is showing, and says which</b>.
-        A wider window gives a lower lift, 1.29× against 1.53×, because it includes the quiet
-        months. Same dealer, same engine, different question.
+        A question about how this dealer's claim frequency moved month by month, answered from the
+        claims themselves — <b>actual against expected, for every month in the period</b>.
       </figcaption>
     </figure>
 
     <p>
-      It also names its own limits, on the screen, without being asked. These three are quoted from
-      the panel that sits under every finding:
+      <b>And the reasoning is kept.</b> What was known at the time, what was decided, what was
+      rejected and why. When the same dealer comes up again next year, whoever is in the chair
+      starts from the record rather than from somebody's memory.
     </p>
-
-    <div class="quotes">
-      <p>“Every measure on this screen is computed over this trailing window. A deviation that began
-      earlier and has since settled will not appear.”</p>
-      <p>“These assumptions were taken as given. Nothing here was screened for thinness or for being
-      indistinguishable from its parent — those are checks on a basis we fit ourselves, and this one
-      we did not.”</p>
-      <p>“The assumptions are stored exactly as supplied and are never refit. A new version number
-      would mean the customer supplied different assumptions, not that anything was recalculated.”</p>
-    </div>
+    <p>
+      It is also straight with you about what it cannot see. Every reading is over a set period, so
+      something that went wrong earlier and has since settled will not show up. And your pricing
+      assumptions are used exactly as you supply them — not adjusted, not second-guessed — and
+      stored, so the question <i>“what did we originally assume?”</i> has an answer.
+    </p>
   </div>
 </section>
 
@@ -675,9 +651,8 @@ figcaption b{color:var(--ink); font-weight:600}
     <p class="eyebrow">The evaluation</p>
     <h2>See what your own book would have told you.</h2>
     <p class="lede">
-      You don't have to take any of this on trust. Send a historical extract. We build your
-      expectation from your own pricing assumptions, then replay the book as it stood at each past
-      month — using only what was knowable then.
+      You don't have to take any of this on trust. Send us history, and we replay your book as it
+      looked at each past month — using only what was known then.
     </p>
 
     <div class="questions">
@@ -687,18 +662,18 @@ figcaption b{color:var(--ink); font-weight:600}
     </div>
 
     <p>
-      And what actually happened next. It is your book, so every finding can be checked against what
-      you already know.
+      Then check it against what actually happened. It is your book — you already know which
+      dealers went bad and when you caught them.
     </p>
     <p>
-      <b>For the evaluation: one file.</b> No integration, no connection to your systems, nothing
-      installed. <b>De-identify it before it leaves you</b> — hash the dealer, contract and vehicle
+      <b>To evaluate: one file.</b> Nothing connected, nothing installed, no access to your
+      systems. <b>De-identify it first</b> — hash the dealer, contract and vehicle
       identifiers on your side and keep the key. This is a book of numbers and dates; it does not
       need to say who anyone is.
     </p>
     <p>
-      <b>For production</b>, the system needs the book kept current — but that is a data feed, not a
-      systems project. A scheduled export of files you already produce is enough.
+      <b>To run it for real</b>, the book needs keeping current — a scheduled export of files you
+      already produce. Not a systems project.
     </p>
   </div>
 </section>
@@ -710,23 +685,23 @@ figcaption b{color:var(--ink); font-weight:600}
   <div class="wrap narrow">
     <h2>One foundation, different questions.</h2>
     <p class="lede">
-      Underwriting Surveillance is the product that runs today. The same foundation — your
-      contracts, claims, dealers, products, vehicles and repair facilities, understood once — is
-      what the next ones are built on.
+      Underwriting surveillance is what runs today. Once your contracts, claims, dealers,
+      products, vehicles and repair facilities are understood once, the same foundation answers
+      other questions.
     </p>
 
     <div class="cases">
       <div class="case">
         <h3>Claims adjudication support</h3>
-        <p>Evaluate a claim against the vehicle, the contract, the component, the repair and comparable prior experience. The adjudicator stays responsible for the decision.</p>
+        <p>Weigh a claim against the vehicle, the contract, the component, the repair, and what comparable claims have cost before. The adjudicator still decides.</p>
       </div>
       <div class="case">
-        <h3>Fraud and abuse detection</h3>
-        <p>Surface unusual patterns across dealers, repair facilities, vehicles, components and the relationships between them.</p>
+        <h3>Fraud and abuse</h3>
+        <p>Surface patterns across dealers, repair facilities, vehicles and components that nobody would find one claim at a time.</p>
       </div>
       <div class="case">
-        <h3>Sales and mix monitoring</h3>
-        <p>Notice when what is being sold, and where, starts to diverge from what the book was built on.</p>
+        <h3>Sales and mix</h3>
+        <p>Notice when what is being sold, and where, starts to drift from what the book was built on.</p>
       </div>
     </div>
 
@@ -737,7 +712,7 @@ figcaption b{color:var(--ink); font-weight:600}
       </div>
       <div class="buyer">
         <h3>Agencies</h3>
-        <p>A different set: sales, mix, how your dealers are performing, where your portfolio is trending. The book data comes from the administrator — the questions are yours.</p>
+        <p>A different set: sales, mix, how their dealers are performing, where the portfolio is heading. The data comes from the administrator; the questions are the agency's own.</p>
       </div>
     </div>
   </div>
