@@ -160,10 +160,11 @@ figcaption b{color:var(--ink); font-weight:600}
    wayfinding. It REPLACES the eyebrow on the three sections it appears on
    rather than sitting above one, so the section is named once.
 
-   Three stops, not four: LEARN is not a section on this page. The hero
-   promises it in words ("and it remembers why") and the trust section pays it
-   off, but a dot that never lights on any section would be a promise the page
-   visibly fails to keep.
+   Four stops. LEARN started as three, on the grounds that a dot which never
+   lights is a promise the page fails to keep — which was an argument for
+   KEEPING the promise, not for hiding the dot. The competitive read is that
+   watch sells and memory keeps; the page was giving the watch three sections
+   and memory one buried paragraph. LEARN now has its own.
 
    The dot needs an opaque fill to mask the line running behind it, so it is
    painted --paper. Only ever used on plain-paper sections for that reason.
@@ -173,7 +174,9 @@ figcaption b{color:var(--ink); font-weight:600}
    whole rail by half a cell and it read as misaligned against the heading
    below — the same fault the figures had. The active dot overhangs 2px, which
    is what a round shape needs to look flush against straight type. */
-.rail{display:flex; list-style:none; margin:0 0 1.6rem; padding:0; max-width:370px}
+/* Wide enough that INVESTIGATE, the longest label, clears the next stop.
+   At 370px with four stops the cells were 92px and it collided. */
+.rail{display:flex; list-style:none; margin:0 0 1.6rem; padding:0; max-width:480px}
 .rail li{
   flex:1; position:relative; padding-top:1.5rem;
   font-size:.68rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
@@ -253,6 +256,12 @@ figcaption b{color:var(--ink); font-weight:600}
   font-size:clamp(1.3rem,2.9vw,1.75rem); line-height:1.25;
   color:var(--ink); margin:2rem 0; max-width:34ch;
 }
+
+/* An underwriter's own sentence, kept. Set as speech rather than as a pull
+   quote — it is evidence that somebody wrote it, not a slogan. */
+.said{margin:2.2rem 0; padding:0 0 0 1.5rem; border-left:2px solid var(--accent)}
+.said p{font-family:"Source Serif 4",Georgia,serif; font-size:1.2rem; line-height:1.4; color:var(--ink); margin:0 0 .5rem}
+.said cite{font-style:normal; font-size:.88rem; color:var(--muted)}
 
 /* ---- three questions ---- */
 .questions{margin:2rem 0; border-left:2px solid var(--accent); padding-left:1.5rem}
@@ -446,6 +455,7 @@ figcaption b{color:var(--ink); font-weight:600}
         <li aria-current="step"><i></i>Watch</li>
         <li><i></i>Investigate</li>
         <li><i></i>Decide</li>
+        <li><i></i>Learn</li>
       </ol>
       <h2>It reads the whole book every month, and tells you what deserves a look.</h2>
       <p class="lede">
@@ -552,6 +562,7 @@ figcaption b{color:var(--ink); font-weight:600}
         <li><i></i>Watch</li>
         <li aria-current="step"><i></i>Investigate</li>
         <li><i></i>Decide</li>
+        <li><i></i>Learn</li>
       </ol>
       <h2>Something changed. Now: why?</h2>
       <p class="lede">
@@ -616,6 +627,7 @@ figcaption b{color:var(--ink); font-weight:600}
         <li><i></i>Watch</li>
         <li><i></i>Investigate</li>
         <li aria-current="step"><i></i>Decide</li>
+        <li><i></i>Learn</li>
       </ol>
       <h2>And here is what you could do about it.</h2>
       <p class="lede">
@@ -643,6 +655,56 @@ figcaption b{color:var(--ink); font-weight:600}
         Each option is honest about its limits. Re-pricing fixes what you write from here and
         cannot touch contracts already in force. Tightening terms works fastest and costs the most
         goodwill. A conversation with the dealer risks least and may fix nothing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ 7 · LEARN ============
+     The shortest section on the page, and the one a competitor cannot answer.
+     A monitoring tool can be copied; the accumulated record of a customer's
+     own underwriters judging their own book cannot be rebuilt from anywhere.
+
+     Deliberately NOT claimed: that the system gets smarter, or that
+     recommendations improve on their own. Patterns exist in the product but
+     what they change is unverified, and the quality score still reads "to be
+     implemented". Kept, retrievable, and checked against what happened is
+     what is true today. -->
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <ol class="rail" aria-label="Where you are in the loop">
+        <li><i></i>Watch</li>
+        <li><i></i>Investigate</li>
+        <li><i></i>Decide</li>
+        <li aria-current="step"><i></i>Learn</li>
+      </ol>
+      <h2>Next time, nobody starts from memory.</h2>
+      <p class="lede">
+        Every decision is kept with the reasoning behind it and what was known when it was made.
+        Not a log — the case as it stood when somebody judged it.
+      </p>
+      <p>
+        Six months on, the same dealer comes up again. The person who handled it last time may have
+        moved on. The record hasn't: what the numbers were, what was decided, what was rejected,
+        and why.
+      </p>
+      <p>
+        And what came of it. The watch keeps running, so whether the deviation actually settled is
+        recorded against the decision that was taken.
+      </p>
+
+      <blockquote class="said">
+        <p>“Since this has happened before with this dealer about six months back, worth raising
+        it.”</p>
+        <cite>an underwriter's own words, kept with the evidence they were judged on</cite>
+      </blockquote>
+
+      <p>
+        Everything else on this page describes what this does in a month. This is what it is worth
+        in a year.
       </p>
     </div>
   </div>
