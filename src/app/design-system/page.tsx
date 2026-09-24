@@ -9,7 +9,7 @@ import {
 
 import { Container } from "@/components/site/container";
 import { Section, SectionHeader } from "@/components/site/section";
-import { Logo, LifecycleMark } from "@/components/site/logo";
+import { Logo, DecisionMark, CompactMark } from "@/components/site/logo";
 import { LifecycleRail } from "@/components/site/lifecycle";
 import {
   IllLifecycle,
@@ -206,12 +206,21 @@ export default function DesignSystemPage() {
             />
           </Reveal>
           <div className="grid items-center gap-10 rounded-xl border border-border bg-card p-8 md:grid-cols-[auto_1fr] md:gap-14 md:p-12">
-            <LifecycleMark className="size-20" />
+            <div className="flex items-end gap-6">
+              <DecisionMark className="size-20" />
+              <CompactMark className="size-8" />
+            </div>
             <div className="flex flex-col gap-7">
               <LifecycleRail labels />
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Detect → Anticipate → <span className="text-foreground">Decide</span> → Learn.
                 The decision core is the one place the accent appears at full strength.
+              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Evidence arrives from several sources, converges, and terminates in one
+                ringed decision — left to right, the same direction as the rail. The
+                compact mark beside it is the same family at a smaller density, for
+                inline use and the favicon where the full mark cannot resolve.
               </p>
             </div>
           </div>
