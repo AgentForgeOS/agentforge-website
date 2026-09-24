@@ -81,8 +81,14 @@ export function CompactMark({ className }: { className?: string }) {
 /** Retained so existing small-size callers keep working. Prefer <CompactMark>. */
 export const LifecycleMark = CompactMark;
 
-/** The lockup — mark + wordmark in Geist. Monochrome wordmark on the site; the
- *  blue OS treatment belongs to the standalone lockup asset, not the nav bar. */
+/**
+ * The lockup — mark + wordmark in Geist.
+ *
+ * OS carries the accent, which is the same rule the mark follows: blue appears
+ * only where a decision does. At nav size the mark's core is a few pixels, so
+ * the wordmark is what actually carries the accent — dropping it here would
+ * make the header the one place in the brand where the rule does not hold.
+ */
 export function Logo({
   className,
   showWordmark = true,
@@ -95,7 +101,7 @@ export function Logo({
       <DecisionMark className="size-7" />
       {showWordmark ? (
         <span className="text-[0.95rem] font-medium tracking-tight text-foreground">
-          AgentForgeOS
+          AgentForge<span className="font-semibold text-brand">OS</span>
         </span>
       ) : null}
     </span>
