@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 
 import { Container } from "@/components/site/container";
 import { Hairline } from "@/components/site/section";
@@ -263,6 +263,16 @@ export default function MemoryPage() {
         <section className="pt-20 pb-10 md:pt-28 md:pb-14">
           <Container className="flex max-w-3xl flex-col gap-6">
             <Reveal className="flex flex-col gap-6">
+              {/* Back to the index — the section has more than one paper in it
+                  eventually, and a reader who lands here from a link should be
+                  able to find the rest. */}
+              <Link
+                href="/research"
+                className="inline-flex w-fit items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <ArrowLeft className="size-3.5" aria-hidden="true" />
+                Research
+              </Link>
               <Eyebrow>White paper</Eyebrow>
               <Display className="text-h1">Beyond the algorithm.</Display>
               <Lead className="max-w-2xl">
