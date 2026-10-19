@@ -80,16 +80,12 @@ export default function ResearchPage() {
       <main className="flex-1">
         <section className="pt-20 pb-12 md:pt-28 md:pb-16">
           <Container className="flex max-w-3xl flex-col gap-6">
+            {/* A label and the list. No rationale: anything explaining why we
+                publish these is an argument aimed at us, sitting on a page
+                meant for a reader who did not ask. */}
             <Reveal className="flex flex-col gap-6">
               <Eyebrow>Research</Eyebrow>
-              <Display className="text-h1">
-                The arguments underneath the product.
-              </Display>
-              <Lead>
-                Papers on organizational memory, human judgment, and the
-                architecture required to retain both. Written to be argued with
-                rather than agreed with — sources named, limits stated.
-              </Lead>
+              <Display className="text-h1">White papers.</Display>
             </Reveal>
           </Container>
         </section>
