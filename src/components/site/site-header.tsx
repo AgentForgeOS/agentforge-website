@@ -8,7 +8,7 @@ import { MobileNav } from "./mobile-nav";
 const NAV = [
   { href: "/architecture", label: "How It Works" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/research", label: "Research" },
+  { href: "/research", label: "White Papers" },
   { href: "/evaluating", label: "Evaluating" },
   { href: "/origin", label: "Conviction" },
 ];
