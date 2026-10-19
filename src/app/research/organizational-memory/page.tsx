@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "A white paper on how memory knowledge graphs preserve and scale human judgment in enterprise decisions that have no single correct answer.",
   openGraph: {
     type: "article",
-    url: "/memory",
+    url: "/research/organizational-memory",
     title: "Beyond the Algorithm · AgentForgeOS",
     description:
       "Many important enterprise decisions have no single correct answer. The next generation of enterprise systems must preserve not only facts and outcomes, but the context and reasoning through which decisions were made.",
